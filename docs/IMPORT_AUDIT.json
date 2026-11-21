@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-21",
+  "repository": "https://github.com/DidulaFernando/GradientGuard.git",
+  "branch": "main",
+  "scope": "Archival import of existing implementation and results; no research commands rerun.",
+  "scientific_files": 1813,
+  "scientific_bytes": 110965561,
+  "all_scientific_bytes_preserved": true,
+  "index_matches_working_tree": true,
+  "high_confidence_credential_scan_findings": [],
+  "files_over_50_MiB": [],
+  "git_fsck_full": "passed",
+  "artifact_manifest": "docs/SCIENTIFIC_ARTIFACTS.sha256",
+  "manifest_sha256": "c9ce5140bb90de521216e0d9e3efec3b138add4b4fb06b11281cccc699824691",
+  "import_commits_before_this_audit": [
+    {
+      "sha": "bc67f334950d1caeb04f25af638295339c5e8958",
+      "subject": "chore: establish GradientGuard repository and preservation workflow"
+    },
+    {
+      "sha": "52d8a4b9d3317af5b72bdf7d211be20cfbb7c11b",
+      "subject": "feat: import first connection-sensitivity feasibility harness"
+    },
+    {
+      "sha": "ed8d654d91799dad1a0972d58d79a260e3efeb10",
+      "subject": "research: preserve first feasibility results and failed setup evidence"
+    },
+    {
+      "sha": "85f3ace4c5137e7f91da12b70004767c33a9c5fe",
+      "subject": "feat: import targeted probe-partition and calibration follow-up"
+    },
+    {
+      "sha": "6e94ed16819e0c276a7ad86a1bf62cf6570267a0",
+      "subject": "research: archive checkpoint robustness and unresolved calibration findings"
+    },
+    {
+      "sha": "15cf68e17798ef576d3f025d3a2776b964358d33",
+      "subject": "feat: import grouped outcome-prediction proof of concept"
+    },
+    {
+      "sha": "9e38cf6e4047e5edfb77a9636cb2ee9af0513d6d",
+      "subject": "research: preserve completed PoC forecasts outcomes and qualified audit results"
+    },
+    {
+      "sha": "b468ec4b345e1fda3eea09545113bdcccbc89f2b",
+      "subject": "research: import bounded post-hoc capacity slope and robustness diagnostics"
+    }
+  ],
+  "identity": {
+    "name": "Didula Fernando",
+    "email": "188708835+DidulaFernando@users.noreply.github.com",
+    "scope": "repository-local; public GitHub account ID verified"
+  },
+  "line_endings": "No text conversion; original byte fingerprints preserved.",
+  "local_only": "Virtual environments, tools/interpreters, caches, temporary files, raw downloads, numerical dataset arrays, training weights/recovery checkpoints and SQLite caches remain untouched on disk.",
+  "limitations": [
+    "Credential screening uses high-confidence patterns and is not an exhaustive security audit.",
+    "Existing scientific tests and outcomes were preserved, not rerun or reinterpreted for this Git import.",
+    "The manifest covers the included scientific files; excluded large local files are not hosted by this repository.",
+    "Network publication is verified separately after pushing; this record describes the local pre-publication audit."
+  ]
+}
