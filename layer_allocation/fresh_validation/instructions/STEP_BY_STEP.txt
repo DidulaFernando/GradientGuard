@@ -54,3 +54,20 @@ git -C 'E:\Final Year Project\Implementation' log -8 --oneline
 git -C 'E:\Final Year Project\Implementation' push origin main
 git -C 'E:\Final Year Project\Implementation' ls-remote origin refs/heads/main
 Expected: remote head matches local main after authorised push; never force-push or expose credentials. A failed authentication/network step leaves local commits intact. Environments/raw data/checkpoints/caches remain local per repository policy; compact manifests/locks/reports/source/frozen forecasters are tracked. Do not use a blind git add .
+
+RECORDED EXECUTION LIMITATION FOR THIS ATTEMPT
+The official pinned SpuCo constructor rejected data seeds400611 and400620 at alignment0.99 because a required class/background source group was empty. This affected fresh_f61_c1_s0/s1 and fresh_f62_c0_s0/s1. Do not reduce alignment, replace seeds, turn off group validation or edit the frozen source to force this attempt through. The initial failure remains in execution.log/failures.log; preparation_failures contains exact traces and identities.
+
+Every other feasible development trajectory was completed using the unchanged frozen functions. Current source-normal development count/family minima and grouped folds passed, but the frozen all128terminal requirement did not. Evaluation and predictor fitting therefore remain blocked. This is not a negative predictive result for GradientGuard. Version1.3 was not created.
+
+Safe continuation/reproduction of this stopped state, if needed:
+$env:PYTHONPYCACHEPREFIX='E:\Final Year Project\Implementation\layer_allocation\cache\pycache'
+$env:PYTHONHASHSEED='0'
+& '.\Feasibility\.venv\Scripts\python.exe' '.\layer_allocation\finish_fresh_development.py'
+.\layer_allocation\fresh_validation\run.ps1 audit
+& '.\Feasibility\.venv\Scripts\python.exe' '.\layer_allocation\audit_fresh_stop.py'
+Expected: skip already completed models and explicitly recorded unavailable constructions; never launch evaluation; regenerate the stopped report and full status accounting. The continuation plan records its own code hash and preserves the original protocol/source hashes. The original all command will still encounter the official rejected construction; use this documented continuation for this attempt instead of repeatedly regenerating it.
+
+Final status files: run_status_expanded.csv distinguishes complete/data_preparation_failed/not_launched. final_validation_audit.json checks all other feasible development work, fixed hashes, full horizons, source splits and the closed evaluation boundary. final_artifact_hashes.json and checkpoint_hashes.json retain output/model identities. Use the detailed status counts instead of treating the four unavailable models as numerical divergences or hidden subgroup failures.
+
+Remaining research work requires a separately frozen source-construction policy/amendment, with all candidate constructions preflighted before expensive training. Do not automatically expand/reseed this design. Successful development data may be retained as explicitly reused development evidence in a later protocol; they are not independent held-out validation.
