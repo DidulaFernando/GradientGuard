@@ -1,0 +1,12 @@
+{
+  "official_source_files_verified": 67,
+  "spuco_commit": "91842463a577b0a90b4f829fec367308f3052e9f",
+  "classifier_source_unchanged": true,
+  "fixed_learner_defaults": {
+    "histogram_min_samples_leaf": 20,
+    "imputation": "mean; empty features retained then fold-local constant filtering",
+    "scaling": "fold-local StandardScaler",
+    "histogram_early_stopping": false
+  },
+  "nonlinear_capacity_limitation": "Default min_samples_leaf=20 may prevent splits in small CV training folds; this limits the nonlinear diagnostic and is not tuned after outcomes."
+}

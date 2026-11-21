@@ -1,0 +1,10 @@
+{
+  "original": {
+    "experiment.py": "9882b88987d4eb0199219d3ae09e28a60ed408bd34f49ddc9473609d881369a2",
+    "prediction.py": "48e8c4aee2ba10e824406703a21523363b3e01c6d8fbd536dbd2dfaffa6e3d20",
+    "report.py": "5c45935d0cb06e03a0cda7edea8fca52cf64ad64dff7abdf7cd88ae9874f38ac",
+    "run.py": "cb2780336afa2d47593440643e098e7c4641d63563112a0b0f540dfcec8f68e6",
+    "test_poc.py": "ff2cf6fe6bec4a0100713b3b130a644386c19094bff6b1936c9ed692bd2d6761"
+  },
+  "reason": "Added fail-closed predictor refit guard before any classifier training or outcome access; no protocol/threshold change"
+}

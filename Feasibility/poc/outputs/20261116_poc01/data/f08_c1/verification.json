@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "foreground_and_background_error": 0.0,
+  "sha256": "6bdeb74dc1a974c57f80cd17049dba89b123195f2a38ae09065a51bd8ff9265a",
+  "difficulty": "MAGNITUDE_LARGE",
+  "medium_mask_nonzero_pixels_per_channel": 784,
+  "source_n": 48004,
+  "train_n": 41604
+}

@@ -1,0 +1,27 @@
+{
+  "seconds": {
+    "training": 5648.3874351944105,
+    "monitor_A": 311.788103799925,
+    "monitor_B": 317.1641488999303,
+    "health": 5.100793499979773,
+    "initialization_monitor": 115.62961199996789,
+    "classifier_wall": 6583.012069900018
+  },
+  "peak_gpu_allocated_bytes": 594755072,
+  "storage_bytes": {
+    "data": 60388067,
+    "classifiers": 115613304,
+    "reports": 3461740,
+    "outcomes": 2067586,
+    "outcome_panels": 653360
+  },
+  "end_to_end_through_first_report_seconds": 7795.4285647,
+  "limitations": [
+    "Initial monitoring is recorded separately from six checkpoint monitoring.",
+    "Training wall excludes construction preparation, source transfer and terminal outcome evaluation.",
+    "Dataset preparation, terminal outcome collection and forecasting were not individually instrumented; their actual component times are unavailable.",
+    "GPU allocation peak is cumulative per process, not an isolated per-probe increment or total device/system memory.",
+    "Initial profile and classifier wall include file saves and Python overhead; end-to-end includes engineering/wait gaps.",
+    "Panel A monitoring includes conventional telemetry/output clustering and sensitivity together; connection-sensitivity incremental cost is not isolated."
+  ]
+}

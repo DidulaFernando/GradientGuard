@@ -1,0 +1,45 @@
+{
+  "observed_at": "2026-11-17T00:12:00.8292445+05:30",
+  "cpu": [
+    {
+      "Name": "AMD Ryzen 7 5700X 8-Core Processor             ",
+      "NumberOfCores": 8,
+      "NumberOfLogicalProcessors": 16
+    }
+  ],
+  "memory": {
+    "TotalVisibleMemorySize": 33472880,
+    "FreePhysicalMemory": 16863216
+  },
+  "disk": {
+    "Used": 896196759552,
+    "Free": 103989551104
+  },
+  "python_process_memory": [
+    {
+      "Id": 22532,
+      "WorkingSet64": 4575232,
+      "PeakWorkingSet64": 4608000,
+      "PrivateMemorySize64": 876544
+    },
+    {
+      "Id": 30996,
+      "WorkingSet64": 2140282880,
+      "PeakWorkingSet64": 3612213248,
+      "PrivateMemorySize64": 4535701504
+    }
+  ],
+  "caches": {
+    "TEMP": "E:\\Final Year Project\\Implementation\\Feasibility\\tmp",
+    "TMP": "E:\\Final Year Project\\Implementation\\Feasibility\\tmp",
+    "TMPDIR": "E:\\Final Year Project\\Implementation\\Feasibility\\tmp",
+    "PIP_CACHE_DIR": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\pip",
+    "MPLCONFIGDIR": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\matplotlib",
+    "TORCH_HOME": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\torch",
+    "XDG_CACHE_HOME": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\xdg",
+    "PYTHONPYCACHEPREFIX": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\pycache",
+    "CUDA_CACHE_PATH": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\cuda",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONHASHSEED": "0"
+  }
+}

@@ -1,0 +1,4 @@
+control,panel_A_Delta20,panel_B_frozen_A_Delta20,panel_B_refit_Delta20,leave_family_out_min,leave_family_out_max
+E,0.0,0.0,0.5555555555555556,-0.625,2.5
+logistic_B,0.0,0.0,0.5555555555555556,-0.625,2.5
+logistic_L6,0.0,0.0,0.0,0.0,0.0

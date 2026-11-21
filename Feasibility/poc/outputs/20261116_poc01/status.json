@@ -1,0 +1,6 @@
+{
+  "time_ns": 1794856607363796500,
+  "event": "report_finalized",
+  "verdict": "No incremental audit value observed in this pilot.",
+  "classifiers": 96
+}

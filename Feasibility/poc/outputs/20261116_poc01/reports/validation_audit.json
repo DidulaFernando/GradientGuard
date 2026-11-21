@@ -1,0 +1,32 @@
+{
+  "all_96_full_horizon": true,
+  "all_optimizer_steps": 19560,
+  "finite_weights_and_required_telemetry": true,
+  "source_constructions_verified": 48,
+  "outcomes_complete": 96,
+  "groups_per_model": 100,
+  "eight_layer_feature_columns": [
+    "shallow_share_last",
+    "shallow_share_mean",
+    "shallow_share_std",
+    "shallow_share_slope",
+    "deep_share_last",
+    "deep_share_mean",
+    "deep_share_std",
+    "deep_share_slope"
+  ],
+  "predictor_freeze_time_ns": 1794853167551757700,
+  "prediction_freeze_time_ns": 1794856311189748100,
+  "test_unseal_time_ns": 1794856318916967800,
+  "freeze_order_verified": true,
+  "pipelines_and_predictions_hashes_verified": true,
+  "validation_outcomes_before_predictor_freeze": true,
+  "test_outcomes_after_unseal": true,
+  "final_models_match_full_horizon_recovery_states": true,
+  "automated_checks_passed": 21,
+  "identical_candidate_memberships_across_methods_and_panels": true,
+  "forbidden_predictor_inputs_absent": true,
+  "protected_prior_artifacts": 582,
+  "protected_prior_artifacts_unchanged": true,
+  "no_predictor_refit_after_unseal": true
+}

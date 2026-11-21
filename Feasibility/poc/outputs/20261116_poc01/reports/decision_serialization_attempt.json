@@ -1,0 +1,72 @@
+{
+  "verdict": "No incremental audit value observed in this pilot.",
+  "completed_classifiers": 96,
+  "planned": 96,
+  "source_normal_support": {
+    "cohort": "eligible",
+    "prefix": 0.1,
+    "N": 36,
+    "families": 9,
+    "failures": 12,
+    "nonfailures": 24,
+    "evaluable": true
+  },
+  "primary_contrasts": [
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": "False",
+      "control": "E",
+      "Delta20": 0.0,
+      "interval_low": -1.1111111111111112,
+      "interval_high": 4.444444444444445,
+      "invalid_resamples": 58,
+      "family_count": 10
+    },
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": "False",
+      "control": "logistic_B",
+      "Delta20": 0.0,
+      "interval_low": -1.1111111111111112,
+      "interval_high": 4.444444444444445,
+      "invalid_resamples": 58,
+      "family_count": 10
+    },
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": "False",
+      "control": "logistic_L6",
+      "Delta20": 0.0,
+      "interval_low": 0.0,
+      "interval_high": 0.0,
+      "invalid_resamples": 58,
+      "family_count": 10
+    },
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": "False",
+      "control": "logistic_B",
+      "Delta20": 0.0,
+      "interval_low": -1.1111111111111112,
+      "interval_high": 4.444444444444445,
+      "invalid_resamples": 58,
+      "family_count": 10
+    }
+  ],
+  "limitations": [
+    "Exploratory; only 10 held-out setting families",
+    "Shared MNIST images and outcome panels",
+    "Partition-sensitive temporal measurements and unresolved head/denominator interpretation",
+    "Prediction-depth comparator deferred",
+    "Family bootstrap conditional on selected forecasters; excludes development selection uncertainty"
+  ],
+  "legacy_preserved": true
+}

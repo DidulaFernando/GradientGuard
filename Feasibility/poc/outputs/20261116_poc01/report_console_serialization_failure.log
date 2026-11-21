@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "E:\Final Year Project\Implementation\Feasibility\poc\run.py", line 92, in <module>
+    report()
+  File "E:\Final Year Project\Implementation\Feasibility\poc\report.py", line 82, in report
+    text='# GradientGuard exploratory outcome PoC\n\n'+verdict+'\n\n'+json.dumps(decision,indent=2)+'\n\nSee metrics.csv, contrasts.csv, development_support.csv (attempt root), evaluation_support.csv, secondary_cutoffs.csv, group_accuracy_uncertainty.csv and audit_selections.csv. Models were selected only on development validation outcomes; held-out test outcomes were unsealed after predictor and prediction freezes. The 60-epoch horizon is an explicitly user-authorized exploratory amendment, not a passed calibration gate.\n'
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable

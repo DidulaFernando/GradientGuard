@@ -1,0 +1,5 @@
+split,cohort,N,families,failure_families,nonfailure_families
+development,eligible,48,13,4,12
+development,full,56,14,5,12
+evaluation,eligible,36,9,3,6
+evaluation,full,40,10,4,7

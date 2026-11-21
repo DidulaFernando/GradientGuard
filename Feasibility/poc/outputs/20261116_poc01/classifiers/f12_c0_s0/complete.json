@@ -1,0 +1,19 @@
+{
+  "run": "f12_c0_s0",
+  "updates": 19560,
+  "planned_updates": 19560,
+  "full_60_epochs": true,
+  "timing": {
+    "training": 56.2543944997451,
+    "monitor_A": 3.3569101999892155,
+    "monitor_B": 3.3649458999934723,
+    "health": 0.051869700000679586
+  },
+  "wall_this_invocation": 66.05423490000248,
+  "final_health": {
+    "loss": 0.1832619659602642,
+    "accuracy": 0.9421875,
+    "seconds": 0.007276699994690716
+  },
+  "peak_gpu_allocated": 594755072
+}

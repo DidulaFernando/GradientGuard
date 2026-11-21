@@ -1,0 +1,111 @@
+{
+  "verdict": "No incremental audit value observed in this pilot.",
+  "completed_classifiers": 96,
+  "planned": 96,
+  "source_normal_support": {
+    "cohort": "eligible",
+    "prefix": 0.1,
+    "N": 36,
+    "families": 9,
+    "failures": 12,
+    "nonfailures": 24,
+    "evaluable": true
+  },
+  "primary_contrasts": [
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": false,
+      "control": "E",
+      "Delta20": 0.0,
+      "interval_low": -1.1111111111111112,
+      "interval_high": 4.444444444444445,
+      "invalid_resamples": 58,
+      "family_count": 10
+    },
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": false,
+      "control": "logistic_B",
+      "Delta20": 0.0,
+      "interval_low": -1.1111111111111112,
+      "interval_high": 4.444444444444445,
+      "invalid_resamples": 58,
+      "family_count": 10
+    },
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": false,
+      "control": "logistic_L6",
+      "Delta20": 0.0,
+      "interval_low": 0.0,
+      "interval_high": 0.0,
+      "invalid_resamples": 58,
+      "family_count": 10
+    },
+    {
+      "cohort": "eligible",
+      "prefix": 0.1,
+      "panel": "A",
+      "refit_B": false,
+      "control": "logistic_B",
+      "Delta20": 0.0,
+      "interval_low": -1.1111111111111112,
+      "interval_high": 4.444444444444445,
+      "invalid_resamples": 58,
+      "family_count": 10
+    }
+  ],
+  "limitations": [
+    "Exploratory; only 10 held-out setting families",
+    "Shared MNIST images and outcome panels",
+    "Partition-sensitive temporal measurements and unresolved head/denominator interpretation",
+    "Prediction-depth comparator deferred",
+    "Family bootstrap conditional on selected forecasters; excludes development selection uncertainty",
+    "Histogram boosting retained default min_samples_leaf=20; some grouped training folds are too small to split, weakening the nonlinear control.",
+    "Final-monitoring comparator uses final source-health loss/accuracy and learning rate, not an extensive final telemetry family.",
+    "Separate timing/memory instrumentation is incomplete; see costs.json."
+  ],
+  "legacy_preserved": true,
+  "primary_useful_gain_target_met": false,
+  "strongest_nontemporal_control": "logistic_B",
+  "positive_primary_global_static_contrasts": false,
+  "positive_panel_and_influence_contrasts": false,
+  "primary_robustness": [
+    {
+      "control": "E",
+      "panel_A_Delta20": 0.0,
+      "panel_B_frozen_A_Delta20": 0.0,
+      "panel_B_refit_Delta20": 0.5555555555555556,
+      "leave_family_out_min": -0.625,
+      "leave_family_out_max": 2.5
+    },
+    {
+      "control": "logistic_B",
+      "panel_A_Delta20": 0.0,
+      "panel_B_frozen_A_Delta20": 0.0,
+      "panel_B_refit_Delta20": 0.5555555555555556,
+      "leave_family_out_min": -0.625,
+      "leave_family_out_max": 2.5
+    },
+    {
+      "control": "logistic_L6",
+      "panel_A_Delta20": 0.0,
+      "panel_B_frozen_A_Delta20": 0.0,
+      "panel_B_refit_Delta20": 0.0,
+      "leave_family_out_min": 0.0,
+      "leave_family_out_max": 0.0
+    }
+  ],
+  "failures_and_eligibility_by_family": "family_coverage_and_diversity.csv",
+  "implementation_audit": "validation_audit.json",
+  "costs": "costs.json",
+  "information_interpretation": "Neither useful temporal nor static/global incremental audit value is demonstrated at the fixed budget.",
+  "maximum_attainable_Delta20_over_E": 0.5555555555555556,
+  "eligible_evaluation_mixed_outcome_families": 0
+}

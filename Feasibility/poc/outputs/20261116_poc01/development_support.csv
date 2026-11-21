@@ -1,0 +1,5 @@
+cohort,prefix,classification_supported,n,failures,nonfailures,families
+eligible,0.1,True,48,8,40,13
+full,0.1,True,56,12,44,14
+eligible,0.05,True,48,8,40,13
+full,0.05,True,56,12,44,14

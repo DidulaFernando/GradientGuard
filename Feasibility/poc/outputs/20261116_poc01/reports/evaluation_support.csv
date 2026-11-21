@@ -1,0 +1,5 @@
+cohort,prefix,N,families,failures,nonfailures,evaluable
+eligible,0.1,36,9,12,24,True
+full,0.1,40,10,15,25,True
+eligible,0.05,36,9,12,24,True
+full,0.05,40,10,15,25,True

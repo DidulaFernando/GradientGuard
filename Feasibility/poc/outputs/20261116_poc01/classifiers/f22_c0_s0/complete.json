@@ -1,0 +1,19 @@
+{
+  "run": "f22_c0_s0",
+  "updates": 19560,
+  "planned_updates": 19560,
+  "full_60_epochs": true,
+  "timing": {
+    "training": 59.4447827003969,
+    "monitor_A": 3.3098871000038343,
+    "monitor_B": 3.4180476999972598,
+    "health": 0.05796480001299642
+  },
+  "wall_this_invocation": 69.41387819999363,
+  "final_health": {
+    "loss": 0.01802646429059678,
+    "accuracy": 0.99609375,
+    "seconds": 0.007325400001718663
+  },
+  "peak_gpu_allocated": 594458624
+}
