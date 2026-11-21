@@ -1,0 +1,7 @@
+{
+  "records": 1152,
+  "expected": 1152,
+  "max_parity_error": 7.105427357601002e-15,
+  "seconds_this_invocation": 103.76834859999872,
+  "no_optimizer_or_training": true
+}

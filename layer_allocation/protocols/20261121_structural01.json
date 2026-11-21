@@ -1,0 +1,106 @@
+{
+  "freeze_sha256": "baa23a2269675751630b433a5e0593b0674cc0066eab97092d5fd16b7ae6679c",
+  "configuration": {
+    "attempt": "20261121_structural01",
+    "scope": "Post-hoc saved-checkpoint structural-control study; no CNN training and no fresh validation claim",
+    "legacy_attempt": "20261116_poc01",
+    "panels": [
+      "A",
+      "B"
+    ],
+    "prefixes": [
+      0.05,
+      0.1
+    ],
+    "microbatch": 128,
+    "probe_per_class": 256,
+    "epsilon": 1e-12,
+    "atol": 1e-06,
+    "rtol": 0.0001,
+    "share_atol": 1e-05,
+    "summary_stats": [
+      "last",
+      "mean",
+      "std"
+    ],
+    "marginals": [
+      "absmean",
+      "std",
+      "absmedian",
+      "absq90"
+    ],
+    "definitions": {
+      "gradient": "Signed sample-count-weighted mean data-loss gradient, accumulated in float32 before absolute products; same original microbatch 128",
+      "norm_product": "U_l = L2(weight_l) * L2(mean_gradient_l), biases excluded. Three-block proxy shares use sum of four U plus epsilon; shallow=conv1, deep=conv3+head",
+      "marginals": "CPU float64 diagnostics on flattened float32 tensors: mean absolute value, signed population SD, median absolute magnitude and linear-interpolated 90th percentile absolute magnitude",
+      "norms": "CPU float64 L2 weight and mean-gradient norms for each of conv1/conv2/conv3/head",
+      "bias": "Original total bias L2 norm and absolute weight-gradient sensitivity, last/mean/population SD; shared in M and MZ",
+      "Z": "Exactly six shallow/deep share last, mean, population SD; actual fixed checkpoint schedule, initialization excluded; no slopes",
+      "models": "E uses original development-selected input columns. B=E+total4. L2=B+share endpoints. L6=B+Z. N=B+norm-product proxy six summaries. NZ=N+Z. M=N+four-layer weight/gradient L2 and marginal summaries+shared bias6. MZ=M+Z. Each pair shares learner/grid/folds/candidates; no generator attributes enter predictors"
+    },
+    "cohorts": [
+      "eligible",
+      "full"
+    ],
+    "learners": [
+      "logistic",
+      "histogram"
+    ],
+    "C": [
+      0.1,
+      1,
+      10
+    ],
+    "depth": [
+      1,
+      2,
+      3
+    ],
+    "histogram": {
+      "max_iter": 100,
+      "learning_rate": 0.05,
+      "min_samples_leaf": 5,
+      "early_stopping": false
+    },
+    "selection_fraction": 0.3333333333333333,
+    "selection": "Development grouped OOF discoveries at floor(N/3), then AP, then first/smaller grid value; post-hoc choice motivated by consumed diagnostics, never presented as original primary endpoint",
+    "folds": "Reuse exact original family memberships for each cohort/prefix; verify train and validation labels both represented",
+    "seed": 210211,
+    "bootstrap_seed": 210212,
+    "bootstrap_replicates": 2000,
+    "uncertainty": "Paired whole-family draws from all ten held-out families, nested runs together, duplicate families get occurrence identity; recompute N/k/rankings; empty and single-label draws excluded and counted. Conditional exploratory pointwise percentile intervals, no selection uncertainty",
+    "capacity_fractions": [
+      0.25,
+      0.3333333333333333
+    ],
+    "comparisons": [
+      [
+        "MZ",
+        "M"
+      ],
+      [
+        "NZ",
+        "N"
+      ],
+      [
+        "L6",
+        "B"
+      ],
+      [
+        "L6",
+        "L2"
+      ]
+    ],
+    "panel_B": "Frozen new A pipelines on B plus matched B-development refit using A-selected hyperparameters only; original frozen pipelines never modified",
+    "interpretation": "Software correctness gates interpretation. Positive MZ-M is exploratory evidence of conditional added value for the bounded learner and bank, not proof of unique information or causality. No gain narrows the contribution; panel/family changes and high dimension versus n must remain explicit. No fresh study, Waterbirds or proposal modification is authorised by this stage"
+  },
+  "source_hashes": {
+    "src\\analysis_report.py": "295f1d55913808ff54e4066e8f0bc3d4ab2a962eb04ef5f49312d1f2ff3e0844",
+    "src\\core.py": "631ce4aab67b48197a4327db02835761656c8b858cd82bbcf4e2cabfc21cfb3e",
+    "src\\predictors.py": "6614963f048a67e7b8b1cd6e1c34296f16fc98b9fbc067d03ce07c8e7adb36d4",
+    "src\\structural_measurement.py": "32194ce0735987e9591250a211b54da86c4edd3aa313249425fbeebaf4bf1d2b",
+    "src\\study.py": "f8a410b7a4d92077ea51d0378cfeab3a5ee1380324c2ed709510462b9efbcb68",
+    "tests\\test_structural.py": "719588229c972f126c44b0dd8ed1496ecd3ea81ac0f1d3f3790fa5dfcba55f2b",
+    "configs\\structural.json": "fee2160445fea821c641dd7e5017b5d6bfc5fd9c6b2afa8085b86d54df57a047"
+  }
+}

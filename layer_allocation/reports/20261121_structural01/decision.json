@@ -1,0 +1,63 @@
+{
+  "attempt": "20261121_structural01",
+  "status": "complete",
+  "post_hoc": true,
+  "classifiers_trained": 0,
+  "saved_classifiers_measured": 96,
+  "checkpoint_panel_measurements": 1152,
+  "original_reproduced": true,
+  "measurement_parity": {
+    "records": 1152,
+    "expected": 1152,
+    "max_parity_error": 7.105427357601002e-15,
+    "seconds_this_invocation": 103.76834859999872,
+    "no_optimizer_or_training": true
+  },
+  "primary_exploratory_comparison": {
+    "cohort": "eligible",
+    "variant": "A",
+    "learner": "logistic",
+    "added": "MZ",
+    "base": "M",
+    "fraction": 0.3333333333333333,
+    "N": 36,
+    "k": 12,
+    "D_added": 10,
+    "D_base": 9,
+    "difference": 1,
+    "Delta20": 0.5555555555555556
+  },
+  "conditional_pointwise_interval": {
+    "cohort": "eligible",
+    "variant": "A",
+    "learner": "logistic",
+    "added": "MZ",
+    "base": "M",
+    "fraction": 0.3333333333333333,
+    "low": 0.0,
+    "high": 0.625,
+    "valid": 1942,
+    "invalid": 58,
+    "seed": 210212
+  },
+  "verdict": "Exploratory conditional added value observed; independent confirmation required",
+  "recommendation": "Proceed to separately frozen validation only if the narrower question remains worthwhile; do not claim sensitivity-specific novelty from this reused evaluation.",
+  "limitations": [
+    "All evaluation outcomes previously inspected; post-hoc protocol freeze cannot restore untouched status",
+    "Single benchmark and CNN; only three failure-bearing eligible evaluation families and no mixed-outcome eligible family",
+    "Large correlated structural bank relative to development sample; negative result cannot show absence of all useful sensitivity information",
+    "Bounded learners and finite control bank do not exhaust existing approaches",
+    "No Waterbirds, new outcome families, direct transfer, causal shortcut claim or economic savings established"
+  ],
+  "independent_flags": {
+    "implementation_passed": true,
+    "preservation_passed": true,
+    "all_checkpoint_measurements_reproduced": true,
+    "positive_logistic_panel_A_increment_at_one_third": true,
+    "positive_increment_across_both_B_variants": false,
+    "pointwise_interval_excludes_zero": false,
+    "untouched_confirmation": false
+  },
+  "development_selected_structural_control": "logistic_B",
+  "qualified_recommendation": "Revise toward a narrower layer-allocation claim; keep norm-product, rich structural and stronger nonlinear controls in separately frozen fresh validation. Sensitivity-specific advantage remains unresolved."
+}

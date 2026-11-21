@@ -1,0 +1,26 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.4.2, pluggy-1.7.0 -- E:\Final Year Project\Implementation\Feasibility\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Final Year Project\Implementation\layer_allocation
+plugins: anyio-4.16.0
+collecting ... collected 16 items
+
+tests/test_structural.py::test_norm_bound_and_coordinate_pairing PASSED  [  6%]
+tests/test_structural.py::test_population_marginal_and_quantile PASSED   [ 12%]
+tests/test_structural.py::test_microbatch_accumulation_and_isolation PASSED [ 18%]
+tests/test_structural.py::test_repeated_summaries PASSED                 [ 25%]
+tests/test_structural.py::test_schema_and_nested_specificity_pair PASSED [ 31%]
+tests/test_structural.py::test_summary_order_free_and_population PASSED  [ 37%]
+tests/test_structural.py::test_curve_bounds_ties_and_full_recovery[y0] PASSED [ 43%]
+tests/test_structural.py::test_curve_bounds_ties_and_full_recovery[y1] PASSED [ 50%]
+tests/test_structural.py::test_curve_bounds_ties_and_full_recovery[y2] PASSED [ 56%]
+tests/test_structural.py::test_invalid_inputs PASSED                     [ 62%]
+tests/test_structural.py::test_fold_local_preprocessing PASSED           [ 68%]
+tests/test_structural.py::test_group_folds_and_no_family_splitting PASSED [ 75%]
+tests/test_structural.py::test_legacy_checkpoint_schedule_and_manifest PASSED [ 81%]
+tests/test_structural.py::test_original_identity_reservations_and_counts PASSED [ 87%]
+tests/test_structural.py::test_checkpoint_loading_determinism PASSED     [ 93%]
+tests/test_structural.py::test_resume_identity_and_analysis_boundary PASSED [100%]
+
+- generated xml file: E:\Final Year Project\Implementation\layer_allocation\runs\20261121_structural01\tests.xml -
+============================= 16 passed in 3.43s ==============================

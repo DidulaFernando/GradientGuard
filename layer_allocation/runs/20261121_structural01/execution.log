@@ -1,0 +1,150 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "architecture": [
+    "64bit",
+    "WindowsPE"
+  ],
+  "os": "Windows-11-10.0.26200-SP0",
+  "executable": "E:\\Final Year Project\\Implementation\\Feasibility\\.venv\\Scripts\\python.exe",
+  "complete_lock_matches": true,
+  "missing": [],
+  "extra": [],
+  "resolved_lines": 80,
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "cudnn": 90701,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "torchvision": "0.22.1+cu128",
+    "spuco": "2.0.3",
+    "joblib": "1.6.0",
+    "matplotlib": "3.9.4"
+  },
+  "configuration_repair": "Only home/executable runtime path changed to available matching Python 3.12.14; package directories unchanged; before/after cfg saved",
+  "settings": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONHASHSEED": "0",
+    "PYTHONPYCACHEPREFIX": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pycache",
+    "TEMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "TMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "PIP_CACHE_DIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pip",
+    "MPLCONFIGDIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\matplotlib"
+  }
+}
+{"time_ns": 1795250041578773400, "event": "protocol_frozen", "protected_files": 3088}
+{"time_ns": 1795250041580796600, "event": "stage_finished", "stage": "freeze", "seconds": 5.30376619999879}
+{"time_ns": 1795250050881799700, "event": "checkpoint_run_complete", "run": "f00_c0_s0", "measurements": 12, "total": 1152, "elapsed_seconds": 9.29}
+{"time_ns": 1795250051805987000, "event": "checkpoint_run_complete", "run": "f00_c0_s1", "measurements": 24, "total": 1152, "elapsed_seconds": 10.22}
+{"time_ns": 1795250052873077300, "event": "checkpoint_run_complete", "run": "f00_c1_s0", "measurements": 36, "total": 1152, "elapsed_seconds": 11.28}
+{"time_ns": 1795250053811640900, "event": "checkpoint_run_complete", "run": "f00_c1_s1", "measurements": 48, "total": 1152, "elapsed_seconds": 12.22}
+{"time_ns": 1795250054889525700, "event": "checkpoint_run_complete", "run": "f01_c0_s0", "measurements": 60, "total": 1152, "elapsed_seconds": 13.3}
+{"time_ns": 1795250055803845400, "event": "checkpoint_run_complete", "run": "f01_c0_s1", "measurements": 72, "total": 1152, "elapsed_seconds": 14.21}
+{"time_ns": 1795250056868136000, "event": "checkpoint_run_complete", "run": "f01_c1_s0", "measurements": 84, "total": 1152, "elapsed_seconds": 15.28}
+{"time_ns": 1795250057763779000, "event": "checkpoint_run_complete", "run": "f01_c1_s1", "measurements": 96, "total": 1152, "elapsed_seconds": 16.17}
+{"time_ns": 1795250058796006000, "event": "checkpoint_run_complete", "run": "f02_c0_s0", "measurements": 108, "total": 1152, "elapsed_seconds": 17.21}
+{"time_ns": 1795250059683728300, "event": "checkpoint_run_complete", "run": "f02_c0_s1", "measurements": 120, "total": 1152, "elapsed_seconds": 18.09}
+{"time_ns": 1795250060704235500, "event": "checkpoint_run_complete", "run": "f02_c1_s0", "measurements": 132, "total": 1152, "elapsed_seconds": 19.11}
+{"time_ns": 1795250061587960000, "event": "checkpoint_run_complete", "run": "f02_c1_s1", "measurements": 144, "total": 1152, "elapsed_seconds": 20.0}
+{"time_ns": 1795250062649886600, "event": "checkpoint_run_complete", "run": "f03_c0_s0", "measurements": 156, "total": 1152, "elapsed_seconds": 21.06}
+{"time_ns": 1795250063610907100, "event": "checkpoint_run_complete", "run": "f03_c0_s1", "measurements": 168, "total": 1152, "elapsed_seconds": 22.02}
+{"time_ns": 1795250064699117300, "event": "checkpoint_run_complete", "run": "f03_c1_s0", "measurements": 180, "total": 1152, "elapsed_seconds": 23.11}
+{"time_ns": 1795250065681798900, "event": "checkpoint_run_complete", "run": "f03_c1_s1", "measurements": 192, "total": 1152, "elapsed_seconds": 24.09}
+{"time_ns": 1795250066768969200, "event": "checkpoint_run_complete", "run": "f04_c0_s0", "measurements": 204, "total": 1152, "elapsed_seconds": 25.18}
+{"time_ns": 1795250067694720900, "event": "checkpoint_run_complete", "run": "f04_c0_s1", "measurements": 216, "total": 1152, "elapsed_seconds": 26.1}
+{"time_ns": 1795250068744926700, "event": "checkpoint_run_complete", "run": "f04_c1_s0", "measurements": 228, "total": 1152, "elapsed_seconds": 27.15}
+{"time_ns": 1795250069661805700, "event": "checkpoint_run_complete", "run": "f04_c1_s1", "measurements": 240, "total": 1152, "elapsed_seconds": 28.07}
+{"time_ns": 1795250070734054100, "event": "checkpoint_run_complete", "run": "f05_c0_s0", "measurements": 252, "total": 1152, "elapsed_seconds": 29.14}
+{"time_ns": 1795250071626676900, "event": "checkpoint_run_complete", "run": "f05_c0_s1", "measurements": 264, "total": 1152, "elapsed_seconds": 30.04}
+{"time_ns": 1795250072674669000, "event": "checkpoint_run_complete", "run": "f05_c1_s0", "measurements": 276, "total": 1152, "elapsed_seconds": 31.08}
+{"time_ns": 1795250073578472900, "event": "checkpoint_run_complete", "run": "f05_c1_s1", "measurements": 288, "total": 1152, "elapsed_seconds": 31.99}
+{"time_ns": 1795250074632574500, "event": "checkpoint_run_complete", "run": "f06_c0_s0", "measurements": 300, "total": 1152, "elapsed_seconds": 33.04}
+{"time_ns": 1795250075542873400, "event": "checkpoint_run_complete", "run": "f06_c0_s1", "measurements": 312, "total": 1152, "elapsed_seconds": 33.95}
+{"time_ns": 1795250076627452400, "event": "checkpoint_run_complete", "run": "f06_c1_s0", "measurements": 324, "total": 1152, "elapsed_seconds": 35.04}
+{"time_ns": 1795250077591866100, "event": "checkpoint_run_complete", "run": "f06_c1_s1", "measurements": 336, "total": 1152, "elapsed_seconds": 36.0}
+{"time_ns": 1795250078644691300, "event": "checkpoint_run_complete", "run": "f07_c0_s0", "measurements": 348, "total": 1152, "elapsed_seconds": 37.05}
+{"time_ns": 1795250079550940100, "event": "checkpoint_run_complete", "run": "f07_c0_s1", "measurements": 360, "total": 1152, "elapsed_seconds": 37.96}
+{"time_ns": 1795250080603626900, "event": "checkpoint_run_complete", "run": "f07_c1_s0", "measurements": 372, "total": 1152, "elapsed_seconds": 39.01}
+{"time_ns": 1795250081503621100, "event": "checkpoint_run_complete", "run": "f07_c1_s1", "measurements": 384, "total": 1152, "elapsed_seconds": 39.91}
+{"time_ns": 1795250082544949600, "event": "checkpoint_run_complete", "run": "f08_c0_s0", "measurements": 396, "total": 1152, "elapsed_seconds": 40.95}
+{"time_ns": 1795250083461657300, "event": "checkpoint_run_complete", "run": "f08_c0_s1", "measurements": 408, "total": 1152, "elapsed_seconds": 41.87}
+{"time_ns": 1795250084505944600, "event": "checkpoint_run_complete", "run": "f08_c1_s0", "measurements": 420, "total": 1152, "elapsed_seconds": 42.92}
+{"time_ns": 1795250085410086200, "event": "checkpoint_run_complete", "run": "f08_c1_s1", "measurements": 432, "total": 1152, "elapsed_seconds": 43.82}
+{"time_ns": 1795250086480160200, "event": "checkpoint_run_complete", "run": "f09_c0_s0", "measurements": 444, "total": 1152, "elapsed_seconds": 44.89}
+{"time_ns": 1795250087402836900, "event": "checkpoint_run_complete", "run": "f09_c0_s1", "measurements": 456, "total": 1152, "elapsed_seconds": 45.81}
+{"time_ns": 1795250088468811800, "event": "checkpoint_run_complete", "run": "f09_c1_s0", "measurements": 468, "total": 1152, "elapsed_seconds": 46.88}
+{"time_ns": 1795250089393822100, "event": "checkpoint_run_complete", "run": "f09_c1_s1", "measurements": 480, "total": 1152, "elapsed_seconds": 47.8}
+{"time_ns": 1795250090455529100, "event": "checkpoint_run_complete", "run": "f10_c0_s0", "measurements": 492, "total": 1152, "elapsed_seconds": 48.87}
+{"time_ns": 1795250091369106700, "event": "checkpoint_run_complete", "run": "f10_c0_s1", "measurements": 504, "total": 1152, "elapsed_seconds": 49.78}
+{"time_ns": 1795250092436367000, "event": "checkpoint_run_complete", "run": "f10_c1_s0", "measurements": 516, "total": 1152, "elapsed_seconds": 50.85}
+{"time_ns": 1795250093352927900, "event": "checkpoint_run_complete", "run": "f10_c1_s1", "measurements": 528, "total": 1152, "elapsed_seconds": 51.76}
+{"time_ns": 1795250094396167400, "event": "checkpoint_run_complete", "run": "f11_c0_s0", "measurements": 540, "total": 1152, "elapsed_seconds": 52.81}
+{"time_ns": 1795250095301965000, "event": "checkpoint_run_complete", "run": "f11_c0_s1", "measurements": 552, "total": 1152, "elapsed_seconds": 53.71}
+{"time_ns": 1795250096361893000, "event": "checkpoint_run_complete", "run": "f11_c1_s0", "measurements": 564, "total": 1152, "elapsed_seconds": 54.77}
+{"time_ns": 1795250097293988000, "event": "checkpoint_run_complete", "run": "f11_c1_s1", "measurements": 576, "total": 1152, "elapsed_seconds": 55.7}
+{"time_ns": 1795250098356440500, "event": "checkpoint_run_complete", "run": "f12_c0_s0", "measurements": 588, "total": 1152, "elapsed_seconds": 56.77}
+{"time_ns": 1795250099266237300, "event": "checkpoint_run_complete", "run": "f12_c0_s1", "measurements": 600, "total": 1152, "elapsed_seconds": 57.68}
+{"time_ns": 1795250100335917300, "event": "checkpoint_run_complete", "run": "f12_c1_s0", "measurements": 612, "total": 1152, "elapsed_seconds": 58.75}
+{"time_ns": 1795250101250092800, "event": "checkpoint_run_complete", "run": "f12_c1_s1", "measurements": 624, "total": 1152, "elapsed_seconds": 59.66}
+{"time_ns": 1795250102321534700, "event": "checkpoint_run_complete", "run": "f13_c0_s0", "measurements": 636, "total": 1152, "elapsed_seconds": 60.73}
+{"time_ns": 1795250103268761000, "event": "checkpoint_run_complete", "run": "f13_c0_s1", "measurements": 648, "total": 1152, "elapsed_seconds": 61.68}
+{"time_ns": 1795250104330294900, "event": "checkpoint_run_complete", "run": "f13_c1_s0", "measurements": 660, "total": 1152, "elapsed_seconds": 62.74}
+{"time_ns": 1795250105282514800, "event": "checkpoint_run_complete", "run": "f13_c1_s1", "measurements": 672, "total": 1152, "elapsed_seconds": 63.69}
+{"time_ns": 1795250106396993400, "event": "checkpoint_run_complete", "run": "f14_c0_s0", "measurements": 684, "total": 1152, "elapsed_seconds": 64.81}
+{"time_ns": 1795250107339236800, "event": "checkpoint_run_complete", "run": "f14_c0_s1", "measurements": 696, "total": 1152, "elapsed_seconds": 65.75}
+{"time_ns": 1795250108412528000, "event": "checkpoint_run_complete", "run": "f14_c1_s0", "measurements": 708, "total": 1152, "elapsed_seconds": 66.82}
+{"time_ns": 1795250109329845700, "event": "checkpoint_run_complete", "run": "f14_c1_s1", "measurements": 720, "total": 1152, "elapsed_seconds": 67.74}
+{"time_ns": 1795250110418850300, "event": "checkpoint_run_complete", "run": "f15_c0_s0", "measurements": 732, "total": 1152, "elapsed_seconds": 68.83}
+{"time_ns": 1795250111331468100, "event": "checkpoint_run_complete", "run": "f15_c0_s1", "measurements": 744, "total": 1152, "elapsed_seconds": 69.74}
+{"time_ns": 1795250112412608800, "event": "checkpoint_run_complete", "run": "f15_c1_s0", "measurements": 756, "total": 1152, "elapsed_seconds": 70.82}
+{"time_ns": 1795250113331540500, "event": "checkpoint_run_complete", "run": "f15_c1_s1", "measurements": 768, "total": 1152, "elapsed_seconds": 71.74}
+{"time_ns": 1795250114415567600, "event": "checkpoint_run_complete", "run": "f16_c0_s0", "measurements": 780, "total": 1152, "elapsed_seconds": 72.83}
+{"time_ns": 1795250115370290400, "event": "checkpoint_run_complete", "run": "f16_c0_s1", "measurements": 792, "total": 1152, "elapsed_seconds": 73.78}
+{"time_ns": 1795250116474957400, "event": "checkpoint_run_complete", "run": "f16_c1_s0", "measurements": 804, "total": 1152, "elapsed_seconds": 74.88}
+{"time_ns": 1795250117397884300, "event": "checkpoint_run_complete", "run": "f16_c1_s1", "measurements": 816, "total": 1152, "elapsed_seconds": 75.81}
+{"time_ns": 1795250118436238900, "event": "checkpoint_run_complete", "run": "f17_c0_s0", "measurements": 828, "total": 1152, "elapsed_seconds": 76.85}
+{"time_ns": 1795250119332907600, "event": "checkpoint_run_complete", "run": "f17_c0_s1", "measurements": 840, "total": 1152, "elapsed_seconds": 77.74}
+{"time_ns": 1795250120404489900, "event": "checkpoint_run_complete", "run": "f17_c1_s0", "measurements": 852, "total": 1152, "elapsed_seconds": 78.81}
+{"time_ns": 1795250121309793800, "event": "checkpoint_run_complete", "run": "f17_c1_s1", "measurements": 864, "total": 1152, "elapsed_seconds": 79.72}
+{"time_ns": 1795250122370021300, "event": "checkpoint_run_complete", "run": "f18_c0_s0", "measurements": 876, "total": 1152, "elapsed_seconds": 80.78}
+{"time_ns": 1795250123287897700, "event": "checkpoint_run_complete", "run": "f18_c0_s1", "measurements": 888, "total": 1152, "elapsed_seconds": 81.7}
+{"time_ns": 1795250124360126500, "event": "checkpoint_run_complete", "run": "f18_c1_s0", "measurements": 900, "total": 1152, "elapsed_seconds": 82.77}
+{"time_ns": 1795250125267845000, "event": "checkpoint_run_complete", "run": "f18_c1_s1", "measurements": 912, "total": 1152, "elapsed_seconds": 83.68}
+{"time_ns": 1795250126323797200, "event": "checkpoint_run_complete", "run": "f19_c0_s0", "measurements": 924, "total": 1152, "elapsed_seconds": 84.73}
+{"time_ns": 1795250127245040900, "event": "checkpoint_run_complete", "run": "f19_c0_s1", "measurements": 936, "total": 1152, "elapsed_seconds": 85.65}
+{"time_ns": 1795250128321796200, "event": "checkpoint_run_complete", "run": "f19_c1_s0", "measurements": 948, "total": 1152, "elapsed_seconds": 86.73}
+{"time_ns": 1795250129247185000, "event": "checkpoint_run_complete", "run": "f19_c1_s1", "measurements": 960, "total": 1152, "elapsed_seconds": 87.66}
+{"time_ns": 1795250130303844100, "event": "checkpoint_run_complete", "run": "f20_c0_s0", "measurements": 972, "total": 1152, "elapsed_seconds": 88.71}
+{"time_ns": 1795250131217304900, "event": "checkpoint_run_complete", "run": "f20_c0_s1", "measurements": 984, "total": 1152, "elapsed_seconds": 89.63}
+{"time_ns": 1795250132278695400, "event": "checkpoint_run_complete", "run": "f20_c1_s0", "measurements": 996, "total": 1152, "elapsed_seconds": 90.69}
+{"time_ns": 1795250133184605300, "event": "checkpoint_run_complete", "run": "f20_c1_s1", "measurements": 1008, "total": 1152, "elapsed_seconds": 91.59}
+{"time_ns": 1795250134246618900, "event": "checkpoint_run_complete", "run": "f21_c0_s0", "measurements": 1020, "total": 1152, "elapsed_seconds": 92.66}
+{"time_ns": 1795250135165902400, "event": "checkpoint_run_complete", "run": "f21_c0_s1", "measurements": 1032, "total": 1152, "elapsed_seconds": 93.58}
+{"time_ns": 1795250136221520900, "event": "checkpoint_run_complete", "run": "f21_c1_s0", "measurements": 1044, "total": 1152, "elapsed_seconds": 94.63}
+{"time_ns": 1795250137146505100, "event": "checkpoint_run_complete", "run": "f21_c1_s1", "measurements": 1056, "total": 1152, "elapsed_seconds": 95.56}
+{"time_ns": 1795250138206379900, "event": "checkpoint_run_complete", "run": "f22_c0_s0", "measurements": 1068, "total": 1152, "elapsed_seconds": 96.62}
+{"time_ns": 1795250139122862700, "event": "checkpoint_run_complete", "run": "f22_c0_s1", "measurements": 1080, "total": 1152, "elapsed_seconds": 97.53}
+{"time_ns": 1795250140184896000, "event": "checkpoint_run_complete", "run": "f22_c1_s0", "measurements": 1092, "total": 1152, "elapsed_seconds": 98.59}
+{"time_ns": 1795250141159710300, "event": "checkpoint_run_complete", "run": "f22_c1_s1", "measurements": 1104, "total": 1152, "elapsed_seconds": 99.57}
+{"time_ns": 1795250142268677300, "event": "checkpoint_run_complete", "run": "f23_c0_s0", "measurements": 1116, "total": 1152, "elapsed_seconds": 100.68}
+{"time_ns": 1795250143244491500, "event": "checkpoint_run_complete", "run": "f23_c0_s1", "measurements": 1128, "total": 1152, "elapsed_seconds": 101.65}
+{"time_ns": 1795250144318794400, "event": "checkpoint_run_complete", "run": "f23_c1_s0", "measurements": 1140, "total": 1152, "elapsed_seconds": 102.73}
+{"time_ns": 1795250145237465700, "event": "checkpoint_run_complete", "run": "f23_c1_s1", "measurements": 1152, "total": 1152, "elapsed_seconds": 103.65}
+{"time_ns": 1795250145364086700, "event": "stage_finished", "stage": "extract", "seconds": 103.78278370000044}
+{"time_ns": 1795250153594209600, "event": "stage_finished", "stage": "features", "seconds": 8.228558900002099}
+{"time_ns": 1795250154033277300, "event": "stage_finished", "stage": "reproduce", "seconds": 0.438850900001853}
+{"time_ns": 1795250160308653900, "event": "development_fit_complete", "cohort": "eligible", "prefix": 0.05, "n": 48, "models": 16, "seconds": 6.22}
+{"time_ns": 1795250165590658600, "event": "development_fit_complete", "cohort": "eligible", "prefix": 0.1, "n": 48, "models": 16, "seconds": 11.51}
+{"time_ns": 1795250171587714400, "event": "development_fit_complete", "cohort": "full", "prefix": 0.05, "n": 56, "models": 16, "seconds": 17.5}
+{"time_ns": 1795250176848099400, "event": "development_fit_complete", "cohort": "full", "prefix": 0.1, "n": 56, "models": 16, "seconds": 22.76}
+{"time_ns": 1795250177801820700, "event": "new_exploratory_predictors_frozen"}
+{"time_ns": 1795250177810488800, "event": "stage_finished", "stage": "fit", "seconds": 23.775084500000958}
+{"time_ns": 1795250178877399700, "event": "exploratory_predictions_saved", "rows": 7296}
+{"time_ns": 1795250178890413400, "event": "stage_finished", "stage": "predict", "seconds": 1.0785656999978528}
+{"time_ns": 1795250178900485100, "event": "post_hoc_evaluation_analysis_started"}
+{"time_ns": 1795250224787356400, "event": "report_generated", "verdict": "Exploratory conditional added value observed; independent confirmation required"}
+{"time_ns": 1795250224790441900, "event": "stage_finished", "stage": "analyse", "seconds": 45.89932439999757}
+{"time_ns": 1795250227482487900, "event": "stage_finished", "stage": "verify", "seconds": 2.690881000002264}
+{"time_ns": 1795250227518588400, "event": "study_complete", "wall_seconds": 191.24256419999801}

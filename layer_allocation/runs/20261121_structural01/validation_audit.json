@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "checks": {
+    "synthetic_engineering_tests_passed": 16,
+    "complete_scheduled_measurements": true,
+    "strictly_early_feature_export": true,
+    "matched_column_lineage_and_frozen_pipelines": true,
+    "matched_candidates_complete_curves_and_bounds": true,
+    "fractional_omission_budgets_recomputed": true,
+    "recorded_stage_order": true,
+    "old_predictions_reproduced": true,
+    "protected_prior_files": 3088
+  },
+  "Z_lineage": [
+    {
+      "key": "eligible_0.05",
+      "learner": "logistic",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    },
+    {
+      "key": "eligible_0.05",
+      "learner": "histogram",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    },
+    {
+      "key": "eligible_0.1",
+      "learner": "logistic",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    },
+    {
+      "key": "eligible_0.1",
+      "learner": "histogram",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    },
+    {
+      "key": "full_0.05",
+      "learner": "logistic",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    },
+    {
+      "key": "full_0.05",
+      "learner": "histogram",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    },
+    {
+      "key": "full_0.1",
+      "learner": "logistic",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    },
+    {
+      "key": "full_0.1",
+      "learner": "histogram",
+      "Z_retained": [
+        "shallow_share_last",
+        "shallow_share_mean",
+        "shallow_share_std",
+        "deep_share_last",
+        "deep_share_mean",
+        "deep_share_std"
+      ]
+    }
+  ],
+  "audit_source_sha256": "3bb78a7c99c51ff2f3d8930daf07812e7c151630cd241940b23a1689ccc6fc2c",
+  "new_predictor_freeze_unchanged": true,
+  "previous_evaluation_consumed": true
+}

@@ -1,0 +1,41 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.4.2, pluggy-1.7.0 -- E:\Final Year Project\Implementation\Feasibility\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Final Year Project\Implementation\layer_allocation
+plugins: anyio-4.16.0
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_structural.py __________________
+ImportError while importing test module 'E:\Final Year Project\Implementation\layer_allocation\tests\test_structural.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_structural.py:7: in <module>
+    from predictors import inputs,ranking,discovery,pipe,folds
+src\predictors.py:4: in <module>
+    from sklearn.impute import SimpleImputer
+..\Feasibility\.venv\Lib\site-packages\sklearn\impute\__init__.py:9: in <module>
+    from sklearn.impute._knn import KNNImputer
+..\Feasibility\.venv\Lib\site-packages\sklearn\impute\_knn.py:10: in <module>
+    from sklearn.metrics import pairwise_distances_chunked
+..\Feasibility\.venv\Lib\site-packages\sklearn\metrics\__init__.py:6: in <module>
+    from sklearn.metrics import cluster
+..\Feasibility\.venv\Lib\site-packages\sklearn\metrics\cluster\__init__.py:28: in <module>
+    from sklearn.metrics.cluster._unsupervised import (
+..\Feasibility\.venv\Lib\site-packages\sklearn\metrics\cluster\_unsupervised.py:13: in <module>
+    from sklearn.metrics.pairwise import (
+..\Feasibility\.venv\Lib\site-packages\sklearn\metrics\pairwise.py:19: in <module>
+    from sklearn.metrics._pairwise_distances_reduction import ArgKmin
+..\Feasibility\.venv\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\__init__.py:94: in <module>
+    from sklearn.metrics._pairwise_distances_reduction._dispatcher import (
+..\Feasibility\.venv\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py:21: in <module>
+    from sklearn.metrics._pairwise_distances_reduction._radius_neighbors import (
+E   ImportError: DLL load failed while importing _radius_neighbors: An Application Control policy has blocked this file.
+- generated xml file: E:\Final Year Project\Implementation\layer_allocation\runs\20261121_structural01\tests.xml -
+=========================== short test summary info ===========================
+ERROR tests/test_structural.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 11.22s ==============================

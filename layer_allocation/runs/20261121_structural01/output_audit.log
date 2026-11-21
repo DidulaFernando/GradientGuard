@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "checks": {
+    "synthetic_engineering_tests_passed": 16,
+    "complete_scheduled_measurements": true,
+    "strictly_early_feature_export": true,
+    "matched_column_lineage_and_frozen_pipelines": true,
+    "matched_candidates_complete_curves_and_bounds": true,
+    "fractional_omission_budgets_recomputed": true,
+    "recorded_stage_order": true,
+    "old_predictions_reproduced": true,
+    "protected_prior_files": 3088
+  },
+  "costs": {
+    "measurement_seconds": 77.99901849995143,
+    "peak_gpu_allocated_bytes": 165080064,
+    "max_incremental_probe_bytes": 116672512,
+    "measurement_records": 1152,
+    "wall_stage_records": [
+      {
+        "time_ns": 1795250041580796600,
+        "event": "stage_finished",
+        "stage": "freeze",
+        "seconds": 5.30376619999879
+      },
+      {
+        "time_ns": 1795250145364086700,
+        "event": "stage_finished",
+        "stage": "extract",
+        "seconds": 103.78278370000044
+      },
+      {
+        "time_ns": 1795250153594209600,
+        "event": "stage_finished",
+        "stage": "features",
+        "seconds": 8.228558900002099
+      },
+      {
+        "time_ns": 1795250154033277300,
+        "event": "stage_finished",
+        "stage": "reproduce",
+        "seconds": 0.438850900001853
+      },
+      {
+        "time_ns": 1795250177810488800,
+        "event": "stage_finished",
+        "stage": "fit",
+        "seconds": 23.775084500000958
+      },
+      {
+        "time_ns": 1795250178890413400,
+        "event": "stage_finished",
+        "stage": "predict",
+        "seconds": 1.0785656999978528
+      },
+      {
+        "time_ns": 1795250224790441900,
+        "event": "stage_finished",
+        "stage": "analyse",
+        "seconds": 45.89932439999757
+      },
+      {
+        "time_ns": 1795250227482487900,
+        "event": "stage_finished",
+        "stage": "verify",
+        "seconds": 2.690881000002264
+      },
+      {
+        "time_ns": 1795250383568236300,
+        "event": "stage_finished",
+        "stage": "predict",
+        "seconds": 0.014989300001616357
+      }
+    ],
+    "end_to_end_invocation_seconds": 191.2068427999984,
+    "process_rss_bytes_at_audit": 580530176,
+    "cpu_count_logical": 16,
+    "system_memory_available_bytes_at_audit": 17651810304,
+    "limitations": "GPU counters cover each isolated measurement; CPU RSS is an audit-time snapshot, not historical training or end-to-end peak memory. Reconstruction/statistics overhead and gradients are jointly timed. No production-only incremental L6 cost can be inferred."
+  }
+}
