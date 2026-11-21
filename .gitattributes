@@ -1,0 +1,16 @@
+# Preserve historical scientific files byte for byte. Existing source/config
+# fingerprints depend on exact bytes, including line endings.
+* -text
+*.py diff
+*.md diff
+*.txt diff
+*.yaml diff
+*.yml diff
+*.json diff
+*.jsonl diff
+*.csv diff
+*.ps1 diff
+*.log diff
+*.png binary
+*.pdf binary
+*.joblib binary

@@ -1,0 +1,54 @@
+# Project-local environments, package caches, interpreters and downloaded tools.
+**/.venv/
+**/.venv_*/
+**/cache/
+**/tmp/
+**/tools/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.py[cod]
+.repository-local/
+
+# Raw benchmark downloads and generated numerical datasets stay local.
+**/data/mnist/
+**/MNIST/
+*.npz
+*.npy
+*.gz
+*.zip
+*.tar
+*.7z
+*.whl
+*.exe
+*.dll
+*.pyd
+
+# Training weights/recovery states and recomputable scalar caches.
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.sqlite
+*.sqlite-*
+*.db
+
+# Keep compact manifests, configurations, tables, figures, logs and frozen
+# forecaster pipelines. Do not broadly ignore runs/, reports/ or data/.
+
+# Credentials and machine/editor metadata must never enter commits.
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
+*token*.secret
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
