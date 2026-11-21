@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\Final Year Project\Implementation\Feasibility\followup\run.py", line 5, in <module>
+    if __name__=="__main__": main()
+                             ^^^^^^
+  File "E:\Final Year Project\Implementation\Feasibility\followup\ggfollow\cli.py", line 24, in main
+    preflight()
+  File "E:\Final Year Project\Implementation\Feasibility\followup\ggfollow\artifacts.py", line 73, in preflight
+    assert result["comparable"],f"Environment drift requires documentation before comparative work: {drift}, {package_drift}, lock={lock_same}"
+           ~~~~~~^^^^^^^^^^^^^^
+AssertionError: Environment drift requires documentation before comparative work: {}, {'packaging': {'saved': '24.2', 'current': '26.3'}, 'typing_extensions': {'saved': '4.12.2', 'current': '4.16.0'}, 'wheel': {'saved': '0.45.1', 'current': '0.48.0'}, 'autocommand': {'saved': '2.2.2', 'current': None}, 'backports.tarfile': {'saved': '1.2.0', 'current': None}, 'importlib_metadata': {'saved': '8.0.0', 'current': None}, 'inflect': {'saved': '7.3.1', 'current': None}, 'jaraco.collections': {'saved': '5.1.0', 'current': None}, 'jaraco.context': {'saved': '5.3.0', 'current': None}, 'jaraco.functools': {'saved': '4.0.1', 'current': None}, 'jaraco.text': {'saved': '3.12.1', 'current': None}, 'more-itertools': {'saved': '10.3.0', 'current': None}, 'platformdirs': {'saved': '4.2.2', 'current': None}, 'tomli': {'saved': '2.0.1', 'current': None}, 'typeguard': {'saved': '4.3.0', 'current': None}, 'zipp': {'saved': '3.19.2', 'current': None}}, lock=True

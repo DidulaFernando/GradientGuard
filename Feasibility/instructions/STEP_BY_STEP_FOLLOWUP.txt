@@ -1,0 +1,205 @@
+GRADIENTGUARD SECOND TARGETED FEASIBILITY STUDY
+Project: E:\Final Year Project\Implementation\Feasibility
+Current follow-up attempt: 20261116_03
+Failed engineering attempt: 20261116_02 (preserved; hash-key path-format bug)
+The original attempt 20261116_01 is READ-ONLY and must not be repurposed.
+
+OPEN POWERSHELL AND SET PROCESS-LOCAL ENVIRONMENT
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation\Feasibility'
+. '.\instructions\environment.ps1'
+
+No venv activation or Python installation is needed. Use .venv\Scripts\python.exe
+directly. The environment script sets project-local caches and temporary directories.
+If PowerShell does not allow dot-sourcing, set these process variables inline first:
+$env:PYTHONUTF8 = '1'
+$env:PYTHONHASHSEED = '0'
+$env:PYTHONPYCACHEPREFIX = 'E:\Final Year Project\Implementation\Feasibility\cache\pycache'
+$env:TEMP = 'E:\Final Year Project\Implementation\Feasibility\tmp'
+$env:TMP = $env:TEMP
+$env:CUBLAS_WORKSPACE_CONFIG = ':4096:8'
+The Python common helper configures the remaining caches inside the project root.
+
+1. PREFLIGHT AND ORIGINAL ARTIFACT PROTECTION
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' preflight
+
+Expected: preflight_passed. Outputs under followup\outputs\20261116_03\preflight:
+protected_before.json, environment.json, requirements-lock.txt, checkpoint_hashes.json.
+The baseline protects original src/tests/configs, data, checkpoints, run records,
+reports, source snapshot, original instructions, README and the reference proposal.
+The complete pip freeze --all lock must match; numerical packages/hardware/source
+hashes are checked. A recorded old-provenance vendored-package enumeration discrepancy
+is distinct from an installed-version change. No dependency installation is performed.
+If actual numerical/hardware drift is detected, stop comparable measurements and
+document the mismatch. Do not replace the original protection baseline.
+
+2. FREEZE THE FOLLOW-UP PROTOCOL
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' freeze
+
+Expected: protocol_frozen or protocol_already_frozen. Creates/reuses protocol_frozen.json.
+Authoritative extension configuration: followup\configs\protocol.yaml.
+It freezes partition seeds, target deep_slope/10%/256, ratio>=3, 16/20 screen,
+calibration candidates/health rule, fresh construction/training seeds and analyses.
+Do not edit legacy configs\pilot.yaml. Original source_hashes() remains untouched.
+Numerical source/protocol changes block resume. Reporting/CLI maintenance has a
+separate implementation history and final report-source provenance.
+
+3. RUN NAMESPACED CORRECTNESS/PARITY CHECKS
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' tests
+
+Expected: 21 passed. New timestamped logs/JUnit under this follow-up's checks folder.
+Legacy analytical/gradcheck/rescaling/isolation/neutrality checks are reused read-only;
+their result writes are redirected to the follow-up namespace. Additional checks cover
+original formulas, protected artifacts, partition membership/nesting, gradient
+recomputation, additive summaries/independent SD, denominators/flags, variable cohorts,
+zero/noise/floors/invalid cases, new CPU/CUDA runner resume, calibration selection and
+source-train-only generator construction. Preserve failures; never loosen tolerances.
+
+4. REPRODUCE THE ORIGINAL RESULT
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' reproduce
+
+Expected: original_reproduction_passed, recalculated ratio 3.0501409990602664,
+remeasured ratio approximately 3.050141. Outputs in reproduction include audit.json,
+original/recalculated/remeasured feature and reliability CSVs, detailed numerical
+parity errors and scalar_cache.sqlite. Only frozen monitoring steps are used:
+65,130,196,326,489,652. Extra recovery checkpoints are not observations.
+Initialisation is excluded from prefix summaries. No optimizer is constructed.
+A failed reproduction blocks interpretation of all extension stages.
+
+5. STAGE A - FREEZE AND MEASURE ALTERNATIVE PROBE PARTITIONS
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' partitions
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' saved
+
+The first command freezes 20 original-ID membership/rank CSVs, seeds 41000-41019.
+The second recomputes gradients for all six saved models at all six monitoring points,
+both panels, 64/128/256 per class, with triplicate A measurements for numerical jitter.
+Expected: progress messages per completed checkpoint, then saved\complete.json with
+8,640 scalar rows, checkpoint_measurements.csv and SQLite cache. Panel memberships
+match across conditions/models and exclude all training/health images.
+These repeated, overlapping finite-pool partitions are validation costs, not 20
+independent datasets or the monitoring cost of one production panel.
+
+6. STAGE B - STRUCTURAL AND PARTITION ANALYSIS
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' structural
+
+Expected: reports\tables\saved_*.csv, saved\decision.json, additivity_audit.json,
+partition-distribution and conv3/head error plots. Original combined deep uses the
+common four-layer denominator. Convolution-only shares have a different denominator
+and are explicitly labelled. SD is not added across layers. MSE decomposition uses
+2*mean(error_conv3*error_head), an uncentred cross term, not assumed covariance.
+Original-budget and selected-budget flags are separate by budget/panel/checkpoint.
+Successful execution can produce a NEGATIVE scientific stability result.
+
+7. STAGE C1 - SOURCE-HEALTH CALIBRATION
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' calibrate
+
+Expected: verified new independent construction (3701/4903), three calibration
+trajectories (101,102,103) trained at most six actual epochs, source health at
+2/4/6 epochs, health_trajectories.csv, selection.json and resumable checkpoints.
+The selection rule uses accuracy>=.80, CE<=ln(10), finite weights/required telemetry
+for ALL three seeds; choose the smallest full horizon among 20/40/60 that qualifies.
+No gradient ratio/recolouring enters selection. No candidate qualifies => preserve
+results and do NOT launch fresh training, lower thresholds or expand the grid.
+
+8. FREEZE THE FRESH-REALISATION PROTOCOL AFTER CALIBRATION
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' freeze-fresh
+
+Expected: fresh\frozen.json. If a horizon qualifies, it is frozen with exact planned
+updates, observation updates, actual full-horizon fractions, absolute epoch equivalents,
+all construction/reservation/training seeds and 18 run identities BEFORE new data or
+training is generated. If no candidate qualifies, launched=false with reason.
+A longer planned horizon observes MORE absolute training at 10%; it never changes
+the old 6,520-update horizon or 652-update endpoint.
+
+9. STAGE C2 - FRESH PREFIX TRAINING AND CHECKPOINT VALIDATION
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' fresh
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' fresh-measure
+
+If calibration qualifies, expected: 18 completed prefixes in fresh\runs and three
+verified matched construction/reservation pairs (5701/6901,5702/6902,5703/6903).
+Realisation training seeds: 211/222/233,1211/1222/1233,2211/2222/2233.
+20 manifests per realisation, seeds 51000-51019, are frozen before its training.
+Training stops at the separately selected 10% endpoint. Health uses a separate
+source-health panel and never depends on gradient partition. Recolouring is offline.
+
+fresh-measure recomputes 256/class panels at the 20 frozen partitions: 8,640 scalar
+rows in fresh_validation. It also measures original A/B at all three budgets for
+context: 1,296 rows in fresh_original, plus online/offline parity errors. Both use
+the same saved models and no optimizer. Recovery checkpoint files remain separate
+from the observation schedule. If launched=false, these commands report a gate skip.
+
+10. STATUS AND SAFE RESUME
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' status
+
+Expected: current progress, completed run counts and measurement completion indicators.
+Live progress also appears in status.json, progress.jsonl and per-run status.json.
+
+Resume any interrupted stage using the SAME stage command. No activation needed.
+SQLite results have complete checkpoint/data/manifest/protocol/source/environment
+identity keys and skip committed measurements. New training restores model/Adam/RNG
+and the exact update/epoch permutation from the last committed checkpoint. It rejects
+an incompatible identity. Complete runs are reused. An interrupted uncommitted
+measurement/update may be recomputed; it never becomes an extra observation.
+Do not modify numerical files or config and then bypass a resume guard. Preserve
+the existing attempt and freeze a newly identifiable attempt for an intended change.
+
+11. VERIFY ORIGINAL PROTECTION AND GENERATE THE FINAL REPORT
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' verify-protection
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' report
+
+Expected: all 294 protected original files plus proposal unchanged; protection audit.
+Report: followup\outputs\20261116_03\reports\REPORT.md and decision.json.
+Tables cover every partition, budget, prefix, all eight retained features, structural
+diagnostics/error decomposition, calibration, all 18 runs/eligibility, full/eligible/
+condition/realisation cohorts, cost/memory/storage and descriptive source associations.
+Exact memberships and expected versus actual counts are explicit; cohorts with fewer
+than two runs are undefined. No failed partition is removed from the denominator 20.
+Structural review is explicitly recorded under reports\structural_review.json after
+inspection of the diagnostics; absence of a completed review prevents a readiness claim.
+No terminal WGA outcome pilot or forecasting model is executed.
+
+Independent final output audit:
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' validate
+Expected: output_validation_passed. Verifies the complete 8,640-row design, all 20
+manifests, cache checkpoint hashes, independent feature arithmetic, calibration
+selection, six-epoch Adam states, checkpoint-loader/probe RNG/parameter isolation,
+installed SpuCo sources, dependency lock, structural-review evidence, report links
+and unchanged original files. The audit constructs no optimizer and trains nothing.
+
+ORDERED AUTOMATED PIPELINE
+& '.\.venv\Scripts\python.exe' -u '.\followup\run.py' all
+
+This performs the authorized stages in order, reusing committed work and obeying the
+predefined calibration gate. It can finish with an unfavourable/inconclusive verdict.
+Its final report preserves independent correctness, stability, structure and coverage
+flags. A report without a completed structural review cannot claim outcome-pilot readiness.
+
+INTERPRETATION
+- Reproduction fails: resolve implementation/numerics before scientific interpretation.
+- deep_slope/10%/256 passes fewer than 16/20 alternatives: original temporal screen
+  is partition-sensitive, even if a different feature looks better.
+- Conv3/head results or opposite-signed errors leave interpretation ambiguous:
+  aggregation interpretation remains unresolved; do not automatically call an artifact.
+- No calibration candidate or insufficient fresh source coverage: source-health coverage
+  unresolved; do not move the health threshold or silently replace seeds.
+- Mean levels persist but slopes do not: temporal research direction requires revision.
+- Only joint correctness, stability, satisfactory source coverage and justified structural
+  interpretation can support designing a later completed-training outcome pilot.
+- A pooled condition contrast does not establish within-condition run discrimination.
+- These partitions/constructions share MNIST and do not supply population confidence
+  intervals, predictive added value, audit gains or established novelty.
+
+No manual dataset download, installation or security-setting change should be needed.
+All new artifacts are inside followup; original instructions and proposal remain unchanged.
+
+OBSERVED COMPLETION STATUS FOR THIS ATTEMPT
+- Original result reproduced (recalculated 3.0501409990602664; remeasured 3.0501409990602655).
+- All 20 alternative partitions completed at all budgets/checkpoints. Primary target
+  passes 15/20, below the frozen 16/20 stability requirement.
+- Calibration completed all three six-epoch trajectories. Six-epoch accuracies:
+  seed101=0.78125, seed102=0.8671875, seed103=0.8546875. None of the candidate
+  full horizons satisfies the all-three health rule; no new horizon was adopted.
+- Fresh-realisation training and measurement were NOT launched by the predefined
+  calibration gate. Their coverage is not assessed, not a measured 0% result.
+- No automatic manual continuation is required or appropriate. Re-running the same
+  fresh commands will correctly report a gate skip. To investigate beyond the grid,
+  design and freeze a separately authorized development study; preserve this result.

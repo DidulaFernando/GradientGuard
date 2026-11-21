@@ -1,0 +1,63 @@
+attempt: '20261116_03'
+legacy_attempt: '20261116_01'
+measurement:
+  budgets: [64, 128, 256]
+  microbatch: 128
+  epsilon: 1.0e-12
+  stabilizer_dominated_fraction: 0.01
+  numerical_share_floor: 1.0e-5
+  diagnostic_total_floor: 1.0e-6
+  diagnostic_floor_rule: shares_use_original_floor_per_weight_means_use_total_floor_divided_by_weight_count_bias_uses_total_floor
+  ratio_screen: 3.0
+  prefixes: [0.05, 0.1]
+  fractions: [0.01, 0.02, 0.03, 0.05, 0.075, 0.1]
+  repeats_A: 3
+  head_flag: 0.5
+  bias_flag: 0.1
+stage_A:
+  partition_seeds: [41000, 41001, 41002, 41003, 41004, 41005, 41006, 41007, 41008, 41009, 41010, 41011, 41012, 41013, 41014, 41015, 41016, 41017, 41018, 41019]
+  target: deep_slope
+  prefix: 0.1
+  budget: 256
+  minimum_passing_partitions: 16
+calibration:
+  data_seed: 3701
+  reservation_seed: 4903
+  seeds: [101, 102, 103]
+  full_horizon_candidates: [20, 40, 60]
+  health_epochs: [2, 4, 6]
+  max_actual_epochs: 6
+  health_accuracy: 0.80
+  health_loss: ln_K
+  selection: smallest_horizon_whose_10pct_point_passes_all_three_seeds
+fresh:
+  construction_pairs: [[5701, 6901], [5702, 6902], [5703, 6903]]
+  seed_bases: [211, 222, 233]
+  seed_offset_per_realisation: 1000
+  partition_seeds: [51000, 51001, 51002, 51003, 51004, 51005, 51006, 51007, 51008, 51009, 51010, 51011, 51012, 51013, 51014, 51015, 51016, 51017, 51018, 51019]
+  partition_budget: 256
+  original_panel_budgets: [64, 128, 256]
+  minimum_healthy_seeds_per_condition_per_realisation: 2
+  primary_subsets: [all, eligible]
+  stratified_subsets: [condition, realisation, realisation_condition]
+training:
+  batch_size: 128
+  lr: 0.001
+  betas: [0.9, 0.999]
+  weight_decay: 0.0
+  num_workers: 0
+  cpu_threads: 4
+  save_every_updates: 100
+  health_accuracy: 0.80
+  health_loss: ln_K
+decision_rules:
+  reproduction_failure_blocks_interpretation: true
+  partition_stability_minimum: 16
+  required_partitions: 20
+  structural_review: inspect_common_denominator_conv3_head_and_uncentred_error_cross_term_without_asserting_artifact
+  calibration_gate: no_qualifying_candidate_means_do_not_launch_fresh
+  no_outcome_pilot: true
+  no_forecaster: true
+  no_validation_test_outcomes: true
+  no_automatic_threshold_or_grid_changes: true
+  readiness: joint_review_of_correctness_partition_stability_health_and_structure
