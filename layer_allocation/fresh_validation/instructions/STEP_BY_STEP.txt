@@ -1,0 +1,56 @@
+GradientGuard fresh-family validation — 21 November 2026
+
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation'
+
+This uses Feasibility\.venv\Scripts\python.exe directly. All caches/temp files stay in layer_allocation. No activation or global installation. Windows native-library application control may require the execution environment's authorised permission mechanism; do not change security settings. Stop for package or hardware drift. The launcher currently points to the verified matching Python3.12.14 runtime.
+
+Environment:
+.\layer_allocation\fresh_validation\run.ps1 preflight
+Expected: environment.json and requirements-lock.txt under layer_allocation\runs\20261121_fresh01, exact80-line dependency agreement, torch2.7.1+cu128, torchvision0.22.1+cu128, CUDA12.8, RTX5060Ti.
+
+Tests (synthetic fixtures only):
+.\layer_allocation\fresh_validation\run.ps1 tests
+Expected: all tests pass; tests.xml. Pytest's temporary fixture directory resolves to E:\Final Year Project\Implementation\layer_allocation\tmp\fresh_tests, inside this project. Old correctness tests are not invoked because some write into protected legacy attempts. Analytical fixture construction is reused read-only.
+
+Protocol/design freeze:
+.\layer_allocation\fresh_validation\run.ps1 freeze
+Expected: protocol.json, protocol_freeze.json, run_manifest.csv (256rows), family_manifest.csv (64rows), source_snapshot. Tests must pass. Saved hashes reject later numeric-source/config changes; preserve and create another named attempt if repair requires changes after freeze. No data/training occurs in freeze.
+
+Automatic execution/resume:
+.\layer_allocation\fresh_validation\run.ps1 all
+Expected: complete all128development trajectories at60epochs, source-health measurements and validation outcomes, then readiness.json. If readiness fails, stop all dependent evaluation stages and write REPORT.md/decision.json with no manuscript update. If readiness passes: select/fit/freeze development predictors, train128evaluation trajectories, save frozen early predictions, unseal terminal test outcomes once and execute comparisons/resampling/report. A stopped scientific gate is successful protocol execution, not a positive predictive result.
+
+Individual stages:
+.\layer_allocation\fresh_validation\run.ps1 development
+.\layer_allocation\fresh_validation\run.ps1 readiness
+.\layer_allocation\fresh_validation\run.ps1 fit
+.\layer_allocation\fresh_validation\run.ps1 evaluation
+.\layer_allocation\fresh_validation\run.ps1 predict
+.\layer_allocation\fresh_validation\run.ps1 unseal
+.\layer_allocation\fresh_validation\run.ps1 analyse
+
+Expected gates: fit requires passed readiness and no test-outcome directory. Evaluation generation/training requires readiness and verified predictor freeze. Unseal requires verified predictor and prediction freezes. No command may bypass a failed gate or regenerate an old attempt. A completed model must have19560updates and a matching final-weight hash. Recovery checkpoints save optimiser/RNG/rows/timings and source/protocol hashes. Nonfinite training is logged as divergence, not a subgroup-failure label. Incomplete models remain incomplete. No performance-based early stopping.
+
+Status/resume/preservation:
+.\layer_allocation\fresh_validation\run.ps1 status
+.\layer_allocation\fresh_validation\run.ps1 verify
+.\layer_allocation\fresh_validation\run.ps1 audit
+Expected: split counts, most recent progress, budget, readiness; preservation_audit unchanged=true; validation_audit passed=true. Resume uses all. It skips completed models and frozen predictors, resumes interrupted training at saved epoch boundaries, and cannot bypass readiness. After unsealing, no refitting is allowed. Do not claim completion while the process remains active. execution_completion.json means the permitted pipeline finished, including a possible predefined gate stop.
+
+Reporting:
+.\layer_allocation\fresh_validation\run.ps1 report
+.\layer_allocation\fresh_validation\run.ps1 audit
+Expected: layer_allocation\reports\20261121_fresh01\REPORT.md, decision.json, manuscript recommendation and available figures. Accounting lists all256planned runs including unlaunched/diverged/incomplete. Results, health, group counts/uncertainty, costs, identity manifests and source snapshots remain under runs\20261121_fresh01. No evaluation metrics are invented when readiness blocks evaluation.
+
+Resource interpretation: gpu_budget.json conservatively charges elapsed time in GPU stages, including source/monitor/checkpoint overhead, against24hours; it is not kernel occupancy. The representative full-run projection is recorded before evaluation. Over-cap projections/actual charges stop execution without silently reducing the design.
+
+Scientific interpretation: primary cohort source-normal at10%, primary capacity floor(N/3), secondary floor(N/4). Both were frozen before new outcomes; one-third was motivated by old consumed diagnostics. MZ versus M is the matched primary pair; simpler norm-product, global and strong conventional controls remain visible. Family bootstrap conditions on frozen predictors; it excludes selection uncertainty. New configurations share MNIST and outcome images. Neither software success nor an isolated positive metric establishes novelty, causality, external validity or economic savings.
+
+Manuscript: only every frozen gate passing authorises a separately named v1.3 with all results and limitations. Otherwise keep v1.2 unchanged and provide the report for manual consideration. A positive analysis_gate.json is permission for the agent's final document-generation/visual-QA step, not proof a paper has already been written. Read decision.json manuscript_updated to verify actual delivery status.
+
+Git verification/publication (agent stages relevant files and makes logical commits):
+git -C 'E:\Final Year Project\Implementation' status --short
+git -C 'E:\Final Year Project\Implementation' log -8 --oneline
+git -C 'E:\Final Year Project\Implementation' push origin main
+git -C 'E:\Final Year Project\Implementation' ls-remote origin refs/heads/main
+Expected: remote head matches local main after authorised push; never force-push or expose credentials. A failed authentication/network step leaves local commits intact. Environments/raw data/checkpoints/caches remain local per repository policy; compact manifests/locks/reports/source/frozen forecasters are tracked. Do not use a blind git add .
