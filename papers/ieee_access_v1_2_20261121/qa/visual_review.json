@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-21",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "pdf_sha256": "61e516914f86f722555a54cbb426a38e52eab7172c01e82bce086d4e5dac319b",
+  "page_hashes": {
+    "page-01.png": "b524058d6d0fb2978ef9b22104c1e5e492dfee0f2179e754d046fbd1abfe66cd",
+    "page-02.png": "ceb104f188942ae60c4d2f21efb8148e58f68a40948a2c8d893db53c957353ef",
+    "page-03.png": "61b869ee62042003e098419d2890b21261a3897bc8ac4aab079b50741863b3c2",
+    "page-04.png": "e2022fa71ab64ca2b08b5a8eca0b48d48d9eecffd2df9c40865ec0698971df3f",
+    "page-05.png": "35929624a75d9bdd9d80ba483ca455717ff4e2e2fb37897a64bd52776e4629c6",
+    "page-06.png": "f93e5dcf18f9a5fb1fe8d538b68398ca128a73e8c0ace3986c4fcb976dd20760",
+    "page-07.png": "fdacfc9c6263dabf2ee7539339dd85280cd0bbfd40b999ffdd2007fda0dc44d5",
+    "page-08.png": "9aaf350ba8f439d32f56b33d3abb4f5b055176b048cacba9016fe931a541c095",
+    "page-09.png": "0832b13fedbd3cf008d8988a11d69f4493d5358092d5940e9098d48189d67104",
+    "page-10.png": "05a3523d06662b5e23febf41e028b097633dc1c31d9bc6f13908e58608de1418",
+    "page-11.png": "bb97a4d880aab0a23798297b077e3bdd244b3bdc953f8f647fc4a643348acd94",
+    "page-12.png": "74a504cf95f0aff175f63433e32872903fa8bb2a87c2915afb1ebfa1a713e59c"
+  },
+  "checks": [
+    "All 12 pages visually inspected",
+    "Claim-to-evidence table, equations, figures and references legible",
+    "No clipping, overlapping content or missing glyphs observed"
+  ],
+  "remaining_issues": []
+}
