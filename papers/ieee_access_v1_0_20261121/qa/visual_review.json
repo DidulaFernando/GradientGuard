@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-21",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "pdf_sha256": "eefcd742679a3ac174d4a7e15bee9567a7ab273943665e67404c39ba2b5c179c",
+  "page_hashes": {
+    "page-01.png": "74bee3a1b6c455c76ef4200b4de68098568a08ffcdf003fa7fdefe965141b09a",
+    "page-02.png": "73e2c0b1ed2fef9b149435dfe14cddbb31cb0f8b12946efe7d95d909a5c11e90",
+    "page-03.png": "b318cc24f19512c429345ad1609fe13de725212369c06d8cfef51e21660f2abc",
+    "page-04.png": "dbb33142a6493ecc995f2ba47b74b0d7354a555c3d25643a51c6e611c81ee1df",
+    "page-05.png": "737eb08a40238d017b57c2559f173fce486a6a127927cab3417a50e76bcafcce",
+    "page-06.png": "a842d948f1341e25f80de76c2712064c0dab04ad75b3068d731ca1d59d791ff9",
+    "page-07.png": "c0174f098d4dea4f1bac19041f8a8a628db101fb16e414d17838643026f4ff7e",
+    "page-08.png": "5f711d59b28bc9486d067d36a69b45566587ba0bb3b84021c8b7ca380d3fd846",
+    "page-09.png": "5305100c99eb913336b36d9a57895d0199805da04aa4e2ba1168123f1780d192",
+    "page-10.png": "89644ea6cbc5c50ec1200f75a5f13c2287d62b2e66bf69e69663e76e71a241b2"
+  },
+  "remaining_issues": [],
+  "checks": [
+    "Two-column flow, native equations and headings",
+    "Six tables and all three vector figures",
+    "Author names and non-invented publication metadata",
+    "Reference readability and numbered citations",
+    "Original primary finding, full cohort and uncertainty retained"
+  ],
+  "final_revision": "Removed a stray period emitted by the legacy class appendix macro; pages 1-8 were pixel-identical to the reviewed renders and corrected pages 9-10 were inspected again."
+}
