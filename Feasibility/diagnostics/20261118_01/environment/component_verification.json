@@ -1,0 +1,47 @@
+{
+  "numpy": {
+    "ok": true
+  },
+  "pandas": {
+    "ok": true
+  },
+  "sklearn": {
+    "ok": true
+  },
+  "joblib": {
+    "ok": true
+  },
+  "matplotlib.pyplot": {
+    "ok": true
+  },
+  "torch": {
+    "ok": true
+  },
+  "torchvision": {
+    "ok": true
+  },
+  "sklearn.pipeline": {
+    "ok": true
+  },
+  "sklearn.impute": {
+    "ok": true
+  },
+  "sklearn.preprocessing": {
+    "ok": true
+  },
+  "sklearn.feature_selection": {
+    "ok": true
+  },
+  "sklearn.linear_model": {
+    "ok": true
+  },
+  "sklearn.ensemble": {
+    "ok": true
+  },
+  "cuda": {
+    "available": true,
+    "runtime": "12.8",
+    "cudnn": 90701,
+    "gpu": "NVIDIA GeForce RTX 5060 Ti"
+  }
+}

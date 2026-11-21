@@ -1,0 +1,13 @@
+{
+  "method": "Update only home/executable in pyvenv.cfg to matching available Codex Python; historical command retained",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "architecture": [
+    "64bit",
+    "WindowsPE"
+  ],
+  "new_base": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+  "before_config_sha256": "40cc5a3833f98a1c47ffc7946ff6cdc2fa858b62d839ec5752bf2677fabc09b8",
+  "after_config_sha256": "ccf8297880b6f457302ee5468361319222cf1b7d9634734717c490813f63bf88",
+  "packages_installed_removed_or_upgraded": false,
+  "time_ns": 1794988530771214600
+}

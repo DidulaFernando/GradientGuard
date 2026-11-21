@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "tests": 16,
+  "protected": {
+    "passed": true,
+    "checked_recorded_hashes": 2841,
+    "protected_current_files": 2863,
+    "time_ns": 1794989599568084200
+  },
+  "all_stages_complete": true,
+  "original_predictions_and_pipelines_unchanged": true,
+  "no_classifier_training": true,
+  "no_forecaster_fitting": true,
+  "source_frozen": true
+}

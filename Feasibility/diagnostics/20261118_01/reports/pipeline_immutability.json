@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "in_memory_before": "2462f7cdf897b72f20c85f8635ff2ae5",
+  "in_memory_after": "2462f7cdf897b72f20c85f8635ff2ae5",
+  "fit_calls": 0,
+  "predictors_retrained": 0,
+  "pipeline_file_sha256": "93645357adc7c3f8df6f579b4ebf7e493afe9fd1a4c08c95944112836290ce82"
+}

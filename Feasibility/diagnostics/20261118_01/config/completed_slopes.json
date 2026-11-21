@@ -1,0 +1,18 @@
+{
+  "plan_sha256": "18178c042651e6dc1a8c9b6ffacc4cfc97e9f60cf6f01577e64a571ae2a8f329",
+  "outputs": {
+    "tables\\common_coefficients.csv": "04834956eb6a81b53799a4a1ef6d4d3532f730f7b1e1294f12777173d66c9f31",
+    "tables\\feature_parity.csv": "2383785e19fc4585d69a847141e9a6f8ae3d72a6f63d49f79e918b0915d3acaa",
+    "tables\\feature_variation.csv": "03419b22d4a92a08789d1a57fdc4c031a2a6ab9641a64ccd706aef1603581009",
+    "tables\\L6_L8_comparisons.csv": "e7cf811c7b935b01d95e3650db56c5f3587b64f69e3fb95fbf5ac64ec07db0f6",
+    "tables\\per_run_slope_contributions.csv": "a08abfc92dced3b596fa6195ab8542bfa27934a7435fe13f6f90b0f30149a968",
+    "tables\\prediction_parity.csv": "2c0e99232ff64ec2ed97c935aa55e73be3b240d32d664a0b36ef13fcb9928084",
+    "tables\\preprocessing_lineage.csv": "7b90f565808a24272322d8429a4dc3598d76aad9eb10fa5b4d402bc51268291f",
+    "tables\\reference_curves.csv": "5d7644d58c87d7fc72243b83b0cb22e873cf479472f18e46baf8bfe522894eaa",
+    "tables\\reference_effects.csv": "df22c1062346adc1446ac7b3b2b1e0b67d0f5147266b84e71de91eef123d6cdc",
+    "tables\\reference_predictions.csv": "8d9809a2d289a056279799a7c8da316d8a61b10781f830517add6e46dce2ae9d",
+    "tables\\slope_coefficients.csv": "de146e9c367fad95371c551be12bab182e06a56772a3173c2eb32468cc224413",
+    "reports\\pipeline_immutability.json": "5c04dc1858cea9bf9a19e724b5ca00474d375a1c43412b4858ba0fea55763083"
+  },
+  "time_ns": 1794989318483627200
+}

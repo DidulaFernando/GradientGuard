@@ -1,0 +1,11 @@
+{"time_ns": 1794989287671160900, "event": "plan_frozen", "inputs": 2245, "post_hoc": true}
+{"time_ns": 1794989312059418800, "event": "curves_complete", "rows": 1059}
+{"time_ns": 1794989318463229000, "event": "slopes_complete", "prediction_parity_checks": 27, "lineage_rows": 588}
+{"time_ns": 1794989321799231700, "event": "stability_complete", "intervals": 462, "lofo": 840, "original_intervals_reproduced": 21}
+{"time_ns": 1794989324057583600, "event": "report_complete", "recommendation": "Revise the contribution toward order-free layer summaries; pursue separately frozen independent validation and novelty assessment."}
+{"time_ns": 1794989329886107400, "event": "diagnostics_complete", "tests": 16}
+{"time_ns": 1794989590979355200, "event": "stage_verified", "stage": "curves"}
+{"time_ns": 1794989591943441700, "event": "stage_verified", "stage": "slopes"}
+{"time_ns": 1794989592906300700, "event": "stage_verified", "stage": "stability"}
+{"time_ns": 1794989593871601100, "event": "stage_verified", "stage": "report"}
+{"time_ns": 1794989599571111400, "event": "diagnostics_complete", "tests": 16}

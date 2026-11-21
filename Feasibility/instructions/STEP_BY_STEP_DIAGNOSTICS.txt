@@ -1,0 +1,106 @@
+GRADIENTGUARD POST-HOC DIAGNOSTICS — ATTEMPT 20261118_01
+
+Project:
+E:\Final Year Project\Implementation\Feasibility
+Diagnostic outputs:
+E:\Final Year Project\Implementation\Feasibility\diagnostics\20261118_01
+
+These commands never train classifiers or fit/retune forecasters. Old scientific
+records remain read-only. Do not invoke legacy freeze/fit/predict/report commands.
+
+SETUP
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation\Feasibility'
+. '.\instructions\environment.ps1'
+
+Use .venv's Python directly; PowerShell activation is unnecessary. Caches and
+temporary directories are process-local and remain inside the project root.
+
+1. ENVIRONMENT VERIFICATION
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' preflight
+
+Expected: preserved-artifact checks pass; all 80 dependency records match; Python
+3.12.14, torch 2.7.1+cu128 and torchvision 0.22.1+cu128 import; CUDA 12.8 / RTX 5060 Ti
+available; existing pipelines load. Records are under environment/ and logs/.
+
+The repair already performed changed ONLY home/executable in .venv/pyvenv.cfg to
+the matching interpreter in the updated Codex runtime. Packages were not reinstalled.
+Original configuration: diagnostics\20261118_01\environment\pyvenv_before.cfg.
+An initial native loader/Application Control failure and successful unchanged retry
+are preserved. No security setting was changed.
+
+If the base interpreter disappears after another app update, inspect current bundled
+runtime paths, verify its complete Python build matches the recorded version, and
+use the backed-up repair script with that exact interpreter. The command used here:
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' 'diagnostics\20261118_01\src\environment.py' repair
+
+Do not blindly substitute an incompatible interpreter, change security policy or
+update packages. Preserve errors. If imports fail, safe CSV analyses remain possible
+but pipeline inference must wait for compatible verified execution.
+
+2. FROZEN PLAN
+The plan was frozen before the new diagnostic calculations:
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' freeze
+
+Expected: config/frozen_plan.json, source/input hashes, post_hoc=true. Repeating with
+unchanged sources is idempotent. Source/config drift is an error: do not replace hashes
+to bypass it. A post-hoc freeze does not restore untouched evaluation status.
+
+3. TESTS (SEPARATELY LABELLED FIXTURES; NO FITTING)
+$diagnosticTestStamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+& '.\.venv\Scripts\python.exe' -m pytest 'diagnostics\20261118_01\tests' -q --basetemp "E:\Final Year Project\Implementation\Feasibility\diagnostics\20261118_01\tmp\tests_$diagnosticTestStamp" -o cache_dir=diagnostics/20261118_01/cache/pytest --junitxml 'diagnostics\20261118_01\logs\tests.xml'
+
+Expected: all diagnostic tests pass and JUnit failures/errors/skips are zero. Fixtures
+test budget edges/ties/invalid observations, grouping, old-result reproduction,
+no-fitting guards, real frozen feature lineage and slope-reference arithmetic.
+Retain failed logs and use a new temp suffix when diagnosing; do not loosen tolerances.
+
+4. RUN ALL DIAGNOSTICS / SAFE RESUME
+& '.\.venv\Scripts\python.exe' -u 'diagnostics\20261118_01\src\main.py' run
+
+Expected stages: curves_complete, slopes_complete, stability_complete,
+report_complete, diagnostics_complete. Completed stages have config/completed_*.json
+with output hashes. Resume with the SAME run command: valid completed stages skip.
+Changed inputs/outputs cause a guard failure. Failed-stage outputs and traceback are
+copied under failures/ before a repaired rerun can replace incomplete diagnostic files.
+
+Individual commands, all read-only on the original study:
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' curves
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' slopes
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' stability
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' report
+
+Curves: every integer k from zero to N, nine/twelve/original-25% points, oracle/random
+comparators and selection ranks. Slopes: feature parity, saved-probability parity,
+preprocessing lineage, variation, coefficients, L6/L8 ranks and training-mean replacement.
+Stability: all panels, whole-family LOFO and 2,000 paired family resamples.
+Report: readable REPORT.md, decision.json, summaries and PNG figures.
+
+5. STATUS / FINAL VERIFICATION
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' status
+& '.\.venv\Scripts\python.exe' 'diagnostics\20261118_01\src\main.py' verify
+
+Expected: all four stages complete, tests passed, original artifact and output hashes
+match, no training/fitting. reports/validation.json records completion. A successful
+process is not automatically a favourable scientific result.
+
+6. OUTPUTS AND INTERPRETATION
+Main report: diagnostics\20261118_01\reports\REPORT.md
+Decision: diagnostics\20261118_01\reports\decision.json
+All detailed numerical outputs: diagnostics\20261118_01\tables
+Figures: diagnostics\20261118_01\figures
+Frozen definitions: diagnostics\20261118_01\config\analysis.json
+
+Nine inspections remain the original 25% primary budget for 36 eligible models.
+Twelve inspections are one third, selected post-hoc for diagnosis. Improvements at
+that budget are useful observations but do not overturn the original nine-audit tie.
+
+L8 improvement over E that is matched by L6 supports investigation of order-free layer
+information, not a demonstrated slope benefit. A difference driven by one family/panel
+requires caution. Input replacement is not causal evidence or a newly fitted control.
+Family intervals are pointwise, conditional on frozen forecasters and do not include
+selection uncertainty. No further training or proposal change is automatic.
+
+If interpretation is blocked by a failed reproduction, resolve it before interpreting
+dependent results. If only a narrow gain remains, discuss a revised contribution and
+fresh independent validation with the supervisor. If no added discovery exists across
+budgets, revise or stop this representation rather than adding favourable seeds.

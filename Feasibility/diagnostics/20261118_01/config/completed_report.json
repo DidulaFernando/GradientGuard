@@ -1,0 +1,17 @@
+{
+  "plan_sha256": "18178c042651e6dc1a8c9b6ffacc4cfc97e9f60cf6f01577e64a571ae2a8f329",
+  "outputs": {
+    "tables\\curve_direction_summary.csv": "2beb7341f0eec57d62bafd724eb6f73e00cb23530e8178c5b5643d522affdcd9",
+    "tables\\full_recall_budgets.csv": "fe975a506d0b0527d931784bd2ff328f6f7c0d8335d3f2f23229ad3cff69bc75",
+    "tables\\influence_summary.csv": "08f2afcf6d416dc85e0fc9717bab042619f6889039ffacc19f13070ab076d338",
+    "figures\\discovery_curves_eligible.png": "fc4ea2cc5b11e52a04f7468f969eec97bf6b83b0e5d850a6dadcc82e77ff60d8",
+    "figures\\discovery_curves_full.png": "22d614f3abdbb09c9c0634a80650031cbafb1b9a88fb16c6f86db9d2977a7866",
+    "figures\\family_influence.png": "ae2966c42004a2a8df7add9733b900a89c1420e19434e63498612aeb96926ee1",
+    "figures\\paired_gain_curves.png": "8454f640a824cca3cb489a6799ee2b78ec6aaf658b35889d4c1648bccc96a6a2",
+    "figures\\slope_contributions.png": "40ce4a658492b99d2f7204167368cfd9aa1afdeec44dace2bcc0656658cc1535",
+    "figures\\slope_replacement_curves.png": "21c9bddaee7978ec1843a6f49148817eb8a586d63fe0f97c352449e2cc0b27e0",
+    "reports\\decision.json": "d2aceec5b6afce411d38c83c76f82f341b0fb865480702dbc8482f5ac194ea96",
+    "reports\\REPORT.md": "c4cadefc659ed64ff9e692edbd785b05172970fa0be5666daa899f00337ee44b"
+  },
+  "time_ns": 1794989324080973200
+}

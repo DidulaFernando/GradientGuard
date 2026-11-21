@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\Final Year Project\\Implementation\\Feasibility\\.venv\\Scripts\\python.exe",
+  "architecture": [
+    "64bit",
+    "WindowsPE"
+  ],
+  "complete_lock_matches": true,
+  "resolved_requirement_lines": 80,
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "matplotlib": "3.9.4",
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "spuco": "2.0.3"
+  },
+  "cuda_available": true,
+  "cuda_runtime": "12.8",
+  "cudnn": 90701,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "os": "Windows-11-10.0.26200-SP0",
+  "pipeline_collections_loaded": [
+    "eligible_0.1",
+    "eligible_0.1_B",
+    "eligible_0.1_ridge",
+    "full_0.1",
+    "full_0.1_B",
+    "full_0.1_ridge",
+    "eligible_0.05",
+    "eligible_0.05_B",
+    "eligible_0.05_ridge",
+    "full_0.05",
+    "full_0.05_B",
+    "full_0.05_ridge"
+  ],
+  "pipeline_sha256": "93645357adc7c3f8df6f579b4ebf7e493afe9fd1a4c08c95944112836290ce82",
+  "prediction_sha256": "2d8301fb3939a6cf3cadf6ed4c443729d970b1e53cfbbb6bfc7ffb13f023ff96",
+  "process_settings": {
+    "TEMP": "E:\\Final Year Project\\Implementation\\Feasibility\\tmp",
+    "TMP": "E:\\Final Year Project\\Implementation\\Feasibility\\tmp",
+    "TMPDIR": "E:\\Final Year Project\\Implementation\\Feasibility\\tmp",
+    "PIP_CACHE_DIR": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\pip",
+    "MPLCONFIGDIR": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\matplotlib",
+    "TORCH_HOME": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\torch",
+    "XDG_CACHE_HOME": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\xdg",
+    "PYTHONPYCACHEPREFIX": "E:\\Final Year Project\\Implementation\\Feasibility\\cache\\pycache",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONHASHSEED": "0"
+  }
+}

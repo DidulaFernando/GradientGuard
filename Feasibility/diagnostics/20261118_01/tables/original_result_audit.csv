@@ -1,0 +1,5 @@
+model,N,F,k,discoveries,oracle
+E,36,12,9,8,9
+logistic_B,36,12,9,8,9
+logistic_L6,36,12,9,8,9
+logistic_L8,36,12,9,8,9

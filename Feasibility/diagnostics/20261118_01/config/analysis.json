@@ -1,0 +1,22 @@
+{
+  "attempt": "20261118_01",
+  "purpose": "Post-hoc exploratory explanation of existing predictions; no new training or fitting",
+  "prefix": 0.1,
+  "cohorts": ["eligible", "full"],
+  "models": ["E", "logistic_B", "logistic_L6", "logistic_L8"],
+  "include_development_selected_strongest_nontemporal": true,
+  "variants": [{"name":"A", "panel":"A", "refit_B":false}, {"name":"B_frozen_A", "panel":"B", "refit_B":false}, {"name":"B_existing_refit", "panel":"B", "refit_B":true}],
+  "absolute_budgets": [9,12],
+  "fractions": ["0","1/20","1/10","3/20","1/5","1/4","3/10","1/3","7/20","2/5","9/20","1/2","11/20","3/5","13/20","7/10","3/4","4/5","17/20","9/10","19/20","1"],
+  "budget_rule": "Integer floor using exact rational fractions; full curves include every k from 0 through N",
+  "ties": "Risk descending, original run identifier ascending; bootstrap duplicate identifiers append underscore and zero-based draw position as in original analysis",
+  "failure": "Frozen original WGA < 0.75; exactly 0.75 is non-failure",
+  "bootstrap": {"replicates":2000,"seed":130005,"families":10,"invalid_rule":"Exclude empty or single-outcome pools for interval comparability with original bootstrap; report counts. Raw audit counts remain defined for single-outcome pools.","interval":"2.5/97.5 percentile pointwise; conditional on frozen predictors; no selection uncertainty or simultaneous-curve coverage"},
+  "parity": {"atol":1e-12,"rtol":1e-10,"logit_atol":1e-10,"exact_rank_and_set_checks":true},
+  "counterfactuals": ["shallow_share_slope", "deep_share_slope", "both"],
+  "reference": "Saved fitted StandardScaler mean in imputed input space. Replace raw finite slope with that value; verify transformed component zero. No evaluation mean, no refitting, no causal interpretation.",
+  "planned_tables": ["original_result_audit","all_budget_curves","all_budget_contrasts","audit_selections","marked_budgets","headroom","feature_parity","prediction_parity","preprocessing_lineage","feature_variation","slope_coefficients","per_run_slope_contributions","common_coefficients","L6_L8_comparisons","reference_predictions","reference_curves","reference_effects","leave_one_family_out","bootstrap_intervals","family_diversity"],
+  "planned_figures": ["discovery_curves_by_cohort_and_panel","paired_gain_curves","panel_budget_comparison","slope_contributions","slope_replacement_curves","family_influence"],
+  "interpretation": {"original_primary_unchanged":true,"highlight_small_improvements_with_magnitude_and_scope":true,"temporal_hint":"L8 advantage over both E and L6, with panel/family diagnostics reported; no post-hoc success declaration", "narrower_hint":"L6 advantage over E without added L8 discovery supports investigation of order-free layer summaries, subject to independent validation and novelty assessment", "no_gain":"No additional discovery across budgets supports revising or stopping this representation; do not silently enlarge the study", "decision":"Continue independent validation, revise narrower contribution, or stop current representation; no automatic further training"},
+  "limitations": ["Outcomes already unsealed: this freeze is not a preregistered untouched evaluation", "Overlapping budgets and panels are not independent tests", "Only ten held-out setting families sharing MNIST and outcome panels", "Earlier temporal reliability and structural interpretation unresolved", "Original nonlinear capacity and prediction-depth comparator limitations unchanged"]
+}

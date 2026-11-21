@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "E:\Final Year Project\Implementation\Feasibility\diagnostics\20261118_01\src\environment.py", line 89, in <module>
+    elif sys.argv[1]=='verify':verify_environment()
+                               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\Final Year Project\Implementation\Feasibility\diagnostics\20261118_01\src\environment.py", line 69, in verify_environment
+    models=joblib.load(POC/'pipelines.joblib')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 755, in load
+    obj = _unpickle(
+          ^^^^^^^^^^
+  File "E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 632, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\pickle.py", line 1256, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\pickle.py", line 1581, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-835-0_26.1117.835.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\pickle.py", line 1622, in find_class
+    __import__(module, level=0)
+  File "E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\sklearn\ensemble\__init__.py", line 6, in <module>
+    from sklearn.ensemble._bagging import BaggingClassifier, BaggingRegressor
+  File "E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\sklearn\ensemble\_bagging.py", line 19, in <module>
+    from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+  File "E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\sklearn\tree\__init__.py", line 6, in <module>
+    from sklearn.tree._classes import (
+  File "E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\sklearn\tree\_classes.py", line 28, in <module>
+    from sklearn.tree import _criterion, _splitter
+ImportError: DLL load failed while importing _criterion: An Application Control policy has blocked this file.

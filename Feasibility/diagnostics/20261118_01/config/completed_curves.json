@@ -1,0 +1,13 @@
+{
+  "plan_sha256": "18178c042651e6dc1a8c9b6ffacc4cfc97e9f60cf6f01577e64a571ae2a8f329",
+  "outputs": {
+    "tables\\all_budget_contrasts.csv": "9f995cadae0f605338ad79019e9f85c92657d27814d529705aae0bea6c63196c",
+    "tables\\all_budget_curves.csv": "064de3727f0da4da4191da0f514f2027f44ccaf5f0b5bb3226b5828fb12de0bc",
+    "tables\\audit_selections.csv": "7fac8d5424ba6c9faf7db6a1eb2aeec7a219da23c9b0b9029f1d90ba7e920b2e",
+    "tables\\family_diversity.csv": "fa4820213464e95299a04284cb1d27fa42c4e863bf08d6f3a82c89835db1e81e",
+    "tables\\headroom.csv": "34e152cf91b19dd1e2bacad11f5a1878746a99e694423490e9c39d848e32584d",
+    "tables\\marked_budgets.csv": "e6411b3df86022638e2fc96826713336c28406750fb354f5c48c3437b25e13ee",
+    "tables\\original_result_audit.csv": "c1020d7303e5f427821cd3bcda7ffbc61e5b3337591063c256940465466c1280"
+  },
+  "time_ns": 1794989312068176900
+}

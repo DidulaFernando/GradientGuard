@@ -1,0 +1,87 @@
+{
+  "post_hoc": true,
+  "recommendation": "Revise the contribution toward order-free layer summaries; pursue separately frozen independent validation and novelty assessment.",
+  "conclusion": "Encouraging added discovery at some audit capacities, with temporal-slope specificity unsupported.",
+  "primary_original_unchanged": true,
+  "primary_cohort": {
+    "N": 36,
+    "families": 9,
+    "F": 12,
+    "nonfailures": 24
+  },
+  "nine_twelve_discoveries": [
+    {
+      "model": "E",
+      "nine_audits": 8.0,
+      "twelve_audits": 8.0
+    },
+    {
+      "model": "logistic_B",
+      "nine_audits": 8.0,
+      "twelve_audits": 8.0
+    },
+    {
+      "model": "logistic_L6",
+      "nine_audits": 8.0,
+      "twelve_audits": 10.0
+    },
+    {
+      "model": "logistic_L8",
+      "nine_audits": 8.0,
+      "twelve_audits": 10.0
+    }
+  ],
+  "primary_curve_direction": [
+    {
+      "cohort": "eligible",
+      "variant": "A",
+      "control": "E",
+      "positive_budgets": "5,6,7,8,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+      "negative_budgets": "none",
+      "tied_budget_count": 19,
+      "max_extra_discoveries": 4,
+      "minimum_difference": 0
+    },
+    {
+      "cohort": "eligible",
+      "variant": "A",
+      "control": "logistic_B",
+      "positive_budgets": "5,6,7,8,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
+      "negative_budgets": "none",
+      "tied_budget_count": 16,
+      "max_extra_discoveries": 4,
+      "minimum_difference": 0
+    },
+    {
+      "cohort": "eligible",
+      "variant": "A",
+      "control": "logistic_L6",
+      "positive_budgets": "none",
+      "negative_budgets": "none",
+      "tied_budget_count": 37,
+      "max_extra_discoveries": 0,
+      "minimum_difference": 0
+    }
+  ],
+  "slopes_reach_estimators": true,
+  "no_fitting": {
+    "passed": true,
+    "in_memory_before": "2462f7cdf897b72f20c85f8635ff2ae5",
+    "in_memory_after": "2462f7cdf897b72f20c85f8635ff2ae5",
+    "fit_calls": 0,
+    "predictors_retrained": 0,
+    "pipeline_file_sha256": "93645357adc7c3f8df6f579b4ebf7e493afe9fd1a4c08c95944112836290ce82"
+  },
+  "environment_complete_lock_matches": true,
+  "new_training_runs": 0,
+  "limitations": [
+    "Outcomes already unsealed: this freeze is not a preregistered untouched evaluation",
+    "Overlapping budgets and panels are not independent tests",
+    "Only ten held-out setting families sharing MNIST and outcome panels",
+    "Earlier temporal reliability and structural interpretation unresolved",
+    "Original nonlinear capacity and prediction-depth comparator limitations unchanged",
+    "Input replacement is an off-distribution diagnostic, not a retrained control or causal effect.",
+    "The original 25% useful-gain target is not transferred to a favourable post-hoc budget.",
+    "Eligible held-out binary labels are homogeneous within families; this does not demonstrate within-setting seed discrimination."
+  ]
+}

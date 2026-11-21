@@ -1,0 +1,5 @@
+{"time_ns": 1794989590979355200, "event": "stage_verified", "stage": "curves"}
+{"time_ns": 1794989591943441700, "event": "stage_verified", "stage": "slopes"}
+{"time_ns": 1794989592906300700, "event": "stage_verified", "stage": "stability"}
+{"time_ns": 1794989593871601100, "event": "stage_verified", "stage": "report"}
+{"time_ns": 1794989599571111400, "event": "diagnostics_complete", "tests": 16}
