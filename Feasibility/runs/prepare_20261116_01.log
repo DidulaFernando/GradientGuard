@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "E:\Final Year Project\Implementation\Feasibility\src\experiment.py", line 60, in <module>
+    if __name__=="__main__": main()
+                             ^^^^^^
+  File "E:\Final Year Project\Implementation\Feasibility\src\experiment.py", line 34, in main
+    (prepare if args.command=="prepare" else verify)()
+  File "E:\Final Year Project\Implementation\Feasibility\src\data.py", line 30, in prepare
+    folder = data_dir()
+             ^^^^^^^^^^
+  File "E:\Final Year Project\Implementation\Feasibility\src\data.py", line 8, in data_dir
+    p = ROOT / "data" / config()["attempt"]
+        ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'WindowsPath' and 'int'

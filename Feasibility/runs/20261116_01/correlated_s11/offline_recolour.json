@@ -1,0 +1,11 @@
+{
+  "label": "OFFLINE MANIPULATION CHECK ONLY",
+  "n": 320,
+  "rule": "background index +1 modulo K; original nonzero foreground and labels preserved",
+  "flip_rate": 0.925000011920929,
+  "mean_true_class_probability_change": -0.8553068041801453,
+  "original_accuracy": 0.959375,
+  "alternative_accuracy": 0.071875,
+  "seconds": 0.006646400001045549,
+  "foreground_preserved": true
+}

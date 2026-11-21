@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "source_hashes": {
+    "src\\analysis.py": "c7c2f6cb35bc5ae4d9105ce701acf696407c242f3c79d69b47175d6cfe647875",
+    "src\\common.py": "057678107523d129a9aa502afcf1888b62a687038f0ee74e9485ec29077daceb",
+    "src\\data.py": "c6331009eda6fca0d2b0ee67b7f45c7d3560f65eca4d06770a6cc352d7ec1b76",
+    "src\\experiment.py": "a728afe97443dd7d261d31979162e1f4ced03227d39eaef8957ec982b5fa5106",
+    "src\\measurement.py": "43c62d7c27ccc4763a478f49c49e2ff429b98e7b0064709c4c9a4c540fbdbdd4",
+    "src\\model.py": "492409ef1d1ed3e59e0b977ef377612ae6ff511e3ec3bd68120f4cb781c350b4",
+    "src\\provenance.py": "bf8040830eea908aa26376e2073f66704ea150ac7b4c7d14dca6fcc8a3304742",
+    "src\\runner.py": "660d044112c9c3140fa4f0246c495ccb3c00e17f83dfb07b9c249500e2586cf9",
+    "tests\\conftest.py": "97b5f44f454e0407feee0d6a58cc9dc6a9e29ee2771afca67933da3658905759",
+    "tests\\test_correctness.py": "572bb8eb1203b365b289d37d730c4ab04af4be95ad121efeeb6d16c920e8ac8f",
+    "configs\\pilot.yaml": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af"
+  },
+  "log": "E:\\Final Year Project\\Implementation\\Feasibility\\runs\\20261116_01\\check_history\\1794832362639220000\\pytest.log",
+  "timestamp_ns": 1794832367506581800
+}

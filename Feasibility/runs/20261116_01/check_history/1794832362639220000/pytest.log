@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.4.2, pluggy-1.7.0 -- E:\Final Year Project\Implementation\Feasibility\.venv\Scripts\python.exe
+cachedir: cache\pytest
+rootdir: E:\Final Year Project\Implementation\Feasibility
+plugins: anyio-4.16.0
+collecting ... collected 13 items
+
+tests/test_correctness.py::test_analytical[A-expected0-shares0] PASSED   [  7%]
+tests/test_correctness.py::test_analytical[B-expected1-shares1] PASSED   [ 15%]
+tests/test_correctness.py::test_gates_and_signed_distinction PASSED      [ 23%]
+tests/test_correctness.py::test_microbatch[dtype0] PASSED                [ 30%]
+tests/test_correctness.py::test_microbatch[dtype1] PASSED                [ 38%]
+tests/test_correctness.py::test_restricted_rescaling PASSED              [ 46%]
+tests/test_correctness.py::test_repeated_isolation[cpu] PASSED           [ 53%]
+tests/test_correctness.py::test_repeated_isolation[cuda] PASSED          [ 61%]
+tests/test_correctness.py::test_training_neutrality[cpu] PASSED          [ 69%]
+tests/test_correctness.py::test_training_neutrality[cuda] PASSED         [ 76%]
+tests/test_correctness.py::test_zero_invalid PASSED                      [ 84%]
+tests/test_correctness.py::test_checkpoint_resume[cpu] PASSED            [ 92%]
+tests/test_correctness.py::test_checkpoint_resume[cuda] PASSED           [100%]
+
+- generated xml file: E:\Final Year Project\Implementation\Feasibility\runs\20261116_01\check_history\1794832362639220000\junit.xml -
+============================= 13 passed in 2.26s ==============================

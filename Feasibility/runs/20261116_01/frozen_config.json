@@ -1,0 +1,154 @@
+{
+  "configuration": {
+    "attempt": "20261116_01",
+    "dataset": {
+      "name": "SpuCoMNIST",
+      "classes": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ]
+      ],
+      "conditions": {
+        "independent": 0.1,
+        "correlated": 0.95
+      },
+      "difficulty": "MAGNITUDE_LARGE",
+      "label_noise": 0.0,
+      "core_feature_noise": 0.0,
+      "data_seed": 1701,
+      "reservation_seed": 2903,
+      "probe_pool_per_class": 256,
+      "health_per_class": 128
+    },
+    "training": {
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "epochs": 20,
+      "batch_size": 128,
+      "drop_last": false,
+      "optimizer": "Adam",
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "weight_decay": 0.0,
+      "num_workers": 0,
+      "checkpoint_fractions": [
+        0.01,
+        0.02,
+        0.03,
+        0.05,
+        0.075,
+        0.1
+      ],
+      "endpoint": 0.1,
+      "device": "auto",
+      "cpu_threads": 4
+    },
+    "measurement": {
+      "epsilon": 1e-12,
+      "stabilizer_dominated_fraction": 0.01,
+      "probe_sizes": [
+        64,
+        128,
+        256
+      ],
+      "microbatch": 128,
+      "numerical_share_floor": 1e-05,
+      "ratio_screen": 3.0,
+      "health_accuracy": 0.8,
+      "health_loss": "ln_K",
+      "recolor_per_class": 32,
+      "recolor_rule": "next_palette_index_mod_K",
+      "excessive_monitoring_ratio": 1.0,
+      "feature_prefixes": [
+        0.05,
+        0.1
+      ],
+      "feature_blocks": [
+        "shallow",
+        "deep"
+      ],
+      "feature_summaries": [
+        "last",
+        "mean",
+        "std",
+        "slope"
+      ]
+    },
+    "tolerances": {
+      "float64_atol": 1e-09,
+      "float64_rtol": 1e-07,
+      "float32_atol": 1e-06,
+      "float32_rtol": 0.0001,
+      "share_atol": 1e-05,
+      "gradcheck_eps": 1e-06,
+      "gradcheck_atol": 1e-05,
+      "gradcheck_rtol": 0.001
+    },
+    "smoke": {
+      "seed": 991,
+      "updates": 12,
+      "examples": 512
+    }
+  },
+  "configuration_sha256": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af",
+  "train_n": 41604,
+  "updates_per_epoch": 326,
+  "full_planned_updates": 6520,
+  "checkpoint_updates": [
+    65,
+    130,
+    196,
+    326,
+    489,
+    652
+  ],
+  "actual_fractions": [
+    0.009969325153374233,
+    0.019938650306748466,
+    0.030061349693251534,
+    0.05,
+    0.075,
+    0.1
+  ],
+  "endpoint": 652,
+  "rounding": "Python round (ties to even), checkpoints distinct",
+  "rationale": "Empty existing project; proposal fixes CNN widths but no specific digit mapping or horizon. User defaults adopted prospectively. No empirical tuning.",
+  "feature_definition": "8 features of shallow/deep primary block shares: last, mean, population SD, OLS slope vs actual full-horizon fraction; exclude initialization.",
+  "numerical_floor": "Level/mean/SD floor 1e-5 share units; slope floor 2e-5/(last-first fraction). Use larger of this and measured repeat RMS/sqrt(2). Ratios use max(sampling noise, numerical floor).",
+  "reliability_followup": "If any initial retained feature at either prefix has spread/noise below 3, remeasure all saved checkpoints at 128 and 256 per class. Never retrain.",
+  "structural_rule": "Head/bias diagnostics are descriptive; no causal attribution. Head sensitivity >=50% of deep or bias sensitivity >=10% of weight total flags targeted control.",
+  "cost_rule": "Combined A+B monitor time/training time >1 flags excessive monitoring; primary A cost also reported."
+}

@@ -1,0 +1,12 @@
+REMEASURED independent_s11 size=128
+REMEASURED independent_s22 size=128
+REMEASURED independent_s33 size=128
+REMEASURED correlated_s11 size=128
+REMEASURED correlated_s22 size=128
+REMEASURED correlated_s33 size=128
+REMEASURED independent_s11 size=256
+REMEASURED independent_s22 size=256
+REMEASURED independent_s33 size=256
+REMEASURED correlated_s11 size=256
+REMEASURED correlated_s22 size=256
+REMEASURED correlated_s33 size=256

@@ -1,0 +1,6 @@
+REMEASURED independent_s11 size=64
+REMEASURED independent_s22 size=64
+REMEASURED independent_s33 size=64
+REMEASURED correlated_s11 size=64
+REMEASURED correlated_s22 size=64
+REMEASURED correlated_s33 size=64

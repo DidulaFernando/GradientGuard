@@ -1,0 +1,23 @@
+Using Python 3.11.18 environment at: Implementation\Feasibility\.venv
+WARN Fixing invalid version specifier by removing stray quotes (before: `>= '2.7'`; after: `>= 2.7`)
+Resolved 79 packages in 1.32s
+   Building grad-cam==1.5.7
+   Building spuco @ file:///E:/Final%20Year%20Project/Implementation/Feasibility/tools/SpuCo
+Downloading pygments (1.2MiB)
+Downloading tokenizers (2.7MiB)
+Downloading pip (1.9MiB)
+Downloading opencv-python-headless (41.8MiB)
+Downloading numpy (12.3MiB)
+Downloading transformers (12.7MiB)
+Downloading hf-xet (3.7MiB)
+Downloading pydantic-core (2.2MiB)
+Downloading pandas (10.8MiB)
+Downloading numba (2.7MiB)
+Downloading scikit-learn (7.9MiB)
+Downloading fonttools (1.6MiB)
+Downloading llvmlite (39.9MiB)
+Downloading scipy (34.9MiB)
+Downloading matplotlib (7.5MiB)
+error: Failed to build `spuco @ file:///E:/Final%20Year%20Project/Implementation/Feasibility/tools/SpuCo`
+  cause: Failed to run `E:\Final Year Project\Implementation\Feasibility\cache\uv\builds-v0\.tmpgPCZjB\Scripts\python.exe`
+  cause: An Application Control policy has blocked this file. (os error 4551)

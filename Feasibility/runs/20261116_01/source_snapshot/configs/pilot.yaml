@@ -1,0 +1,54 @@
+attempt: '20261116_01'
+dataset:
+  name: SpuCoMNIST
+  classes: [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]]
+  conditions: {independent: 0.1, correlated: 0.95}
+  difficulty: MAGNITUDE_LARGE
+  label_noise: 0.0
+  core_feature_noise: 0.0
+  data_seed: 1701
+  reservation_seed: 2903
+  probe_pool_per_class: 256
+  health_per_class: 128
+training:
+  seeds: [11, 22, 33]
+  epochs: 20
+  batch_size: 128
+  drop_last: false
+  optimizer: Adam
+  lr: 0.001
+  betas: [0.9, 0.999]
+  weight_decay: 0.0
+  num_workers: 0
+  checkpoint_fractions: [0.01, 0.02, 0.03, 0.05, 0.075, 0.1]
+  endpoint: 0.1
+  device: auto
+  cpu_threads: 4
+measurement:
+  epsilon: 1.0e-12
+  stabilizer_dominated_fraction: 0.01
+  probe_sizes: [64, 128, 256]
+  microbatch: 128
+  numerical_share_floor: 1.0e-5
+  ratio_screen: 3.0
+  health_accuracy: 0.80
+  health_loss: ln_K
+  recolor_per_class: 32
+  recolor_rule: next_palette_index_mod_K
+  excessive_monitoring_ratio: 1.0
+  feature_prefixes: [0.05, 0.1]
+  feature_blocks: [shallow, deep]
+  feature_summaries: [last, mean, std, slope]
+tolerances:
+  float64_atol: 1.0e-9
+  float64_rtol: 1.0e-7
+  float32_atol: 1.0e-6
+  float32_rtol: 1.0e-4
+  share_atol: 1.0e-5
+  gradcheck_eps: 1.0e-6
+  gradcheck_atol: 1.0e-5
+  gradcheck_rtol: 0.001
+smoke:
+  seed: 991
+  updates: 12
+  examples: 512

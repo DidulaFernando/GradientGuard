@@ -1,0 +1,9 @@
+{
+  "state": "completed",
+  "run": "independent_s22",
+  "step": 652,
+  "endpoint": 652,
+  "device": "cuda",
+  "source_health_eligible": false,
+  "config_hash": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af"
+}

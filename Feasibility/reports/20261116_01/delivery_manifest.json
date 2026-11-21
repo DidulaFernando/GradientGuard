@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "report_sha256": "729027e755591b70e26a684e820a943f6f60886abaa7b24628928407ccad4761",
+  "decision_sha256": "38fa4c923d824f41466cf74eb27dfb4e4d57bc093567392f2928b94157bf9828",
+  "instructions_sha256": "582d7f9cc971d20f77d76dfda972925e03fc65995f936f2597a2cbd6db844d22",
+  "report_tables": 21,
+  "figures": 25,
+  "completed_runs": [
+    "independent_s11",
+    "independent_s22",
+    "independent_s33",
+    "correlated_s11",
+    "correlated_s22",
+    "correlated_s33"
+  ]
+}

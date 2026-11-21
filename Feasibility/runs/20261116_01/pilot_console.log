@@ -1,0 +1,48 @@
+independent_s11 update=0/652 fraction=0.000000 health_acc=0.1000 health_loss=2.3061 train_s=0.00
+independent_s11 update=65/652 fraction=0.009969 health_acc=0.1711 health_loss=2.2674 train_s=0.26
+independent_s11 update=130/652 fraction=0.019939 health_acc=0.2453 health_loss=1.9499 train_s=0.48
+independent_s11 update=196/652 fraction=0.030061 health_acc=0.3078 health_loss=1.8311 train_s=0.71
+independent_s11 update=326/652 fraction=0.050000 health_acc=0.4813 health_loss=1.6901 train_s=1.17
+independent_s11 update=489/652 fraction=0.075000 health_acc=0.5977 health_loss=1.2679 train_s=1.74
+independent_s11 update=652/652 fraction=0.100000 health_acc=0.7063 health_loss=1.0019 train_s=2.30
+COMPLETED independent_s11
+independent_s22 update=0/652 fraction=0.000000 health_acc=0.1000 health_loss=2.3059 train_s=0.00
+independent_s22 update=65/652 fraction=0.009969 health_acc=0.1266 health_loss=2.2934 train_s=0.23
+independent_s22 update=130/652 fraction=0.019939 health_acc=0.2234 health_loss=2.1038 train_s=0.45
+independent_s22 update=196/652 fraction=0.030061 health_acc=0.2711 health_loss=1.9455 train_s=0.67
+independent_s22 update=326/652 fraction=0.050000 health_acc=0.2719 health_loss=1.9025 train_s=1.12
+independent_s22 update=489/652 fraction=0.075000 health_acc=0.5203 health_loss=1.4863 train_s=1.68
+independent_s22 update=652/652 fraction=0.100000 health_acc=0.6844 health_loss=1.0443 train_s=2.24
+COMPLETED independent_s22
+independent_s33 update=0/652 fraction=0.000000 health_acc=0.1000 health_loss=2.3046 train_s=0.00
+independent_s33 update=65/652 fraction=0.009969 health_acc=0.1516 health_loss=2.2980 train_s=0.23
+independent_s33 update=130/652 fraction=0.019939 health_acc=0.1867 health_loss=2.1592 train_s=0.45
+independent_s33 update=196/652 fraction=0.030061 health_acc=0.3125 health_loss=1.9321 train_s=0.68
+independent_s33 update=326/652 fraction=0.050000 health_acc=0.3875 health_loss=1.7472 train_s=1.11
+independent_s33 update=489/652 fraction=0.075000 health_acc=0.4773 health_loss=1.5479 train_s=1.66
+independent_s33 update=652/652 fraction=0.100000 health_acc=0.5156 health_loss=1.3277 train_s=2.24
+COMPLETED independent_s33
+correlated_s11 update=0/652 fraction=0.000000 health_acc=0.1000 health_loss=2.3078 train_s=0.00
+correlated_s11 update=65/652 fraction=0.009969 health_acc=0.9555 health_loss=0.6294 train_s=0.23
+correlated_s11 update=130/652 fraction=0.019939 health_acc=0.9555 health_loss=0.4762 train_s=0.46
+correlated_s11 update=196/652 fraction=0.030061 health_acc=0.9563 health_loss=0.3539 train_s=0.70
+correlated_s11 update=326/652 fraction=0.050000 health_acc=0.9555 health_loss=0.2860 train_s=1.16
+correlated_s11 update=489/652 fraction=0.075000 health_acc=0.9563 health_loss=0.2743 train_s=1.72
+correlated_s11 update=652/652 fraction=0.100000 health_acc=0.9563 health_loss=0.2673 train_s=2.29
+COMPLETED correlated_s11
+correlated_s22 update=0/652 fraction=0.000000 health_acc=0.1000 health_loss=2.3065 train_s=0.00
+correlated_s22 update=65/652 fraction=0.009969 health_acc=0.9555 health_loss=0.5335 train_s=0.23
+correlated_s22 update=130/652 fraction=0.019939 health_acc=0.9555 health_loss=0.3714 train_s=0.45
+correlated_s22 update=196/652 fraction=0.030061 health_acc=0.9555 health_loss=0.3201 train_s=0.69
+correlated_s22 update=326/652 fraction=0.050000 health_acc=0.9555 health_loss=0.3006 train_s=1.14
+correlated_s22 update=489/652 fraction=0.075000 health_acc=0.9563 health_loss=0.2888 train_s=1.71
+correlated_s22 update=652/652 fraction=0.100000 health_acc=0.9563 health_loss=0.2552 train_s=2.28
+COMPLETED correlated_s22
+correlated_s33 update=0/652 fraction=0.000000 health_acc=0.1000 health_loss=2.3030 train_s=0.00
+correlated_s33 update=65/652 fraction=0.009969 health_acc=0.9555 health_loss=0.5841 train_s=0.23
+correlated_s33 update=130/652 fraction=0.019939 health_acc=0.9555 health_loss=0.4238 train_s=0.45
+correlated_s33 update=196/652 fraction=0.030061 health_acc=0.9555 health_loss=0.3373 train_s=0.66
+correlated_s33 update=326/652 fraction=0.050000 health_acc=0.9563 health_loss=0.2977 train_s=1.09
+correlated_s33 update=489/652 fraction=0.075000 health_acc=0.9555 health_loss=0.2683 train_s=1.63
+correlated_s33 update=652/652 fraction=0.100000 health_acc=0.9570 health_loss=0.2604 train_s=2.16
+COMPLETED correlated_s33

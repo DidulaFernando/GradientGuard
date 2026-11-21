@@ -1,0 +1,6 @@
+{
+  "script": "E:\\Final Year Project\\Implementation\\Feasibility\\instructions\\finalize_report.py",
+  "script_sha256": "117ce4550bc1dc10ae9a676de30aa8a323c4f7ac6ed89c6a3487e75c9036b70f",
+  "training_sources_unchanged": true,
+  "note": "Descriptive report extension only; no modification to frozen settings, retained features, thresholds, checkpoints or training."
+}

@@ -1,0 +1,21 @@
+{
+  "CapturedAt": "2026-11-16T18:11:43.6242314+05:30",
+  "Phase": "Post-run inventory; pretraining memory and CUDA settings retained in provenance.json",
+  "CPU": {
+    "Name": "AMD Ryzen 7 5700X 8-Core Processor             ",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  },
+  "OS": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200",
+    "TotalVisibleMemorySize": 33472880,
+    "FreePhysicalMemory": 18684572
+  },
+  "GPU": "NVIDIA GeForce RTX 5060 Ti, 610.88, 16311 MiB, 2062 MiB",
+  "Disk": {
+    "Used": 895437168640,
+    "Free": 104749142016
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "label": "SMOKE ONLY - not feasibility evidence",
+  "updates": 12,
+  "training_neutrality_max_error": 0.0,
+  "config_hash": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af",
+  "device": "cuda"
+}

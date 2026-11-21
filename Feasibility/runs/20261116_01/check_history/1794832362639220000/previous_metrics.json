@@ -1,0 +1,94 @@
+{
+  "analytical_A": {
+    "logit": 1.0,
+    "r": 0.2319693166840739,
+    "normalized_sensitivities": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "shares": [
+      0.24999999999973058,
+      0.24999999999973058,
+      0.49999999999946115
+    ],
+    "max_error": 0.0
+  },
+  "analytical_B": {
+    "logit": 1.0,
+    "r": 0.2319693166840739,
+    "normalized_sensitivities": [
+      1.0,
+      1.5000000000000004,
+      0.7500000000000001,
+      0.7499999999999999
+    ],
+    "shares": [
+      0.24999999999973055,
+      0.3749999999995959,
+      0.37499999999959577
+    ],
+    "max_error": 4.440892098500626e-16
+  },
+  "gates": {
+    "max_chain_rule_error": 2.710505431213761e-20,
+    "common_gate": -0.01809656653830554,
+    "signed_sum": -0.018096566538305558,
+    "absolute_sum": 0.2515918250864848,
+    "gradcheck": {
+      "eps": 1e-06,
+      "atol": 1e-05,
+      "rtol": 0.001
+    }
+  },
+  "microbatch_torch.float64": {
+    "max_gradient_error": 3.122502256758253e-17,
+    "max_share_error": 1.1102230246251565e-16,
+    "max_total_error": 5.551115123125783e-17,
+    "n": 13,
+    "microbatches": [
+      13,
+      1,
+      4,
+      7
+    ]
+  },
+  "microbatch_torch.float32": {
+    "max_gradient_error": 6.891787052154541e-08,
+    "max_share_error": 2.287322564686889e-08,
+    "max_total_error": 3.3527612686157227e-08,
+    "n": 13,
+    "microbatches": [
+      13,
+      1,
+      4,
+      7
+    ]
+  },
+  "rescaling": {
+    "max_output_error": 1.3877787807814457e-17,
+    "max_sensitivity_error": 0.0
+  },
+  "repeated_isolation_cpu": {
+    "maximum_difference": 0.0,
+    "parameters_optimizer_rng_grad_modes_unchanged": true
+  },
+  "repeated_isolation_cuda": {
+    "maximum_difference": 0.0,
+    "parameters_optimizer_rng_grad_modes_unchanged": true
+  },
+  "training_neutrality_cpu": {
+    "max_parameter_error": 0.0,
+    "optimizer_equal": true,
+    "updates": 5
+  },
+  "training_neutrality_cuda": {
+    "max_parameter_error": 0.0,
+    "optimizer_equal": true,
+    "updates": 5
+  },
+  "invalid_zero": {
+    "passed": true
+  }
+}

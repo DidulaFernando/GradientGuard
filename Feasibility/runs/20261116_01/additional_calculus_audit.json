@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "finite_differences": [
+    {
+      "name": "conv1.weight",
+      "index": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "autograd": 0.2319693166840739,
+      "central_difference": 0.23196931686619848,
+      "absolute_error": 1.821245931843407e-10,
+      "epsilon": 1e-06,
+      "gradcheck_passed": true
+    },
+    {
+      "name": "conv2.weight",
+      "index": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "autograd": 0.3479539750261109,
+      "central_difference": 0.3479539749662308,
+      "absolute_error": 5.988010087776274e-11,
+      "epsilon": 1e-06,
+      "gradcheck_passed": true
+    },
+    {
+      "name": "conv3.weight",
+      "index": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "autograd": 0.17397698751305543,
+      "central_difference": 0.1739769872610708,
+      "absolute_error": 2.5198462760833706e-10,
+      "epsilon": 1e-06,
+      "gradcheck_passed": true
+    },
+    {
+      "name": "head.weight",
+      "index": [
+        0,
+        0
+      ],
+      "autograd": 0.1739769875130554,
+      "central_difference": 0.1739769874831154,
+      "absolute_error": 2.993999492773014e-11,
+      "epsilon": 1e-06,
+      "gradcheck_passed": true
+    }
+  ],
+  "trained_checkpoint_cuda_microbatch": [
+    {
+      "condition": "independent",
+      "seed": 11,
+      "step": 652,
+      "probe_size": 640,
+      "microbatch": 64,
+      "max_gradient_error": 2.086162567138672e-07,
+      "max_block_share_error": 2.6177059714305173e-08,
+      "total_absolute_error": 2.384185791015625e-07
+    },
+    {
+      "condition": "independent",
+      "seed": 11,
+      "step": 652,
+      "probe_size": 640,
+      "microbatch": 128,
+      "max_gradient_error": 1.9371509552001953e-07,
+      "max_block_share_error": 1.8709271909500558e-08,
+      "total_absolute_error": 1.1920928955078125e-07
+    },
+    {
+      "condition": "independent",
+      "seed": 11,
+      "step": 652,
+      "probe_size": 640,
+      "microbatch": 192,
+      "max_gradient_error": 2.5331974029541016e-07,
+      "max_block_share_error": 0.0,
+      "total_absolute_error": 0.0
+    },
+    {
+      "condition": "correlated",
+      "seed": 11,
+      "step": 652,
+      "probe_size": 640,
+      "microbatch": 64,
+      "max_gradient_error": 2.421438694000244e-08,
+      "max_block_share_error": 1.0801829070095081e-08,
+      "total_absolute_error": 2.9802322387695312e-08
+    },
+    {
+      "condition": "correlated",
+      "seed": 11,
+      "step": 652,
+      "probe_size": 640,
+      "microbatch": 128,
+      "max_gradient_error": 3.166496753692627e-08,
+      "max_block_share_error": 2.526706599503825e-08,
+      "total_absolute_error": 0.0
+    },
+    {
+      "condition": "correlated",
+      "seed": 11,
+      "step": 652,
+      "probe_size": 640,
+      "microbatch": 192,
+      "max_gradient_error": 2.60770320892334e-08,
+      "max_block_share_error": 1.7940249980030742e-08,
+      "total_absolute_error": 1.1920928955078125e-07
+    }
+  ]
+}

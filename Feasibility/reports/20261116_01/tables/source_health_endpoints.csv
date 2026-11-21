@@ -1,0 +1,7 @@
+run,health_accuracy,health_loss,eligible
+independent_s11,0.70625,1.001948618888855,False
+independent_s22,0.684375,1.0443000853061677,False
+independent_s33,0.515625,1.3277096629142762,False
+correlated_s11,0.95625,0.2672722727060318,True
+correlated_s22,0.95625,0.2551711454987526,True
+correlated_s33,0.95703125,0.2604146584868431,True

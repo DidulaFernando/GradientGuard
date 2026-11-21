@@ -1,0 +1,175 @@
+DATA HASHES AND CONFIG VERIFIED
+ARTIFACT AUDIT PASSED {
+  "snapshot_matches_frozen_sources": true,
+  "current_sources_match_frozen_sources": true,
+  "matched_ids_labels_roles_nested_ranks": true,
+  "runs": {
+    "independent_s11": {
+      "updates_verified_from_Adam_state": 652,
+      "initial_state_matches_paired_seed": true,
+      "monitoring_points_verified": 7,
+      "max_share_sum_error": 1.1606049454826461e-11
+    },
+    "independent_s22": {
+      "updates_verified_from_Adam_state": 652,
+      "initial_state_matches_paired_seed": true,
+      "monitoring_points_verified": 7,
+      "max_share_sum_error": 9.880762874558968e-12
+    },
+    "independent_s33": {
+      "updates_verified_from_Adam_state": 652,
+      "initial_state_matches_paired_seed": true,
+      "monitoring_points_verified": 7,
+      "max_share_sum_error": 1.3822054611978274e-11
+    },
+    "correlated_s11": {
+      "updates_verified_from_Adam_state": 652,
+      "initial_state_matches_paired_seed": true,
+      "monitoring_points_verified": 7,
+      "max_share_sum_error": 3.504307954926844e-12
+    },
+    "correlated_s22": {
+      "updates_verified_from_Adam_state": 652,
+      "initial_state_matches_paired_seed": true,
+      "monitoring_points_verified": 7,
+      "max_share_sum_error": 1.971089957919503e-12
+    },
+    "correlated_s33": {
+      "updates_verified_from_Adam_state": 652,
+      "initial_state_matches_paired_seed": true,
+      "monitoring_points_verified": 7,
+      "max_share_sum_error": 3.113731494863714e-12
+    }
+  },
+  "nested_probe_counts": {
+    "probe_A_64": 640,
+    "probe_A_128": 1280,
+    "probe_A_256": 2560,
+    "probe_B_64": 640,
+    "probe_B_128": 1280,
+    "probe_B_256": 2560,
+    "health_32": 320,
+    "health_128": 1280
+  },
+  "training_order_hashes": {
+    "11": [
+      "4a9fd6042351d34cb5740c9ba8e1bcb593728ed2a23aff174104ad3c99f14dd9",
+      "d375e1e13c386895092c47b3a061010181ec39cce6d3fa42dea583572167ab7c"
+    ],
+    "22": [
+      "e594bf921a2bf85138b89712dd9cfeb635cd07e402b8ccb3b7a4b012c84b7241",
+      "d80d2ad1eec2178ae2ecf600f5bcecb42be6cfdbf64ce4c974978a6fb5ef05a6"
+    ],
+    "33": [
+      "fb3f2ae487914e17621309f494b79672713968fd7b90889772402493c21ef3e3",
+      "1edf0d748b03aef131ee2aff292328f6abb8ded6d772544022a5a3c257fe48fc"
+    ]
+  },
+  "installed_spuco_source_files_verified": 67,
+  "model_parameter_counts": {
+    "conv1.weight": 432,
+    "conv1.bias": 16,
+    "conv2.weight": 4608,
+    "conv2.bias": 32,
+    "conv3.weight": 18432,
+    "conv3.bias": 64,
+    "head.weight": 640,
+    "head.bias": 10
+  },
+  "passed": true
+}
+ADDITIONAL CALCULUS AUDIT PASSED {'passed': True, 'finite_differences': [{'name': 'conv1.weight', 'index': (0, 0, 1, 1), 'autograd': 0.2319693166840739, 'central_difference': 0.23196931686619848, 'absolute_error': 1.821245931843407e-10, 'epsilon': 1e-06, 'gradcheck_passed': True}, {'name': 'conv2.weight', 'index': (0, 0, 1, 1), 'autograd': 0.3479539750261109, 'central_difference': 0.3479539749662308, 'absolute_error': 5.988010087776274e-11, 'epsilon': 1e-06, 'gradcheck_passed': True}, {'name': 'conv3.weight', 'index': (0, 0, 1, 1), 'autograd': 0.17397698751305543, 'central_difference': 0.1739769872610708, 'absolute_error': 2.5198462760833706e-10, 'epsilon': 1e-06, 'gradcheck_passed': True}, {'name': 'head.weight', 'index': (0, 0), 'autograd': 0.1739769875130554, 'central_difference': 0.1739769874831154, 'absolute_error': 2.993999492773014e-11, 'epsilon': 1e-06, 'gradcheck_passed': True}], 'trained_checkpoint_cuda_microbatch': [{'condition': 'independent', 'seed': 11, 'step': 652, 'probe_size': 640, 'microbatch': 64, 'max_gradient_error': 2.086162567138672e-07, 'max_block_share_error': 2.6177059714305173e-08, 'total_absolute_error': 2.384185791015625e-07}, {'condition': 'independent', 'seed': 11, 'step': 652, 'probe_size': 640, 'microbatch': 128, 'max_gradient_error': 1.9371509552001953e-07, 'max_block_share_error': 1.8709271909500558e-08, 'total_absolute_error': 1.1920928955078125e-07}, {'condition': 'independent', 'seed': 11, 'step': 652, 'probe_size': 640, 'microbatch': 192, 'max_gradient_error': 2.5331974029541016e-07, 'max_block_share_error': 0.0, 'total_absolute_error': 0.0}, {'condition': 'correlated', 'seed': 11, 'step': 652, 'probe_size': 640, 'microbatch': 64, 'max_gradient_error': 2.421438694000244e-08, 'max_block_share_error': 1.0801829070095081e-08, 'total_absolute_error': 2.9802322387695312e-08}, {'condition': 'correlated', 'seed': 11, 'step': 652, 'probe_size': 640, 'microbatch': 128, 'max_gradient_error': 3.166496753692627e-08, 'max_block_share_error': 2.526706599503825e-08, 'total_absolute_error': 0.0}, {'condition': 'correlated', 'seed': 11, 'step': 652, 'probe_size': 640, 'microbatch': 192, 'max_gradient_error': 2.60770320892334e-08, 'max_block_share_error': 1.7940249980030742e-08, 'total_absolute_error': 1.1920928955078125e-07}]}
+REPORT E:\Final Year Project\Implementation\Feasibility\reports\20261116_01\REPORT.md
+{
+  "attempt": "20261116_01",
+  "decision": "reliable_level_and_slope_variation_targeted_structural_control_required",
+  "completed_runs": [
+    "independent_s11",
+    "independent_s22",
+    "independent_s33",
+    "correlated_s11",
+    "correlated_s22",
+    "correlated_s33"
+  ],
+  "correctness_passed": true,
+  "repeat_stable": true,
+  "numerical_jitter_max": 4.440892098500626e-16,
+  "probe_sizes_measured": [
+    64,
+    128,
+    256
+  ],
+  "selected_probe_budget_per_class": 256,
+  "at_least_one_level_passes": true,
+  "at_least_one_slope_passes": true,
+  "head_or_bias_diagnostic_flag": true,
+  "source_health_eligible_count": 3,
+  "AB_monitor_training_ratio": 0.13325638792116318,
+  "excessive_monitoring_flag": false,
+  "correlated_minus_independent_flip_rate": 0.8031250064571698,
+  "background_contrast_absent_or_weak": false,
+  "scientific_scope": "Descriptive diagnostics across two fixed dataset conditions with three paired seeds. No population inference, WGA prediction, audit gain, mechanism or novelty claim.",
+  "configuration_sha256": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af",
+  "summary_storage_bytes": 581953,
+  "report_generation_seconds": 4.061913000001368
+}
+FINAL QUALIFIED REPORT E:\Final Year Project\Implementation\Feasibility\reports\20261116_01\REPORT.md
+{
+  "attempt": "20261116_01",
+  "decision": "reliable_level_and_slope_variation_targeted_structural_control_required",
+  "completed_runs": [
+    "independent_s11",
+    "independent_s22",
+    "independent_s33",
+    "correlated_s11",
+    "correlated_s22",
+    "correlated_s33"
+  ],
+  "correctness_passed": true,
+  "repeat_stable": true,
+  "numerical_jitter_max": 4.440892098500626e-16,
+  "probe_sizes_measured": [
+    64,
+    128,
+    256
+  ],
+  "selected_probe_budget_per_class": 256,
+  "at_least_one_level_passes": true,
+  "at_least_one_slope_passes": true,
+  "head_or_bias_diagnostic_flag": true,
+  "source_health_eligible_count": 3,
+  "AB_monitor_training_ratio": 0.13325638792116318,
+  "excessive_monitoring_flag": false,
+  "correlated_minus_independent_flip_rate": 0.8031250064571698,
+  "background_contrast_absent_or_weak": false,
+  "scientific_scope": "Descriptive diagnostics across two fixed dataset conditions with three paired seeds. No population inference, WGA prediction, audit gain, mechanism or novelty claim.",
+  "configuration_sha256": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af",
+  "summary_storage_bytes": 581953,
+  "report_generation_seconds": 4.061913000001368,
+  "assessment": "Strong reproducible level variation in these six prefixes; temporal screen passes narrowly only with 256/class. Structural control required before attribution or progression claims.",
+  "passing_features_at_10pct_selected_budget": [
+    "shallow_mean",
+    "shallow_std",
+    "deep_last",
+    "deep_mean",
+    "deep_slope"
+  ],
+  "deep_slope_screen_ratio_at_10pct_256": 3.0501409990602664,
+  "slope_margin_above_frozen_ratio_screen": 0.05014099906026637,
+  "AB_monitor_training_ratio_by_budget": {
+    "64": 0.13325638792116287,
+    "128": 0.24331619024122517,
+    "256": 0.39340357777688695
+  },
+  "selected_budget_head_flag": false,
+  "selected_budget_bias_flag": false,
+  "independent_feature_recalculation_max_error": 7.549516567451064e-15,
+  "artifact_audit_passed": true,
+  "additional_calculus_audit_passed": true,
+  "remaining_manual_execution_steps": [],
+  "next_research_steps": [
+    "Targeted classifier-head/aggregation control",
+    "Recheck temporal reliability across additional probe reservations and independent settings",
+    "Address source-health mismatch before a source-normal outcome study"
+  ]
+}

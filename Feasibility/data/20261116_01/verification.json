@@ -1,0 +1,56 @@
+{
+  "generator_signature": "(root: str, spurious_feature_difficulty: spuco.datasets.base_spuco_dataset.SpuriousFeatureDifficulty, classes: List[List[int]], spurious_correlation_strength=0.0, label_noise: float = 0.0, core_feature_noise: float = 0.0, color_map: spuco.datasets.spuco_mnist.ColourMap = <ColourMap.HSV: 'hsv'>, split: str = 'train', transform: Optional[Callable] = None, verbose: bool = False, download: bool = True)",
+  "conditions": {
+    "independent": {
+      "n": 48004,
+      "train_n": 41604,
+      "alignment": {
+        "all": 0.0999083409715857,
+        "train": 0.10020671089318335,
+        "probe_A": 0.100390625,
+        "probe_B": 0.092578125,
+        "health": 0.10390625
+      },
+      "foreground_error": 0.0,
+      "background_error": 0.0,
+      "overlaps": {
+        "probe_A/train": 0,
+        "probe_A/probe_B": 0,
+        "probe_B/train": 0,
+        "health/train": 0,
+        "health/probe_A": 0,
+        "health/probe_B": 0
+      },
+      "official_validation_overlap": 0,
+      "tensor_sha256": "b61ca52401b9541e57c962b477dace151e84c035fd15171a632430067007587b"
+    },
+    "correlated": {
+      "n": 48004,
+      "train_n": 41604,
+      "alignment": {
+        "all": 0.9499208399300059,
+        "train": 0.949548120373041,
+        "probe_A": 0.95390625,
+        "probe_B": 0.94921875,
+        "health": 0.95546875
+      },
+      "foreground_error": 0.0,
+      "background_error": 0.0,
+      "overlaps": {
+        "probe_A/train": 0,
+        "probe_A/probe_B": 0,
+        "probe_B/train": 0,
+        "health/train": 0,
+        "health/probe_A": 0,
+        "health/probe_B": 0
+      },
+      "official_validation_overlap": 0,
+      "tensor_sha256": "c8bf6a101512752ef6a3811b2ceaf4754c22e7e950db3498f83b3f0a47bd51cb"
+    }
+  },
+  "data_seed": 1701,
+  "reservation_seed": 2903,
+  "note": "Official validation/test are never instantiated/evaluated. torchvision download may fetch raw test files.",
+  "seconds": 45.83410279999953,
+  "passed": true
+}

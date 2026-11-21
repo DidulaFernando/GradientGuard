@@ -1,0 +1,58 @@
+{
+  "attempt": "20261116_01",
+  "decision": "reliable_level_and_slope_variation_targeted_structural_control_required",
+  "completed_runs": [
+    "independent_s11",
+    "independent_s22",
+    "independent_s33",
+    "correlated_s11",
+    "correlated_s22",
+    "correlated_s33"
+  ],
+  "correctness_passed": true,
+  "repeat_stable": true,
+  "numerical_jitter_max": 4.440892098500626e-16,
+  "probe_sizes_measured": [
+    64,
+    128,
+    256
+  ],
+  "selected_probe_budget_per_class": 256,
+  "at_least_one_level_passes": true,
+  "at_least_one_slope_passes": true,
+  "head_or_bias_diagnostic_flag": true,
+  "source_health_eligible_count": 3,
+  "AB_monitor_training_ratio": 0.13325638792116318,
+  "excessive_monitoring_flag": false,
+  "correlated_minus_independent_flip_rate": 0.8031250064571698,
+  "background_contrast_absent_or_weak": false,
+  "scientific_scope": "Descriptive diagnostics across two fixed dataset conditions with three paired seeds. No population inference, WGA prediction, audit gain, mechanism or novelty claim.",
+  "configuration_sha256": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af",
+  "summary_storage_bytes": 581953,
+  "report_generation_seconds": 3.9753544999985024,
+  "assessment": "Strong reproducible level variation in these six prefixes; temporal screen passes narrowly only with 256/class. Structural control required before attribution or progression claims.",
+  "passing_features_at_10pct_selected_budget": [
+    "shallow_mean",
+    "shallow_std",
+    "deep_last",
+    "deep_mean",
+    "deep_slope"
+  ],
+  "deep_slope_screen_ratio_at_10pct_256": 3.0501409990602664,
+  "slope_margin_above_frozen_ratio_screen": 0.05014099906026637,
+  "AB_monitor_training_ratio_by_budget": {
+    "64": 0.13325638792116287,
+    "128": 0.24331619024122517,
+    "256": 0.39340357777688695
+  },
+  "selected_budget_head_flag": false,
+  "selected_budget_bias_flag": false,
+  "independent_feature_recalculation_max_error": 7.549516567451064e-15,
+  "artifact_audit_passed": true,
+  "remaining_manual_execution_steps": [],
+  "next_research_steps": [
+    "Targeted classifier-head/aggregation control",
+    "Recheck temporal reliability across additional probe reservations and independent settings",
+    "Address source-health mismatch before a source-normal outcome study"
+  ]
+}

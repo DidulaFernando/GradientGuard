@@ -1,0 +1,10 @@
+Using Python 3.11.18 environment at: Implementation\Feasibility\.venv
+Resolved 4 packages in 2ms
+Downloading pip (1.9MiB)
+ Downloaded pip
+Prepared 2 packages in 334ms
+Installed 4 packages in 90ms
+ + packaging==26.3
+ + pip==26.3
+ + setuptools==84.2.1
+ + wheel==0.48.0
