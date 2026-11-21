@@ -1,0 +1,5 @@
+{
+  "charged_seconds": 9401.188065900002,
+  "limit_seconds": 86400,
+  "definition": "Cumulative wall time in GPU stages including source preparation, checkpoints, health and outcome evaluation; conservative, not hardware occupancy"
+}

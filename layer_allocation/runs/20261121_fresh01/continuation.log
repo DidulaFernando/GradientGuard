@@ -1,0 +1,46 @@
+{"time_ns": 1795261073913804700, "event": "source_construction_unavailable", "family": 62, "construction": 0, "reason": "No examples in (2, 8), considering reducing spurious correlation strength"}
+{"time_ns": 1795261111925998900, "event": "classifier_progress", "run": "fresh_f62_c1_s0", "epochs": 10, "total": 60}
+{"time_ns": 1795261122009656800, "event": "classifier_progress", "run": "fresh_f62_c1_s0", "epochs": 20, "total": 60}
+{"time_ns": 1795261132323653500, "event": "classifier_progress", "run": "fresh_f62_c1_s0", "epochs": 30, "total": 60}
+{"time_ns": 1795261142299913000, "event": "classifier_progress", "run": "fresh_f62_c1_s0", "epochs": 40, "total": 60}
+{"time_ns": 1795261152217149900, "event": "classifier_progress", "run": "fresh_f62_c1_s0", "epochs": 50, "total": 60}
+{"time_ns": 1795261162226611700, "event": "classifier_progress", "run": "fresh_f62_c1_s0", "epochs": 60, "total": 60}
+{"time_ns": 1795261162238621400, "event": "classifier_complete", "run": "fresh_f62_c1_s0", "updates": 19560, "seconds": 68.45}
+{"time_ns": 1795261180814118800, "event": "classifier_progress", "run": "fresh_f62_c1_s1", "epochs": 10, "total": 60}
+{"time_ns": 1795261191151517500, "event": "classifier_progress", "run": "fresh_f62_c1_s1", "epochs": 20, "total": 60}
+{"time_ns": 1795261201132497400, "event": "classifier_progress", "run": "fresh_f62_c1_s1", "epochs": 30, "total": 60}
+{"time_ns": 1795261211133551700, "event": "classifier_progress", "run": "fresh_f62_c1_s1", "epochs": 40, "total": 60}
+{"time_ns": 1795261220997765600, "event": "classifier_progress", "run": "fresh_f62_c1_s1", "epochs": 50, "total": 60}
+{"time_ns": 1795261230981553200, "event": "classifier_progress", "run": "fresh_f62_c1_s1", "epochs": 60, "total": 60}
+{"time_ns": 1795261230992679300, "event": "classifier_complete", "run": "fresh_f62_c1_s1", "updates": 19560, "seconds": 68.36}
+{"time_ns": 1795261269215061700, "event": "classifier_progress", "run": "fresh_f63_c0_s0", "epochs": 10, "total": 60}
+{"time_ns": 1795261279078079800, "event": "classifier_progress", "run": "fresh_f63_c0_s0", "epochs": 20, "total": 60}
+{"time_ns": 1795261288921449400, "event": "classifier_progress", "run": "fresh_f63_c0_s0", "epochs": 30, "total": 60}
+{"time_ns": 1795261298735368400, "event": "classifier_progress", "run": "fresh_f63_c0_s0", "epochs": 40, "total": 60}
+{"time_ns": 1795261308759955400, "event": "classifier_progress", "run": "fresh_f63_c0_s0", "epochs": 50, "total": 60}
+{"time_ns": 1795261318564103200, "event": "classifier_progress", "run": "fresh_f63_c0_s0", "epochs": 60, "total": 60}
+{"time_ns": 1795261318575345600, "event": "classifier_complete", "run": "fresh_f63_c0_s0", "updates": 19560, "seconds": 67.51}
+{"time_ns": 1795261336504328000, "event": "classifier_progress", "run": "fresh_f63_c0_s1", "epochs": 10, "total": 60}
+{"time_ns": 1795261346258438800, "event": "classifier_progress", "run": "fresh_f63_c0_s1", "epochs": 20, "total": 60}
+{"time_ns": 1795261356578185900, "event": "classifier_progress", "run": "fresh_f63_c0_s1", "epochs": 30, "total": 60}
+{"time_ns": 1795261366507332800, "event": "classifier_progress", "run": "fresh_f63_c0_s1", "epochs": 40, "total": 60}
+{"time_ns": 1795261376311019400, "event": "classifier_progress", "run": "fresh_f63_c0_s1", "epochs": 50, "total": 60}
+{"time_ns": 1795261386191960600, "event": "classifier_progress", "run": "fresh_f63_c0_s1", "epochs": 60, "total": 60}
+{"time_ns": 1795261386203543400, "event": "classifier_complete", "run": "fresh_f63_c0_s1", "updates": 19560, "seconds": 67.5}
+{"time_ns": 1795261424172856600, "event": "classifier_progress", "run": "fresh_f63_c1_s0", "epochs": 10, "total": 60}
+{"time_ns": 1795261434085944800, "event": "classifier_progress", "run": "fresh_f63_c1_s0", "epochs": 20, "total": 60}
+{"time_ns": 1795261443837703000, "event": "classifier_progress", "run": "fresh_f63_c1_s0", "epochs": 30, "total": 60}
+{"time_ns": 1795261453624818400, "event": "classifier_progress", "run": "fresh_f63_c1_s0", "epochs": 40, "total": 60}
+{"time_ns": 1795261464126994700, "event": "classifier_progress", "run": "fresh_f63_c1_s0", "epochs": 50, "total": 60}
+{"time_ns": 1795261473966254700, "event": "classifier_progress", "run": "fresh_f63_c1_s0", "epochs": 60, "total": 60}
+{"time_ns": 1795261473978417000, "event": "classifier_complete", "run": "fresh_f63_c1_s0", "updates": 19560, "seconds": 67.84}
+{"time_ns": 1795261491896560000, "event": "classifier_progress", "run": "fresh_f63_c1_s1", "epochs": 10, "total": 60}
+{"time_ns": 1795261501728872700, "event": "classifier_progress", "run": "fresh_f63_c1_s1", "epochs": 20, "total": 60}
+{"time_ns": 1795261511574270800, "event": "classifier_progress", "run": "fresh_f63_c1_s1", "epochs": 30, "total": 60}
+{"time_ns": 1795261521375991600, "event": "classifier_progress", "run": "fresh_f63_c1_s1", "epochs": 40, "total": 60}
+{"time_ns": 1795261531263789800, "event": "classifier_progress", "run": "fresh_f63_c1_s1", "epochs": 50, "total": 60}
+{"time_ns": 1795261541168985600, "event": "classifier_progress", "run": "fresh_f63_c1_s1", "epochs": 60, "total": 60}
+{"time_ns": 1795261541181135800, "event": "classifier_complete", "run": "fresh_f63_c1_s1", "updates": 19560, "seconds": 67.08}
+{"time_ns": 1795261544398669600, "event": "development_readiness", "passed": false, "N": 107, "families": 29, "completed": 124, "diverged": 0, "incomplete": 4}
+{"time_ns": 1795261544891806700, "event": "fresh_study_reported", "decision": "stopped_predefined_gate"}
+{"time_ns": 1795261547884823100, "event": "fresh_continuation_complete", "readiness_passed": false, "preparation_failures": 2}

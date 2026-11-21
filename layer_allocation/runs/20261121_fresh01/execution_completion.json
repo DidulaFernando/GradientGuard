@@ -1,0 +1,11 @@
+{
+  "finished": true,
+  "status": "stopped_unavailable_construction_and_readiness_gate",
+  "time_ns": 1795261547882790900,
+  "continuation_source_sha256": "3b2adcd3319590e8cfd00be857c59e66131e985895a6dbde26125579217bb8e4",
+  "fixed_protocol_sha256": "97701a42ecc4d9a2cbec626ff1b70367e1d5a826a9e9ec738e54af68d4f9c307",
+  "evaluation_launched": false,
+  "final_report_sha256": "69f7478e2d453e00943b41073daef6973ab97b308dfd6387f68938e494ca6559",
+  "final_decision_sha256": "67ca9c7d90c50c4c9d293fc23be60f02e8c5118af9007dfce7ce02be2f496995",
+  "final_audit_sha256": "531d47ecff4fe9839b9f2f3153e93ce6af785f0b8ec3bc04310cb000c94cd531"
+}

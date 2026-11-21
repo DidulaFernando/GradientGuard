@@ -1,0 +1,3 @@
+family,construction,data_seed,reservation_seed,reason,source,affected_runs,configuration_unchanged
+61,1,400611,500611,"Official SpuCo assertion: No examples in (9, 1), considering reducing spurious correlation strength",Original execution.log/failures.log; not retried or regenerated,"['fresh_f61_c1_s0', 'fresh_f61_c1_s1']",
+62,0,400620,500620,"No examples in (2, 8), considering reducing spurious correlation strength",,"['fresh_f62_c0_s0', 'fresh_f62_c0_s1']",True

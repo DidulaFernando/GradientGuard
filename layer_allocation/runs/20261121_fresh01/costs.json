@@ -1,0 +1,26 @@
+{
+  "classifier_component_sums": {
+    "training": 7060.330506496804,
+    "monitor_A": 413.4964802999966,
+    "monitor_B": 421.66750459996547,
+    "initialization": 154.9503708000375,
+    "health": 6.41401449998375,
+    "wall": 8381.411765299988,
+    "outcome_seconds": 11.734205299992027
+  },
+  "conservative_gpu_budget": {
+    "charged_seconds": 9401.188065900002,
+    "limit_seconds": 86400,
+    "definition": "Cumulative wall time in GPU stages including source preparation, checkpoints, health and outcome evaluation; conservative, not hardware occupancy"
+  },
+  "dataset_bytes": 10410086,
+  "checkpoint_bytes": 144548364,
+  "limitations": "Training synchronized; primary-panel path includes telemetry/structural/clustering, not isolated sensitivity increment. GPU counters are per-observation allocated peaks; no historical CPU peak or demonstrated monetary savings.",
+  "freeze_to_completion_wall_seconds": 9552.7230951,
+  "auxiliary_real_checkpoint_audit_seconds": 0.6453834999992978,
+  "peak_observation_gpu_allocated_bytes": 594645504,
+  "max_probe_incremental_bytes": 118680576,
+  "summary_and_metadata_bytes": 85923396,
+  "audit_process_rss_bytes": 471318528,
+  "initial_failed_generation_cost_note": "Original rejected construction overhead before exception was not separately charged; exact total preparation/exception overhead is not isolated. GPU-stage ledger remains far below24h; auxiliary parity cost recorded separately. CPU RSS is a snapshot, not a historical peak."
+}

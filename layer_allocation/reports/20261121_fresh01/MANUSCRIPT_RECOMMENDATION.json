@@ -1,0 +1,5 @@
+{
+  "create_v1_3": false,
+  "reason": "No held-out comparison; fixed construction/readiness gate blocked evaluation",
+  "user_manual_revision_required_if_desired": true
+}

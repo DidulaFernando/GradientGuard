@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "E:\Final Year Project\Implementation\layer_allocation\fresh_validation\run.py", line 42, in <module>
+    commands[args.command]()
+  File "E:\Final Year Project\Implementation\layer_allocation\fresh_validation\run.py", line 32, in all_stages
+    freeze();execute('development')
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Final Year Project\Implementation\layer_allocation\fresh_validation\ggfresh\training.py", line 82, in execute
+    else:d=source(specs[0]);budget.tick()
+           ^^^^^^^^^^^^^^^^
+  File "E:\Final Year Project\Implementation\layer_allocation\fresh_validation\ggfresh\measure_data.py", line 36, in source
+    ds.initialize(); ids=np.array(ds.mnist.indices); y=np.array(ds.labels); bg=np.array(ds.spurious)
+    ^^^^^^^^^^^^^^^
+  File "E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\spuco\datasets\base_spuco_dataset.py", line 137, in initialize
+    assert group_label in self._group_partition and len(self._group_partition[group_label]) > 0, f"No examples in {group_label}, considering reducing spurious correlation strength"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: No examples in (9, 1), considering reducing spurious correlation strength
+
