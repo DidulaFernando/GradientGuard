@@ -1,0 +1,172 @@
+GRADIENTGUARD FIRST FEASIBILITY TEST
+Project: E:\Final Year Project\Implementation\Feasibility
+Attempt: 20261116_01 (new attempt, no prior results overwritten)
+All commands below are PowerShell commands. No virtual-environment activation is needed.
+Run commands in order. A Python traceback or nonzero exit code means STOP that stage,
+preserve its log, and diagnose it. Do not change scientific settings to obtain a pass.
+
+0. OPEN THE PROJECT AND SET PROCESS-LOCAL PATHS
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation\Feasibility'
+$env:PYTHONUTF8 = '1'
+$env:PYTHONHASHSEED = '0'
+$env:TEMP = 'E:\Final Year Project\Implementation\Feasibility\tmp'
+$env:TMP = $env:TEMP
+$env:PYTHONPYCACHEPREFIX = 'E:\Final Year Project\Implementation\Feasibility\cache\pycache'
+$env:CUBLAS_WORKSPACE_CONFIG = ':4096:8'
+
+The Python harness sets all remaining cache paths under the project before importing
+numerical/plotting libraries. instructions\environment.ps1 lists the full process settings.
+It can also be dot-sourced if your PowerShell policy permits scripts. No persistent
+system environment changes or PowerShell activation-policy changes are required.
+
+1. VERIFY THE VIRTUAL ENVIRONMENT
+& '.\.venv\Scripts\python.exe' '.\src\experiment.py' environment
+& '.\.venv\Scripts\python.exe' -m pip check
+
+Expected: Python 3.12.14 at this project's .venv, torch 2.7.1+cu128,
+device cuda and NVIDIA GeForce RTX 5060 Ti, a finite CUDA tensor result,
+and 'No broken requirements found'. CPU fallback is supported if CUDA is unavailable,
+but do not mix hardware within a resumed attempt. Preferred Python 3.11 was blocked
+by Windows Application Control. The failed environment and installation logs remain
+preserved. No security setting was changed. Existing bundled Python 3.12 was used.
+
+Exact resolved packages: runs\20261116_01\requirements-lock.txt
+Hardware, settings, seeds and source hashes: runs\20261116_01\provenance.json
+
+2. PREPARE AND VERIFY THE DATASET
+& '.\.venv\Scripts\python.exe' '.\src\experiment.py' prepare
+& '.\.venv\Scripts\python.exe' '.\src\experiment.py' verify-data
+
+Expected: first preparation downloads official MNIST under data\mnist, constructs
+the two official SpuCoMNIST source conditions, verifies all original identities,
+reservations, foreground pixels, labels/backgrounds and saves data\20261116_01.
+Subsequent prepare calls verify hashes instead of regenerating.
+Expected outputs: independent.pt, correlated.pt, verification.json, matched_images.png,
+class-count tables, role/ID manifests, offline_diagnostics contingency/background CSVs.
+Foreground/background errors and split overlaps must be zero. Official validation
+IDs are excluded; validation/test outcomes are never evaluated.
+If partial data preparation exists without verification.json, do not overwrite it.
+Preserve it, diagnose the error, and assign a new unique attempt ID before regeneration.
+
+3. FREEZE CONFIGURATION AND RUN CORRECTNESS CHECKS
+& '.\.venv\Scripts\python.exe' '.\src\experiment.py' freeze
+& '.\.venv\Scripts\python.exe' '.\src\experiment.py' check
+
+Expected: FROZEN with training count, full planned updates, distinct rounded checkpoints
+and endpoint; exact environment export. Then pytest passes analytical states A/B,
+gate/gradcheck, signed-versus-absolute distinction, microbatch invariance, rescaling,
+repeat isolation, CPU/CUDA training neutrality, invalid totals and checkpoint resume.
+Expected outputs: correctness_status.json, correctness_metrics.json and preserved
+check_history timestamp directories with pytest.log and junit.xml.
+Do not loosen tolerances after a failure. Repair code and rerun checks before training.
+If code changes, check must run again; resume rejects differing source/config hashes.
+
+4. RUN THE SEPARATELY LABELLED SMOKE TEST
+& '.\.venv\Scripts\python.exe' '.\src\experiment.py' smoke
+
+Expected: SMOKE PASSED, 12 short real-data engineering updates with exact monitored
+versus unmonitored training-state agreement. Outputs only in runs\20261116_01\smoke,
+labelled SMOKE ONLY. They are never included in feasibility tables.
+
+5. START OR RESUME THE SIX REAL EARLY-TRAINING PREFIXES
+& '.\.venv\Scripts\python.exe' -u '.\src\experiment.py' pilot
+
+Expected: six runs, independent_s11/s22/s33 and correlated_s11/s22/s33.
+Each logs update, frozen fraction, source-health loss/accuracy, training seconds,
+then COMPLETED. Runs stop at the frozen first 10% endpoint, not 20 full epochs.
+Each condition reuses the paired seed's same initial weights and underlying digit order.
+Inspect runs\20261116_01\<run>\status.json for current state/runtime estimate.
+Final status is completed in complete.json; do not infer completion from a launched process.
+
+Resume after interruption with the SAME pilot command. Already completed runs are skipped.
+It loads the last committed checkpoint (every 50 updates and every monitoring point),
+restores model/Adam/RNG/update position and the deterministic epoch permutation.
+Uncommitted summary rows are copied to recovered_uncommitted_<timestamp>.csv.
+Optional single-run resume:
+& '.\.venv\Scripts\python.exe' -u '.\src\experiment.py' pilot --run independent_s11
+
+Checkpoint files: checkpoints\20261116_01\<run>\step_NNNN.pt
+Initial weights: checkpoints\20261116_01\initial_seed_11.pt etc.
+Per-run outputs: measurements_64.csv, timing.json, offline_recolour.json,
+status.json, complete.json. A and B identify probe panels, NOT dataset conditions.
+Keep ineligible runs; source-health eligibility is an annotation, never a filter.
+
+6. CHECKPOINT RELIABILITY AND REPORT
+& '.\.venv\Scripts\python.exe' -u '.\src\experiment.py' remeasure --sizes 64
+
+Expected: A is measured three times at each saved monitoring checkpoint; B once.
+The original primary 64/class observation is retained as repeat=0. No training updates.
+Files: runs\20261116_01\reliability\measurements_64.csv.
+
+If ANY of the eight initial features at either prefix has ratio below 3 or is invalid,
+run the following fixed nested follow-up (the all command does this automatically):
+& '.\.venv\Scripts\python.exe' -u '.\src\experiment.py' remeasure --sizes 128 256
+
+Expected: identical saved weights, larger fixed nested probes, no retraining.
+Measurements are resumable at completed run/checkpoint rows. Repeated calls skip saved rows.
+
+& '.\.venv\Scripts\python.exe' '.\instructions\finalize_report.py'
+
+Expected: REPORT path and JSON decision, reports\20261116_01\REPORT.md,
+decision.json, figures\ PNGs and tables\ CSVs. All eight features, both panels,
+5%/10% prefixes and all completed runs are retained. Summary exports are separate
+from source-health/recolour/background metadata. No WGA/AUROC/forecaster is generated.
+The finalizer rebuilds the base report, adds the explicit marginal-slope qualification,
+costs the revised probe budget, plots diagnostics for every budget and independently
+checks feature arithmetic. It also runs the artifact and additional calculus audits.
+Prior report versions remain in reports\20261116_01\history.
+
+Optional artifact integrity audit:
+& '.\.venv\Scripts\python.exe' '.\instructions\audit_artifacts.py'
+Expected: ARTIFACT AUDIT PASSED; verifies source snapshot, data matching, all six Adam
+update counts, paired initialization, checkpoint hashes and installed official sources.
+Optional standalone numerical audit:
+& '.\.venv\Scripts\python.exe' '.\instructions\audit_calculus.py'
+Expected: ADDITIONAL CALCULUS AUDIT PASSED and actual finite-difference/CUDA
+microbatch errors in runs\20261116_01\additional_calculus_audit.json.
+
+ORDERED AUTOMATED PIPELINE
+& '.\.venv\Scripts\python.exe' -u '.\src\experiment.py' all
+& '.\.venv\Scripts\python.exe' '.\instructions\finalize_report.py'
+
+This prepares/verifies data, freezes, checks, smokes, resumes/completes all runs,
+measures identical probes, conditionally performs 128/256 follow-up, and reports.
+Completed stages are reused where appropriate; correctness histories remain timestamped.
+The second command adds the revised-budget final qualification and full diagnostic plots.
+
+7. INTERPRET THE REPORT
+noise = RMS across six runwise feature_A-feature_B differences / sqrt(2).
+spread = sample SD across six runwise panel-average features (ddof=1).
+Raw ratios are reported; decisions use spread / max(noise, numerical floor).
+Level numerical floor: 1e-5 share units. Slope floor: 2e-5 / observed fraction span.
+A larger measured identical-probe feature jitter replaces that floor.
+Zero/flat/nonfinite observations are explicitly flagged; no interpolation or cherry-picking.
+At least one retained level AND one slope must exceed the provisional ratio 3 screen.
+
+Correctness fails -> repair before training.
+Identical-probe unstable -> resolve numerical/stochastic behavior.
+Reliability improves with larger probes -> document/adopt revised measurement budget.
+Sampling dominates at 256/class -> reconsider measurement feasibility.
+Stable levels but unstable/flat slopes -> temporal feasibility unresolved.
+Head/bias concern -> targeted control before interpreting layer redistribution.
+Reliable levels and slopes surviving diagnostics -> larger completed-training outcome pilot.
+Absent background contrast -> investigate the manipulation.
+Excessive monitoring cost -> revise budget, then revalidate.
+
+This is descriptive engineering evidence from TWO fixed settings and three paired seeds,
+not six independent setting families. It does not validate final WGA prediction,
+methodological novelty, improved audit discovery or a causal learning mechanism.
+
+8. NEW EXPERIMENTS AND RECOVERY
+Do not edit configs\pilot.yaml inside a completed attempt and resume its checkpoints.
+Preserve completed/failed attempts. For a new scientific configuration, archive a copy
+of the current source/config and select a NEW unique attempt ID before preparation.
+The frozen config/hash makes accidental setting changes fail verification/resume.
+Do not delete caches/checkpoints to hide failed/inconclusive outcomes.
+
+Recreate dependencies only if needed, with project-local caches from environment.ps1:
+& '.\tools\uv\uv.exe' pip install --python '.\.venv\Scripts\python.exe' torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu128
+& '.\tools\uv\uv.exe' pip install --python '.\.venv\Scripts\python.exe' pip setuptools wheel packaging
+& '.\tools\uv\uv.exe' pip install --no-build-isolation --python '.\.venv\Scripts\python.exe' -r '.\runs\20261116_01\requirements-lock.txt'
+The local official SpuCo checkout must remain at the recorded commit. Native package
+policy restrictions require the user's environment administrator; do not disable them.
