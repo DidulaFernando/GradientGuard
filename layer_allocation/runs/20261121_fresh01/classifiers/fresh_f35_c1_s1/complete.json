@@ -1,0 +1,22 @@
+{
+  "run": "fresh_f35_c1_s1",
+  "updates": 19560,
+  "planned_updates": 19560,
+  "full_60_epochs": true,
+  "timing": {
+    "training": 55.9453660001418,
+    "monitor_A": 3.3529937000057544,
+    "monitor_B": 3.4165481999989424,
+    "initialization": 1.1672356000017317,
+    "health": 0.049199299992324086
+  },
+  "wall_this_invocation": 66.49170679999952,
+  "final_health": {
+    "loss": 0.04984882664648467,
+    "accuracy": 0.98984375,
+    "seconds": 0.00743250000232365
+  },
+  "protocol_sha256": "97701a42ecc4d9a2cbec626ff1b70367e1d5a826a9e9ec738e54af68d4f9c307",
+  "final_sha256": "bafd98d645522a6ccd4f2da96c6cd076512673eefd2c2894db8e758306e263e9",
+  "peak_gpu_allocated": 594062336
+}
