@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "environment_lock_matches": true,
+  "legacy_and_proposal_preserved": true,
+  "frozen_classifier_source_matches": true,
+  "families": 24,
+  "planned_classifiers": 96,
+  "completed": 96,
+  "diverged": 0,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "torch": "2.7.1+cu128"
+}

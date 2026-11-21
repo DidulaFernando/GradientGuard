@@ -1,0 +1,35 @@
+.....................                                                    [100%]
+============================== warnings summary ===============================
+poc/test_poc.py::test_mask_and_foreground
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\outdated\__init__.py:36: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import parse_version
+
+poc/test_poc.py::test_mask_and_foreground
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+poc/test_poc.py::test_mask_and_foreground
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+poc/tests/test_reporting_edges.py::test_official_validation_panels_have_all_predefined_groups
+poc/tests/test_reporting_edges.py::test_official_validation_panels_have_all_predefined_groups
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\spuco\datasets\spuco_mnist.py:236: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+    color_map = cm.get_cmap(color_map.value)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+21 passed, 16 warnings in 24.81s

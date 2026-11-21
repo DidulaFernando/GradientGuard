@@ -1,0 +1,67 @@
+.F                                                                       [100%]
+================================== FAILURES ===================================
+____________________ test_actual_runner_interrupted_resume ____________________
+
+tmp_path = WindowsPath('E:/Final Year Project/Implementation/Feasibility/tmp/poc_execution_tests/test_actual_runner_interrupted0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000160C7358FE0>
+
+    def test_actual_runner_interrupted_resume(tmp_path, monkeypatch):
+        """Run unchanged trainer on a labelled small fixture; interrupt at recovery."""
+        import study
+        monkeypatch.setattr(study,'O',tmp_path)
+        monkeypatch.setattr(study,'event',lambda *a,**k:None)
+        write_json(tmp_path/'protocol.json',{'fractions':[.01,.02,.03,.05,.075,.1]})
+        write_json(tmp_path/'source_freeze.json',{'fixture':'synthetic-only'})
+        seed_all(73202)
+        count=1280+3*100
+        d={'x':torch.rand(count,3,28,28),'y':torch.arange(count)%10,
+           'roles':np.array([0]*1280+[1]*100+[2]*100+[3]*100)}
+        study.train({'run':'uninterrupted','training_seed':73203,'lr':.001},d)
+        original=study.save_torch
+        def interrupt(path,value):
+            original(path,value)
+            if path.name=='recovery.pt' and value['step']==20:
+                raise RuntimeError('intentional synthetic interruption')
+        monkeypatch.setattr(study,'save_torch',interrupt)
+        with pytest.raises(RuntimeError,match='intentional synthetic interruption'):
+            study.train({'run':'resumed','training_seed':73203,'lr':.001},d)
+        monkeypatch.setattr(study,'save_torch',original)
+        study.train({'run':'resumed','training_seed':73203,'lr':.001},d)
+        a=torch.load(tmp_path/'classifiers/uninterrupted/final.pt',weights_only=True)
+        b=torch.load(tmp_path/'classifiers/resumed/final.pt',weights_only=True)
+>       assert all(torch.equal(a[n],b[n]) for n in a)
+E       assert False
+E        +  where False = all(<generator object test_actual_runner_interrupted_resume.<locals>.<genexpr> at 0x00000160C78DE890>)
+
+poc\tests\test_execution.py:60: AssertionError
+============================== warnings summary ===============================
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\outdated\__init__.py:36: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import parse_version
+
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+poc/tests/test_execution.py::test_new_observer_matches_original_gradient_definition
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED poc/tests/test_execution.py::test_actual_runner_interrupted_resume - a...
+1 failed, 1 passed, 14 warnings in 26.81s

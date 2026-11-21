@@ -1,0 +1,93 @@
+GRADIENTGUARD EXPLORATORY OUTCOME POC
+Project: E:\Final Year Project\Implementation\Feasibility
+Attempt: poc\outputs\20261116_poc01
+
+PowerShell setup (no activation or new Python installation):
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation\Feasibility'
+. '.\instructions\environment.ps1'
+
+The design is frozen in poc\outputs\20261116_poc01\protocol.json.
+It explicitly authorises a 60-epoch outcome study despite failed earlier gates.
+Do not change those prior conclusions or edit earlier source/configuration folders.
+
+1. Verify the existing environment and frozen attempt without rewriting records:
+& '.\.venv\Scripts\python.exe' 'poc\verify.py'
+Expected: passed=true, matching environment lock, unchanged prior artifacts/proposal,
+24 families, 96 planned runs, and current completion counts. After final reporting it
+also verifies every recorded attempt-artifact hash. Any mismatch must be diagnosed;
+do not replace hashes to bypass a guard.
+
+The original protocol freeze command (already executed; initial invocation only) was:
+& '.\.venv\Scripts\python.exe' 'poc\launch.py' freeze
+Expected: 24 families / 96 runs, environment/lock, protocol and manifests.
+After a documented engineering source revision, do not replace a source-freeze
+record merely to make this command pass. Historical source snapshots are retained.
+
+2. Separately labelled correctness fixtures:
+& '.\.venv\Scripts\python.exe' -m pytest 'poc\test_poc.py' -q --basetemp 'E:\Final Year Project\Implementation\Feasibility\tmp\poc_tests_manual' -o cache_dir=poc/cache/pytest
+& '.\.venv\Scripts\python.exe' -m pytest 'poc\tests' -q --basetemp 'E:\Final Year Project\Implementation\Feasibility\tmp\poc_boundary_tests_manual' -o cache_dir=poc/cache/pytest
+Expected: passed tests. These synthetic fixtures are not classifier outcomes.
+The execution fixture uses production determinism settings and intentionally
+interrupts/resumes a small separately labelled training run. Synthetic checkpoints
+stay under the specified project-local tmp path and never enter the 96-run manifest.
+
+3. Complete development training and validation-based outcomes:
+& '.\.venv\Scripts\python.exe' -u 'poc\launch.py' development
+Expected: 56 complete classifiers, each 60 epochs / 19560 updates, early panel
+observations and source health, final weights and validation group outcomes.
+Compact source manifests/background assignments avoid storing full RGB duplicates.
+
+4. Development-only selection and predictor freeze:
+& '.\.venv\Scripts\python.exe' -u 'poc\launch.py' fit
+Expected: support table, fitted pipelines.joblib and predictor_freeze.json.
+Classification may be unsupported; this is an inconclusive scientific result,
+not permission to lower support requirements. Continuous ridge is secondary.
+
+5. Train untouched evaluation families, without test labels:
+& '.\.venv\Scripts\python.exe' -u 'poc\launch.py' evaluation
+Expected: 40 additional complete classifiers. Requires predictor freeze.
+
+6. Freeze predictions, then unseal terminal test outcomes:
+& '.\.venv\Scripts\python.exe' -u 'poc\launch.py' predict
+& '.\.venv\Scripts\python.exe' -u 'poc\launch.py' unseal
+Expected: prediction freeze with hashes, then class/background group test counts,
+accuracies/Wilson intervals and fixed WGA labels. Do not refit after unsealing.
+
+7. Report:
+& '.\.venv\Scripts\python.exe' -u 'poc\launch.py' report
+& '.\.venv\Scripts\python.exe' -u 'poc\finalize.py'
+Expected: reports\REPORT.md, decision.json, metric/contrast/audit/uncertainty CSVs.
+Finalization adds independent completion/health audits, exactly-eight-feature panel
+exports, family coverage, structural diagnostics, cost limitations and PNG figures.
+It fits no predictor. The initial automatic report/decision are retained separately.
+Primary risk uses panel A. Panel B and ridge/final monitoring are secondary.
+Do not select whichever panel, cutoff or cohort produces a favourable result.
+
+Status:
+& '.\.venv\Scripts\python.exe' 'poc\launch.py' status
+Progress is also in status.json, events.jsonl and the stage console logs.
+
+Resume training with the SAME development/evaluation command. Completed runs skip;
+unfinished runs restore model/Adam/RNG/epoch from recovery.pt. Each complete model
+must record full_60_epochs=true and updates=planned_updates. Early observation steps
+are fixed; recovery checkpoints never enter feature summaries. Do not silently
+reduce sample counts/families, change precision or early-stop a difficult run.
+
+After test unsealing, DO NOT rerun fit or change selected inputs/hyperparameters.
+The launcher rejects refitting when held-out outcomes exist. Prediction/report
+validation must retain the original frozen pipeline and prediction hashes; the
+launcher also rejects prediction regeneration after test access. Rebuild reports
+from those original predictions with report then finalize, and verify again. For a
+new scientific experiment create a new attempt and separately freeze its protocol;
+do not edit this attempt or repurpose its failed/unfavourable families.
+
+Environment details: poc\outputs\20261116_poc01\environment.json and requirements-lock.txt.
+Actual project-local cache settings and CPU/memory inventory are also saved in
+hardware_during_evaluation.json. No activation or global package change is needed.
+
+A complete process is not a positive scientific result. Inadequate failure diversity
+or source-normal support means the main question is not adequately evaluable.
+A higher AUROC alone is not audit improvement or temporal specificity. Static/global
+controls, panel sensitivity, family influence, ceiling/headroom and finite-group
+uncertainty must all be inspected. No journal-readiness or novelty claim is justified.
+
