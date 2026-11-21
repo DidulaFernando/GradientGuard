@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "fixture": "First development run,10%checkpoint,panelA; selected by manifest order only",
+  "run": "fresh_f00_c0_s0",
+  "checkpoint_sha256": "820495e59118ed05137328678188eab6a747510d040a3f77f6dad47876225e5f",
+  "recorded_measurement_max_error": 8.326672684688674e-17,
+  "structural_max_error": 9.71445146547012e-17,
+  "unequal_microbatch_max_gradient_error": 1.3969838619232178e-07,
+  "unequal_microbatch_max_share_error": 0.0,
+  "atol": 1e-06,
+  "rtol": 0.0001,
+  "share_atol": 1e-05,
+  "seconds": 0.6453834999992978,
+  "optimizer_constructed": false,
+  "source_sha256": "f41f353b01368cea07431d997a687398d69072f8729b7d4b350e01cd19bc3358"
+}
