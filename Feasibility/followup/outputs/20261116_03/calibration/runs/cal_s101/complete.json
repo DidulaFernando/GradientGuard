@@ -1,0 +1,91 @@
+{
+  "completed": true,
+  "stage": "calibration",
+  "run": "cal_s101",
+  "seed": 101,
+  "endpoint": 1956,
+  "schedule": {
+    "train_n": 41604,
+    "epochs": 60,
+    "updates_per_epoch": 326,
+    "horizon": 19560,
+    "steps": [
+      196,
+      391,
+      587,
+      978,
+      1467,
+      1956
+    ],
+    "endpoint": 1956,
+    "actual_fractions": [
+      0.010020449897750512,
+      0.019989775051124745,
+      0.030010224948875255,
+      0.05,
+      0.075,
+      0.1
+    ],
+    "absolute_epoch_equivalents": [
+      0.6012269938650306,
+      1.1993865030674846,
+      1.8006134969325154,
+      3.0,
+      4.5,
+      6.0
+    ],
+    "label": "development calibration trajectory; NOT completed 60-epoch training"
+  },
+  "identity": {
+    "protocol_sha256": "ff533d48a1003c0e0606f79bbf65e8dd12a020d9ddfb21f4b3feb763fca74d79",
+    "plan_sha256": "655130208f0d118d6ac490ddd99afc369df3aa98d8f4eec2440b2321ad7715d5",
+    "numerical_sha256": "f3c61508749ba65a338f144edbe2feb77b29b6076b498995eded3771040e04ac",
+    "data_sha256": "e508bf77610471c78db23cb5dbbb31ddb9849b2aad5522474956ec67a7d3874d",
+    "seed": 101
+  },
+  "initial_state_sha256": "f1aa7ea414a2543efb5eb1e912bedad0e2c226acbca6eab6d72b58fee3c06293",
+  "checkpoint_dir": "E:\\Final Year Project\\Implementation\\Feasibility\\followup\\outputs\\20261116_03\\checkpoints\\calibration\\cal_s101",
+  "health": [
+    {
+      "step": 652,
+      "actual_epochs": 2.0,
+      "health_loss": 1.1443242132663727,
+      "health_accuracy": 0.61953125,
+      "health_seconds": 0.00950139999986277,
+      "finite_weights": true,
+      "required_telemetry_finite": true,
+      "eligible": false
+    },
+    {
+      "step": 1304,
+      "actual_epochs": 4.0,
+      "health_loss": 0.6899767935276031,
+      "health_accuracy": 0.76328125,
+      "health_seconds": 0.009599700002581812,
+      "finite_weights": true,
+      "required_telemetry_finite": true,
+      "eligible": false
+    },
+    {
+      "step": 1956,
+      "actual_epochs": 6.0,
+      "health_loss": 0.6273052006959915,
+      "health_accuracy": 0.78125,
+      "health_seconds": 0.009367000002384884,
+      "finite_weights": true,
+      "required_telemetry_finite": true,
+      "eligible": false
+    }
+  ],
+  "timing": {
+    "training_seconds": 6.702551499922265,
+    "primary_panel_monitor_seconds": 0.0,
+    "health_seconds": 0.028468100004829466,
+    "recolour_seconds": 0.0,
+    "checkpoint_seconds": 0.08826279998902464,
+    "warmup_seconds": 0.2956933999994362,
+    "max_gpu_allocated": 118774272,
+    "max_gpu_reserved": 144703488,
+    "training_loop_wall_seconds_this_invocation": 16.402487200000905
+  }
+}

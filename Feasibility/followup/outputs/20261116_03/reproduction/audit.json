@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "ratio": 3.0501409990602664,
+  "maximum_feature_formula_error": 0.0,
+  "remeasured_ratio": 3.0501409990602655,
+  "maximum_remeasured_feature_error": 1.4210854715202004e-14,
+  "maximum_primary_share_error": 8.326672684688674e-17,
+  "measurement_rows": 432,
+  "seconds": 28.83075519999693,
+  "checkpoints": [
+    65,
+    130,
+    196,
+    326,
+    489,
+    652
+  ],
+  "optimizer_constructed": false,
+  "training_updates": 0
+}

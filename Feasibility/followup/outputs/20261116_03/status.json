@@ -1,0 +1,12 @@
+{
+  "utc_ns": 1794839774363069800,
+  "stage": "followup_completed",
+  "executed_stages": [
+    "A",
+    "B",
+    "C1"
+  ],
+  "C2": "not_launched_calibration_gate",
+  "validation_passed": true,
+  "legacy_unchanged": true
+}

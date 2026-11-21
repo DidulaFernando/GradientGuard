@@ -1,0 +1,21 @@
+{
+  "reviewed": true,
+  "interpretation_resolved": false,
+  "reason": "Aggregation algebra and MSE decomposition pass. Conv3 common-denominator slope passes 16/20, head 14/20 and combined deep 15/20. Conv3 convolution-only slope passes 10/20, so denominator choice materially affects the diagnosis. The uncentred cross term is positive in every partition: some individual opposite-signed errors occur, but net cancellation does not explain combined reliability. No head-only artifact or causal depth-specific interpretation is established. Component and denominator dependence leave aggregation interpretation unresolved. The conv3 finding is diagnostic and does not replace the predefined deep_slope target.",
+  "budget": 256,
+  "prefix": 0.1,
+  "conv3_passing_partitions": 16,
+  "head_passing_partitions": 14,
+  "conv3_only_passing_partitions": 10,
+  "combined_deep_passing_partitions": 15,
+  "cross_term_positive_partitions": 20,
+  "cross_term_median": 0.10547528340268185,
+  "head_warning_original64_A_endpoint_count": 4,
+  "head_warning_original256_endpoint_count": 0,
+  "bias_warning_original256_endpoint_count": 0,
+  "evidence_hashes": {
+    "saved_structural_reliability.csv": "7cc0ff9a38a1600cdd1d267adb0ab9c751ba1afc3fb65d9dba80f614aba207db",
+    "saved_error_decomposition.csv": "49a6ca5ae7bafb2bb6ba647a471ef2b3df5c2e32a0b5383c0ac44df2b3c20690",
+    "saved_budget_checkpoint_flags.csv": "f20253ea0c31c6ba6b49179f6cf91b7ee35fd55a2538596386e7cf5538235f46"
+  }
+}

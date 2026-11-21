@@ -1,0 +1,7 @@
+realisation,condition,planned_seeds,trained_seeds,health_assessed,required_healthy_seeds,healthy_seeds,coverage
+realisation_1,independent,3,0,0,2,,not assessed - calibration gate
+realisation_1,correlated,3,0,0,2,,not assessed - calibration gate
+realisation_2,independent,3,0,0,2,,not assessed - calibration gate
+realisation_2,correlated,3,0,0,2,,not assessed - calibration gate
+realisation_3,independent,3,0,0,2,,not assessed - calibration gate
+realisation_3,correlated,3,0,0,2,,not assessed - calibration gate

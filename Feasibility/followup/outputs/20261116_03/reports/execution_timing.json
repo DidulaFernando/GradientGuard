@@ -1,0 +1,6 @@
+{
+  "recorded_attempt_start_utc_ns": 1794837676773932001,
+  "snapshot_utc_ns": 1794839443790357400,
+  "elapsed_wall_seconds_including_engineering_and_idle_gaps": 1767.016425399,
+  "note": "Interval from first instrumented command body to this snapshot; interpreter startup before first body and final report completion are outside this interval. Nested component/command records overlap."
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "data_seed": 3701,
+  "reservation_seed": 4903,
+  "split": "official source train only",
+  "official_validation_test_instantiated": false,
+  "conditions": {
+    "independent": {
+      "sha256": "e508bf77610471c78db23cb5dbbb31ddb9849b2aad5522474956ec67a7d3874d",
+      "n": 48004,
+      "train_n": 41604,
+      "alignment": {
+        "all": 0.0999083409715857,
+        "train": 0.10054321699836555,
+        "probe_A": 0.09453125,
+        "probe_B": 0.099609375,
+        "health": 0.090625
+      },
+      "foreground_error": 0.0,
+      "background_error": 0.0,
+      "overlap_count": 0,
+      "validation_overlap": 0
+    }
+  },
+  "seconds": 14.610768800001097,
+  "protocol_hash": "ff533d48a1003c0e0606f79bbf65e8dd12a020d9ddfb21f4b3feb763fca74d79"
+}

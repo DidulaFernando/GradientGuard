@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "source_hashes": {
+    "ggfollow\\__init__.py": "1d7143dc728780630dc50385c613430745f3102ce46d0502959bd945abbefb78",
+    "ggfollow\\artifacts.py": "3308b85a04db2e65b674a8c366fb639e1bc78cef664bbff8ffbf768883c337c3",
+    "ggfollow\\cli.py": "cb353099308a417dde2bb46592cf357a5a001d714625b9d50fb2c29253bda8ff",
+    "ggfollow\\core.py": "4552ea2357026899302d9bd6bcc9123712016348327c959552e98e4b9e655780",
+    "ggfollow\\datasets.py": "9d1aaf817954230e07d902b46b1e77a9b467cf7d4c66258a5549c30a6aca7d62",
+    "ggfollow\\measuring.py": "cbbf7983a2d2b089eea5b943a6c565250c2d5c87c36c87c0b80c31f84180b6dd",
+    "ggfollow\\metrics.py": "f4cfc76358b3042d3275a46ca236b73fa9bfe11448d5817ef8c180a416235817",
+    "ggfollow\\partitions.py": "2b1cb8a85c719cb7795f6ecefb75d417959f7797346349387e009ecea297e30a",
+    "ggfollow\\reporting.py": "9ae1bfc678425d36bdde4ed69ac5af019707da96adb9d8b2a40300e7f427ae2d",
+    "ggfollow\\training.py": "c03ba12f77fab42ccb3f1926d307feece3535ff7e9e6502cfa3948896b41bb9a",
+    "tests\\conftest.py": "b42c4376e12d4f1ac3afa67764009423695c48770995f5c9d85735df81aab711",
+    "tests\\test_followup.py": "30b7cf5b4369dbd8f035423bca61fdacdb6f6f59927e09a8eaa45a03cc5ce8c0",
+    "configs\\protocol.yaml": "38ae9b01358101984cd158fecb945e1e33b1ae3eab9565b1c68a7974e491da3f",
+    "run.py": "9c5103779dd241a76450201ff82ad13b1c2474f7ae825163e1d13556fbddb8a2"
+  },
+  "log": "E:\\Final Year Project\\Implementation\\Feasibility\\followup\\outputs\\20261116_02\\checks\\1794837626222091800\\pytest.log"
+}

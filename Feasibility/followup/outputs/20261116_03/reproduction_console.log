@@ -1,0 +1,7 @@
+{"utc_ns": 1794837727930590000, "stage": "reproduced_run", "run": "independent_s11"}
+{"utc_ns": 1794837732263551400, "stage": "reproduced_run", "run": "independent_s22"}
+{"utc_ns": 1794837736551345300, "stage": "reproduced_run", "run": "independent_s33"}
+{"utc_ns": 1794837741400330100, "stage": "reproduced_run", "run": "correlated_s11"}
+{"utc_ns": 1794837745688718800, "stage": "reproduced_run", "run": "correlated_s22"}
+{"utc_ns": 1794837749993418900, "stage": "reproduced_run", "run": "correlated_s33"}
+{"utc_ns": 1794837751598243600, "stage": "original_reproduction_passed", "original_ratio": 3.0501409990602664, "remeasured_ratio": 3.0501409990602655}

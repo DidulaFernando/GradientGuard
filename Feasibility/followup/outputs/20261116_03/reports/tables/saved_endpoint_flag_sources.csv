@@ -1,0 +1,13 @@
+partition_source,budget,panel,observations,head_flags,bias_flags
+alternative_partitions,64,A,120,11,0
+alternative_partitions,64,B,120,16,0
+alternative_partitions,128,A,120,17,0
+alternative_partitions,128,B,120,16,0
+alternative_partitions,256,A,120,11,0
+alternative_partitions,256,B,120,13,0
+original_AB,64,A,6,4,0
+original_AB,64,B,6,0,0
+original_AB,128,A,6,1,0
+original_AB,128,B,6,0,0
+original_AB,256,A,6,0,0
+original_AB,256,B,6,0,0

@@ -1,0 +1,88 @@
+{"utc_ns": 1794837681654523100, "stage": "preflight_passed", "protected_files": 294, "environment_identical": true}
+{"utc_ns": 1794837683758166700, "stage": "protocol_frozen", "attempt": "20261116_03", "source_files": 14}
+{"utc_ns": 1794837693289715300, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "full", "step": 0, "endpoint": 5, "actual_epochs": 0.0, "training_seconds": 0.0, "health_accuracy": null, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693330961300, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "full", "step": 3, "endpoint": 5, "actual_epochs": 3.0, "training_seconds": 0.015, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.009700733331555966}
+{"utc_ns": 1794837693359289000, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "full", "step": 5, "endpoint": 5, "actual_epochs": 5.0, "training_seconds": 0.023, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693373408400, "stage": "training_run_completed", "experiment_stage": "checks_training", "run": "full", "endpoint": 5}
+{"utc_ns": 1794837693418419500, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "resumed", "step": 0, "endpoint": 5, "actual_epochs": 0.0, "training_seconds": 0.0, "health_accuracy": null, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693454427900, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "resumed", "step": 3, "endpoint": 5, "actual_epochs": 3.0, "training_seconds": 0.012, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.00811766666447511}
+{"utc_ns": 1794837693494808700, "stage": "training_resumed", "run": "resumed", "step": 3}
+{"utc_ns": 1794837693522179100, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "resumed", "step": 5, "endpoint": 5, "actual_epochs": 5.0, "training_seconds": 0.022, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693536351900, "stage": "training_run_completed", "experiment_stage": "checks_training", "run": "resumed", "endpoint": 5}
+{"utc_ns": 1794837693589562400, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "full", "step": 0, "endpoint": 5, "actual_epochs": 0.0, "training_seconds": 0.0, "health_accuracy": null, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693627303900, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "full", "step": 3, "endpoint": 5, "actual_epochs": 3.0, "training_seconds": 0.01, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.00660513333180764}
+{"utc_ns": 1794837693656117600, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "full", "step": 5, "endpoint": 5, "actual_epochs": 5.0, "training_seconds": 0.016, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693671319200, "stage": "training_run_completed", "experiment_stage": "checks_training", "run": "full", "endpoint": 5}
+{"utc_ns": 1794837693714820700, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "resumed", "step": 0, "endpoint": 5, "actual_epochs": 0.0, "training_seconds": 0.0, "health_accuracy": null, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693749699500, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "resumed", "step": 3, "endpoint": 5, "actual_epochs": 3.0, "training_seconds": 0.01, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.0066954666666182066}
+{"utc_ns": 1794837693790775100, "stage": "training_resumed", "run": "resumed", "step": 3}
+{"utc_ns": 1794837693815818000, "stage": "training_checkpoint", "experiment_stage": "checks_training", "run": "resumed", "step": 5, "endpoint": 5, "actual_epochs": 5.0, "training_seconds": 0.016, "health_accuracy": 0.0625, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794837693830821500, "stage": "training_run_completed", "experiment_stage": "checks_training", "run": "resumed", "endpoint": 5}
+{"utc_ns": 1794837727930590000, "stage": "reproduced_run", "run": "independent_s11"}
+{"utc_ns": 1794837732263551400, "stage": "reproduced_run", "run": "independent_s22"}
+{"utc_ns": 1794837736551345300, "stage": "reproduced_run", "run": "independent_s33"}
+{"utc_ns": 1794837741400330100, "stage": "reproduced_run", "run": "correlated_s11"}
+{"utc_ns": 1794837745688718800, "stage": "reproduced_run", "run": "correlated_s22"}
+{"utc_ns": 1794837749993418900, "stage": "reproduced_run", "run": "correlated_s33"}
+{"utc_ns": 1794837751598243600, "stage": "original_reproduction_passed", "original_ratio": 3.0501409990602664, "remeasured_ratio": 3.0501409990602655}
+{"utc_ns": 1794837836993982200, "stage": "saved_checkpoint", "run": "independent_s11", "step": 65, "rows": 240, "elapsed_seconds": 13.06, "seconds_per_new_row": 0.05441}
+{"utc_ns": 1794837849143843400, "stage": "saved_checkpoint", "run": "independent_s11", "step": 130, "rows": 480, "elapsed_seconds": 25.21, "seconds_per_new_row": 0.05252}
+{"utc_ns": 1794837861296491900, "stage": "saved_checkpoint", "run": "independent_s11", "step": 196, "rows": 720, "elapsed_seconds": 37.36, "seconds_per_new_row": 0.05189}
+{"utc_ns": 1794837873426951400, "stage": "saved_checkpoint", "run": "independent_s11", "step": 326, "rows": 960, "elapsed_seconds": 49.49, "seconds_per_new_row": 0.05156}
+{"utc_ns": 1794837885534296200, "stage": "saved_checkpoint", "run": "independent_s11", "step": 489, "rows": 1200, "elapsed_seconds": 61.6, "seconds_per_new_row": 0.05133}
+{"utc_ns": 1794837897712712900, "stage": "saved_checkpoint", "run": "independent_s11", "step": 652, "rows": 1440, "elapsed_seconds": 73.78, "seconds_per_new_row": 0.05123}
+{"utc_ns": 1794837909792607400, "stage": "saved_checkpoint", "run": "independent_s22", "step": 65, "rows": 1680, "elapsed_seconds": 85.86, "seconds_per_new_row": 0.05111}
+{"utc_ns": 1794837921865316100, "stage": "saved_checkpoint", "run": "independent_s22", "step": 130, "rows": 1920, "elapsed_seconds": 97.93, "seconds_per_new_row": 0.05101}
+{"utc_ns": 1794837934182509000, "stage": "saved_checkpoint", "run": "independent_s22", "step": 196, "rows": 2160, "elapsed_seconds": 110.25, "seconds_per_new_row": 0.05104}
+{"utc_ns": 1794837946296882500, "stage": "saved_checkpoint", "run": "independent_s22", "step": 326, "rows": 2400, "elapsed_seconds": 122.36, "seconds_per_new_row": 0.05098}
+{"utc_ns": 1794837958420639400, "stage": "saved_checkpoint", "run": "independent_s22", "step": 489, "rows": 2640, "elapsed_seconds": 134.49, "seconds_per_new_row": 0.05094}
+{"utc_ns": 1794837970541060800, "stage": "saved_checkpoint", "run": "independent_s22", "step": 652, "rows": 2880, "elapsed_seconds": 146.61, "seconds_per_new_row": 0.05091}
+{"utc_ns": 1794837982657769400, "stage": "saved_checkpoint", "run": "independent_s33", "step": 65, "rows": 3120, "elapsed_seconds": 158.72, "seconds_per_new_row": 0.05087}
+{"utc_ns": 1794837994810124700, "stage": "saved_checkpoint", "run": "independent_s33", "step": 130, "rows": 3360, "elapsed_seconds": 170.88, "seconds_per_new_row": 0.05086}
+{"utc_ns": 1794838006976988700, "stage": "saved_checkpoint", "run": "independent_s33", "step": 196, "rows": 3600, "elapsed_seconds": 183.04, "seconds_per_new_row": 0.05084}
+{"utc_ns": 1794838019055340300, "stage": "saved_checkpoint", "run": "independent_s33", "step": 326, "rows": 3840, "elapsed_seconds": 195.12, "seconds_per_new_row": 0.05081}
+{"utc_ns": 1794838031143318600, "stage": "saved_checkpoint", "run": "independent_s33", "step": 489, "rows": 4080, "elapsed_seconds": 207.21, "seconds_per_new_row": 0.05079}
+{"utc_ns": 1794838043294821100, "stage": "saved_checkpoint", "run": "independent_s33", "step": 652, "rows": 4320, "elapsed_seconds": 219.36, "seconds_per_new_row": 0.05078}
+{"utc_ns": 1794838056018391300, "stage": "saved_checkpoint", "run": "correlated_s11", "step": 65, "rows": 4560, "elapsed_seconds": 232.08, "seconds_per_new_row": 0.0509}
+{"utc_ns": 1794838068206894200, "stage": "saved_checkpoint", "run": "correlated_s11", "step": 130, "rows": 4800, "elapsed_seconds": 244.27, "seconds_per_new_row": 0.05089}
+{"utc_ns": 1794838080422736100, "stage": "saved_checkpoint", "run": "correlated_s11", "step": 196, "rows": 5040, "elapsed_seconds": 256.49, "seconds_per_new_row": 0.05089}
+{"utc_ns": 1794838092838564800, "stage": "saved_checkpoint", "run": "correlated_s11", "step": 326, "rows": 5280, "elapsed_seconds": 268.9, "seconds_per_new_row": 0.05093}
+{"utc_ns": 1794838105000990200, "stage": "saved_checkpoint", "run": "correlated_s11", "step": 489, "rows": 5520, "elapsed_seconds": 281.07, "seconds_per_new_row": 0.05092}
+{"utc_ns": 1794838117560585800, "stage": "saved_checkpoint", "run": "correlated_s11", "step": 652, "rows": 5760, "elapsed_seconds": 293.63, "seconds_per_new_row": 0.05098}
+{"utc_ns": 1794838130689177800, "stage": "saved_checkpoint", "run": "correlated_s22", "step": 65, "rows": 6000, "elapsed_seconds": 306.75, "seconds_per_new_row": 0.05113}
+{"utc_ns": 1794838143825947800, "stage": "saved_checkpoint", "run": "correlated_s22", "step": 130, "rows": 6240, "elapsed_seconds": 319.89, "seconds_per_new_row": 0.05126}
+{"utc_ns": 1794838157171367500, "stage": "saved_checkpoint", "run": "correlated_s22", "step": 196, "rows": 6480, "elapsed_seconds": 333.24, "seconds_per_new_row": 0.05143}
+{"utc_ns": 1794838170297835700, "stage": "saved_checkpoint", "run": "correlated_s22", "step": 326, "rows": 6720, "elapsed_seconds": 346.36, "seconds_per_new_row": 0.05154}
+{"utc_ns": 1794838183337380500, "stage": "saved_checkpoint", "run": "correlated_s22", "step": 489, "rows": 6960, "elapsed_seconds": 359.4, "seconds_per_new_row": 0.05164}
+{"utc_ns": 1794838196140909600, "stage": "saved_checkpoint", "run": "correlated_s22", "step": 652, "rows": 7200, "elapsed_seconds": 372.21, "seconds_per_new_row": 0.0517}
+{"utc_ns": 1794838209005458600, "stage": "saved_checkpoint", "run": "correlated_s33", "step": 65, "rows": 7440, "elapsed_seconds": 385.07, "seconds_per_new_row": 0.05176}
+{"utc_ns": 1794838222312200500, "stage": "saved_checkpoint", "run": "correlated_s33", "step": 130, "rows": 7680, "elapsed_seconds": 398.38, "seconds_per_new_row": 0.05187}
+{"utc_ns": 1794838235454015000, "stage": "saved_checkpoint", "run": "correlated_s33", "step": 196, "rows": 7920, "elapsed_seconds": 411.52, "seconds_per_new_row": 0.05196}
+{"utc_ns": 1794838248277027000, "stage": "saved_checkpoint", "run": "correlated_s33", "step": 326, "rows": 8160, "elapsed_seconds": 424.34, "seconds_per_new_row": 0.052}
+{"utc_ns": 1794838261253971900, "stage": "saved_checkpoint", "run": "correlated_s33", "step": 489, "rows": 8400, "elapsed_seconds": 437.32, "seconds_per_new_row": 0.05206}
+{"utc_ns": 1794838275016002500, "stage": "saved_checkpoint", "run": "correlated_s33", "step": 652, "rows": 8640, "elapsed_seconds": 451.08, "seconds_per_new_row": 0.05221}
+{"utc_ns": 1794838349581122100, "stage": "dataset_condition_verified", "construction": "calibration", "condition": "independent"}
+{"utc_ns": 1794838350861287400, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s101", "step": 0, "endpoint": 1956, "actual_epochs": 0.0, "training_seconds": 0.0, "health_accuracy": null, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794838356335924700, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s101", "step": 652, "endpoint": 1956, "actual_epochs": 2.0, "training_seconds": 2.262, "health_accuracy": 0.61953125, "estimated_training_seconds_remaining": 4.523370599927148}
+{"utc_ns": 1794838361747932100, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s101", "step": 1304, "endpoint": 1956, "actual_epochs": 4.0, "training_seconds": 4.473, "health_accuracy": 0.76328125, "estimated_training_seconds_remaining": 2.2366067999737425}
+{"utc_ns": 1794838367262227500, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s101", "step": 1956, "endpoint": 1956, "actual_epochs": 6.0, "training_seconds": 6.703, "health_accuracy": 0.78125, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794838367278375900, "stage": "training_run_completed", "experiment_stage": "calibration", "run": "cal_s101", "endpoint": 1956}
+{"utc_ns": 1794838367672717400, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s102", "step": 0, "endpoint": 1956, "actual_epochs": 0.0, "training_seconds": 0.0, "health_accuracy": null, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794838373078388200, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s102", "step": 652, "endpoint": 1956, "actual_epochs": 2.0, "training_seconds": 2.225, "health_accuracy": 0.678125, "estimated_training_seconds_remaining": 4.449258000000555}
+{"utc_ns": 1794838378496516500, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s102", "step": 1304, "endpoint": 1956, "actual_epochs": 4.0, "training_seconds": 4.462, "health_accuracy": 0.8125, "estimated_training_seconds_remaining": 2.2310742499903427}
+{"utc_ns": 1794838383940931700, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s102", "step": 1956, "endpoint": 1956, "actual_epochs": 6.0, "training_seconds": 6.698, "health_accuracy": 0.8671875, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794838383955933200, "stage": "training_run_completed", "experiment_stage": "calibration", "run": "cal_s102", "endpoint": 1956}
+{"utc_ns": 1794838384349303800, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s103", "step": 0, "endpoint": 1956, "actual_epochs": 0.0, "training_seconds": 0.0, "health_accuracy": null, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794838389928843900, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s103", "step": 652, "endpoint": 1956, "actual_epochs": 2.0, "training_seconds": 2.256, "health_accuracy": 0.459375, "estimated_training_seconds_remaining": 4.512110999967263}
+{"utc_ns": 1794838395395810900, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s103", "step": 1304, "endpoint": 1956, "actual_epochs": 4.0, "training_seconds": 4.51, "health_accuracy": 0.803125, "estimated_training_seconds_remaining": 2.2548323999799322}
+{"utc_ns": 1794838401294729000, "stage": "training_checkpoint", "experiment_stage": "calibration", "run": "cal_s103", "step": 1956, "endpoint": 1956, "actual_epochs": 6.0, "training_seconds": 6.85, "health_accuracy": 0.8546875, "estimated_training_seconds_remaining": 0.0}
+{"utc_ns": 1794838401314995900, "stage": "training_run_completed", "experiment_stage": "calibration", "run": "cal_s103", "endpoint": 1956}
+{"utc_ns": 1794838401349897300, "stage": "calibration_completed", "selected_full_epochs": null}
+{"utc_ns": 1794838487777884500, "stage": "fresh_not_launched_calibration_gate"}
+{"utc_ns": 1794838489872622200, "stage": "fresh_skipped_calibration_gate"}
+{"utc_ns": 1794838491948390600, "stage": "fresh_measurement_skipped_calibration_gate"}
+{"utc_ns": 1794838868881288300, "stage": "report_generated", "path": "E:\\Final Year Project\\Implementation\\Feasibility\\followup\\outputs\\20261116_03\\reports\\REPORT.md", "ready_for_outcome_pilot": false}
+{"utc_ns": 1794839059090485900, "stage": "output_validation_passed", "checks": 15, "legacy_files": 294}
+{"utc_ns": 1794839444353018100, "stage": "report_generated", "path": "E:\\Final Year Project\\Implementation\\Feasibility\\followup\\outputs\\20261116_03\\reports\\REPORT.md", "ready_for_outcome_pilot": false}
+{"utc_ns": 1794839688894934300, "stage": "output_validation_passed", "checks": 15, "legacy_files": 294}
+{"utc_ns": 1794839774363069800, "stage": "followup_completed", "executed_stages": ["A", "B", "C1"], "C2": "not_launched_calibration_gate", "validation_passed": true, "legacy_unchanged": true}

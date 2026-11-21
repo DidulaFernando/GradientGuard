@@ -1,0 +1,41 @@
+{
+  "schedule": {
+    "train_n": 41604,
+    "epochs": 60,
+    "updates_per_epoch": 326,
+    "horizon": 19560,
+    "steps": [
+      196,
+      391,
+      587,
+      978,
+      1467,
+      1956
+    ],
+    "endpoint": 1956,
+    "actual_fractions": [
+      0.010020449897750512,
+      0.019989775051124745,
+      0.030010224948875255,
+      0.05,
+      0.075,
+      0.1
+    ],
+    "absolute_epoch_equivalents": [
+      0.6012269938650306,
+      1.1993865030674846,
+      1.8006134969325154,
+      3.0,
+      4.5,
+      6.0
+    ],
+    "label": "development calibration trajectory; NOT completed 60-epoch training"
+  },
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "selection_rule": "smallest_horizon_whose_10pct_point_passes_all_three_seeds",
+  "source": "protocol frozen before execution"
+}

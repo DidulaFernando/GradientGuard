@@ -1,0 +1,8 @@
+{
+  "launched": false,
+  "planned_prefixes": 18,
+  "completed_prefixes": 0,
+  "source_health_coverage": "not assessed because calibration did not qualify",
+  "not_a_failed_18_run_validation": true,
+  "reason": "No frozen horizon candidate passes all three calibration seeds"
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": {
+    "complete_saved_factorial_design_rows": 8640,
+    "partition_manifests_verified": 20,
+    "checkpoint_cache_keys_verified": 36,
+    "independent_feature_recalculation_max_error": 8.992806499463768e-15,
+    "primary_target_passes": 15,
+    "independent_health_rule_selection": null,
+    "calibration_models_completed_six_epochs": 3,
+    "predefined_fresh_gate_respected": true,
+    "new_loader_and_probe_isolation_verified": true,
+    "direct_repeat_max_error": 0.0,
+    "installed_spuco_sources_unchanged": 67,
+    "dependency_lock_unchanged": true,
+    "structural_review_evidence_hashes_match": true,
+    "report_links_valid": true,
+    "legacy_files_unchanged": 294
+  },
+  "precision_settings": {
+    "deterministic_algorithms": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  }
+}

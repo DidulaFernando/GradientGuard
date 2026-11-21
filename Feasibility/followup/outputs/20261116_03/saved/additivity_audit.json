@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "maximum_errors": {
+    "all": {
+      "last": 2.220446049250313e-16,
+      "mean": 2.220446049250313e-16,
+      "slope": 5.551115123125783e-15
+    }
+  },
+  "standard_deviations_asserted_additive": false
+}

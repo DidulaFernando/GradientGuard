@@ -1,0 +1,7 @@
+{
+  "training_neutrality_cuda": {
+    "max_parameter_error": 0.0,
+    "optimizer_equal": true,
+    "updates": 5
+  }
+}

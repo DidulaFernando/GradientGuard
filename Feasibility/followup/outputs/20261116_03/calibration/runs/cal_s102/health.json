@@ -1,0 +1,32 @@
+[
+  {
+    "step": 652,
+    "actual_epochs": 2.0,
+    "health_loss": 0.871816211938858,
+    "health_accuracy": 0.678125,
+    "health_seconds": 0.009235599998646649,
+    "finite_weights": true,
+    "required_telemetry_finite": true,
+    "eligible": false
+  },
+  {
+    "step": 1304,
+    "actual_epochs": 4.0,
+    "health_loss": 0.5593281239271164,
+    "health_accuracy": 0.8125,
+    "health_seconds": 0.009131300001172349,
+    "finite_weights": true,
+    "required_telemetry_finite": true,
+    "eligible": true
+  },
+  {
+    "step": 1956,
+    "actual_epochs": 6.0,
+    "health_loss": 0.3967432349920273,
+    "health_accuracy": 0.8671875,
+    "health_seconds": 0.009504300000116928,
+    "finite_weights": true,
+    "required_telemetry_finite": true,
+    "eligible": true
+  }
+]

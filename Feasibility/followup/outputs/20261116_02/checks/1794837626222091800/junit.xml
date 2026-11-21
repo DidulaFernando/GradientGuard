@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="21" time="7.695" timestamp="2026-11-16T19:30:27.964060+05:30" hostname="DidulaPC"><testcase classname="followup.tests.test_followup" name="test_legacy_analytical_readonly[A-expected0-shares0]" time="0.055" /><testcase classname="followup.tests.test_followup" name="test_legacy_analytical_readonly[B-expected1-shares1]" time="0.018" /><testcase classname="followup.tests.test_followup" name="test_legacy_gradcheck_readonly" time="0.378" /><testcase classname="followup.tests.test_followup" name="test_legacy_microbatch_readonly[dtype0]" time="0.061" /><testcase classname="followup.tests.test_followup" name="test_legacy_microbatch_readonly[dtype1]" time="0.056" /><testcase classname="followup.tests.test_followup" name="test_legacy_rescale_readonly" time="0.028" /><testcase classname="followup.tests.test_followup" name="test_legacy_isolation_readonly[cpu]" time="0.754" /><testcase classname="followup.tests.test_followup" name="test_legacy_isolation_readonly[cuda]" time="0.572" /><testcase classname="followup.tests.test_followup" name="test_legacy_training_neutrality_readonly[cpu]" time="0.099" /><testcase classname="followup.tests.test_followup" name="test_legacy_training_neutrality_readonly[cuda]" time="0.160" /><testcase classname="followup.tests.test_followup" name="test_original_arithmetic_exact" time="1.655" /><testcase classname="followup.tests.test_followup" name="test_protected_artifacts_unchanged" time="1.013" /><testcase classname="followup.tests.test_followup" name="test_partitions_disjoint_nested_reproducible_and_matched" time="0.552" /><testcase classname="followup.tests.test_followup" name="test_additive_summaries_sd_independent_and_uncentred_cross_term" time="0.075" /><testcase classname="followup.tests.test_followup" name="test_common_denominator_and_budget_specific_flags" time="0.029" /><testcase classname="followup.tests.test_followup" name="test_zero_floor_invalid_incomplete_variable_cohorts" time="0.293" /><testcase classname="followup.tests.test_followup" name="test_gradient_recomputation_and_absolute_order" time="0.054" /><testcase classname="followup.tests.test_followup" name="test_calibration_selection_health_only" time="0.021" /><testcase classname="followup.tests.test_followup" name="test_new_runner_checkpoint_resume[cpu]" time="0.008"><failure message="KeyError: 'ggfollow/core.py'">tmp_path = WindowsPath('E:/Final Year Project/Implementation/Feasibility/tmp/followup_pytest_1794837626223216500/test_new_runner_checkpoint_res0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002BEB19F71A0&gt;
+dev = 'cpu'
+
+    @pytest.mark.parametrize("dev",["cpu","cuda"])
+    def test_new_runner_checkpoint_resume(tmp_path,monkeypatch,dev):
+        import ggfollow.training as tr
+        from model import CNNA
+        if dev=="cuda" and not torch.cuda.is_available(): pytest.skip("CUDA unavailable")
+        monkeypatch.setattr(tr,"device",lambda:torch.device(dev))
+        monkeypatch.setattr(tr,"out",lambda:tmp_path)
+        seed_all(81)
+        d={"x":torch.rand(48,3,28,28),"y":torch.arange(48)%10,"roles":["train"]*32+["health"]*16}
+        plan={"updates_per_epoch":1,"endpoint":5,"steps":[1,2,3,4,5],"horizon":50}
+&gt;       full=tr.train_run(d,"checks_training","full",9981,plan,[3,5],False,"plan","synthetic")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+followup\tests\test_followup.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+followup\ggfollow\training.py:61: in train_run
+    require_protocol(); dev=device(); folder=out()/stage/"runs"/run; folder.mkdir(parents=True,exist_ok=True)
+    ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def require_protocol():
+        frozen=read_json(out()/"protocol_frozen.json")
+        assert frozen["protocol_sha256"]==sha(PROTOCOL_PATH),"Protocol changed"
+        # Only numerical source files govern measurement/training resume; reporting code may evolve with a separate hash log.
+        for rel in ("ggfollow/core.py","ggfollow/metrics.py","ggfollow/partitions.py","ggfollow/datasets.py","ggfollow/training.py","ggfollow/measuring.py"):
+&gt;           assert frozen["extension_source_hashes"][rel]==sha(EXT/rel),f"Numerical source changed: {rel}"
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           KeyError: 'ggfollow/core.py'
+
+followup\ggfollow\core.py:49: KeyError</failure></testcase><testcase classname="followup.tests.test_followup" name="test_new_runner_checkpoint_resume[cuda]" time="0.007"><failure message="KeyError: 'ggfollow/core.py'">tmp_path = WindowsPath('E:/Final Year Project/Implementation/Feasibility/tmp/followup_pytest_1794837626223216500/test_new_runner_checkpoint_res1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002BEB19C8E90&gt;
+dev = 'cuda'
+
+    @pytest.mark.parametrize("dev",["cpu","cuda"])
+    def test_new_runner_checkpoint_resume(tmp_path,monkeypatch,dev):
+        import ggfollow.training as tr
+        from model import CNNA
+        if dev=="cuda" and not torch.cuda.is_available(): pytest.skip("CUDA unavailable")
+        monkeypatch.setattr(tr,"device",lambda:torch.device(dev))
+        monkeypatch.setattr(tr,"out",lambda:tmp_path)
+        seed_all(81)
+        d={"x":torch.rand(48,3,28,28),"y":torch.arange(48)%10,"roles":["train"]*32+["health"]*16}
+        plan={"updates_per_epoch":1,"endpoint":5,"steps":[1,2,3,4,5],"horizon":50}
+&gt;       full=tr.train_run(d,"checks_training","full",9981,plan,[3,5],False,"plan","synthetic")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+followup\tests\test_followup.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+followup\ggfollow\training.py:61: in train_run
+    require_protocol(); dev=device(); folder=out()/stage/"runs"/run; folder.mkdir(parents=True,exist_ok=True)
+    ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def require_protocol():
+        frozen=read_json(out()/"protocol_frozen.json")
+        assert frozen["protocol_sha256"]==sha(PROTOCOL_PATH),"Protocol changed"
+        # Only numerical source files govern measurement/training resume; reporting code may evolve with a separate hash log.
+        for rel in ("ggfollow/core.py","ggfollow/metrics.py","ggfollow/partitions.py","ggfollow/datasets.py","ggfollow/training.py","ggfollow/measuring.py"):
+&gt;           assert frozen["extension_source_hashes"][rel]==sha(EXT/rel),f"Numerical source changed: {rel}"
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           KeyError: 'ggfollow/core.py'
+
+followup\ggfollow\core.py:49: KeyError</failure></testcase><testcase classname="followup.tests.test_followup" name="test_no_official_validation_test_instantiation" time="1.372"><failure message="KeyError: 'ggfollow/core.py'">tmp_path = WindowsPath('E:/Final Year Project/Implementation/Feasibility/tmp/followup_pytest_1794837626223216500/test_no_official_validation_te0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002BEB19F63F0&gt;
+
+    def test_no_official_validation_test_instantiation(tmp_path,monkeypatch):
+        import ggfollow.datasets as ds
+        import spuco.datasets as official
+        seen=[]
+        class StopConstructor(Exception): pass
+        def guarded(**kwargs): seen.append(kwargs); raise StopConstructor()
+        monkeypatch.setattr(official,"SpuCoMNIST",guarded); monkeypatch.setattr(ds,"out",lambda:tmp_path)
+&gt;       with pytest.raises(StopConstructor): ds.build("unit",3701,4903,{"independent":.1})
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+followup\tests\test_followup.py:189: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+followup\ggfollow\datasets.py:8: in build
+    require_protocol()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def require_protocol():
+        frozen=read_json(out()/"protocol_frozen.json")
+        assert frozen["protocol_sha256"]==sha(PROTOCOL_PATH),"Protocol changed"
+        # Only numerical source files govern measurement/training resume; reporting code may evolve with a separate hash log.
+        for rel in ("ggfollow/core.py","ggfollow/metrics.py","ggfollow/partitions.py","ggfollow/datasets.py","ggfollow/training.py","ggfollow/measuring.py"):
+&gt;           assert frozen["extension_source_hashes"][rel]==sha(EXT/rel),f"Numerical source changed: {rel}"
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           KeyError: 'ggfollow/core.py'
+
+followup\ggfollow\core.py:49: KeyError</failure></testcase></testsuite></testsuites>

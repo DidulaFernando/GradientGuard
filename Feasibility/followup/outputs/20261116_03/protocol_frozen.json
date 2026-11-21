@@ -1,0 +1,211 @@
+{
+  "protocol": {
+    "attempt": "20261116_03",
+    "legacy_attempt": "20261116_01",
+    "measurement": {
+      "budgets": [
+        64,
+        128,
+        256
+      ],
+      "microbatch": 128,
+      "epsilon": 1e-12,
+      "stabilizer_dominated_fraction": 0.01,
+      "numerical_share_floor": 1e-05,
+      "diagnostic_total_floor": 1e-06,
+      "diagnostic_floor_rule": "shares_use_original_floor_per_weight_means_use_total_floor_divided_by_weight_count_bias_uses_total_floor",
+      "ratio_screen": 3.0,
+      "prefixes": [
+        0.05,
+        0.1
+      ],
+      "fractions": [
+        0.01,
+        0.02,
+        0.03,
+        0.05,
+        0.075,
+        0.1
+      ],
+      "repeats_A": 3,
+      "head_flag": 0.5,
+      "bias_flag": 0.1
+    },
+    "stage_A": {
+      "partition_seeds": [
+        41000,
+        41001,
+        41002,
+        41003,
+        41004,
+        41005,
+        41006,
+        41007,
+        41008,
+        41009,
+        41010,
+        41011,
+        41012,
+        41013,
+        41014,
+        41015,
+        41016,
+        41017,
+        41018,
+        41019
+      ],
+      "target": "deep_slope",
+      "prefix": 0.1,
+      "budget": 256,
+      "minimum_passing_partitions": 16
+    },
+    "calibration": {
+      "data_seed": 3701,
+      "reservation_seed": 4903,
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "full_horizon_candidates": [
+        20,
+        40,
+        60
+      ],
+      "health_epochs": [
+        2,
+        4,
+        6
+      ],
+      "max_actual_epochs": 6,
+      "health_accuracy": 0.8,
+      "health_loss": "ln_K",
+      "selection": "smallest_horizon_whose_10pct_point_passes_all_three_seeds"
+    },
+    "fresh": {
+      "construction_pairs": [
+        [
+          5701,
+          6901
+        ],
+        [
+          5702,
+          6902
+        ],
+        [
+          5703,
+          6903
+        ]
+      ],
+      "seed_bases": [
+        211,
+        222,
+        233
+      ],
+      "seed_offset_per_realisation": 1000,
+      "partition_seeds": [
+        51000,
+        51001,
+        51002,
+        51003,
+        51004,
+        51005,
+        51006,
+        51007,
+        51008,
+        51009,
+        51010,
+        51011,
+        51012,
+        51013,
+        51014,
+        51015,
+        51016,
+        51017,
+        51018,
+        51019
+      ],
+      "partition_budget": 256,
+      "original_panel_budgets": [
+        64,
+        128,
+        256
+      ],
+      "minimum_healthy_seeds_per_condition_per_realisation": 2,
+      "primary_subsets": [
+        "all",
+        "eligible"
+      ],
+      "stratified_subsets": [
+        "condition",
+        "realisation",
+        "realisation_condition"
+      ]
+    },
+    "training": {
+      "batch_size": 128,
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "weight_decay": 0.0,
+      "num_workers": 0,
+      "cpu_threads": 4,
+      "save_every_updates": 100,
+      "health_accuracy": 0.8,
+      "health_loss": "ln_K"
+    },
+    "decision_rules": {
+      "reproduction_failure_blocks_interpretation": true,
+      "partition_stability_minimum": 16,
+      "required_partitions": 20,
+      "structural_review": "inspect_common_denominator_conv3_head_and_uncentred_error_cross_term_without_asserting_artifact",
+      "calibration_gate": "no_qualifying_candidate_means_do_not_launch_fresh",
+      "no_outcome_pilot": true,
+      "no_forecaster": true,
+      "no_validation_test_outcomes": true,
+      "no_automatic_threshold_or_grid_changes": true,
+      "readiness": "joint_review_of_correctness_partition_stability_health_and_structure"
+    }
+  },
+  "protocol_sha256": "ff533d48a1003c0e0606f79bbf65e8dd12a020d9ddfb21f4b3feb763fca74d79",
+  "extension_source_hashes": {
+    "ggfollow/__init__.py": "1d7143dc728780630dc50385c613430745f3102ce46d0502959bd945abbefb78",
+    "ggfollow/artifacts.py": "3308b85a04db2e65b674a8c366fb639e1bc78cef664bbff8ffbf768883c337c3",
+    "ggfollow/cli.py": "cb353099308a417dde2bb46592cf357a5a001d714625b9d50fb2c29253bda8ff",
+    "ggfollow/core.py": "808ca281652e57af40d0c532a891429223ac93b948ad165a8d907e15ed9ecf8f",
+    "ggfollow/datasets.py": "9d1aaf817954230e07d902b46b1e77a9b467cf7d4c66258a5549c30a6aca7d62",
+    "ggfollow/measuring.py": "cbbf7983a2d2b089eea5b943a6c565250c2d5c87c36c87c0b80c31f84180b6dd",
+    "ggfollow/metrics.py": "f4cfc76358b3042d3275a46ca236b73fa9bfe11448d5817ef8c180a416235817",
+    "ggfollow/partitions.py": "2b1cb8a85c719cb7795f6ecefb75d417959f7797346349387e009ecea297e30a",
+    "ggfollow/reporting.py": "9ae1bfc678425d36bdde4ed69ac5af019707da96adb9d8b2a40300e7f427ae2d",
+    "ggfollow/training.py": "c03ba12f77fab42ccb3f1926d307feece3535ff7e9e6502cfa3948896b41bb9a",
+    "tests/conftest.py": "b42c4376e12d4f1ac3afa67764009423695c48770995f5c9d85735df81aab711",
+    "tests/test_followup.py": "30b7cf5b4369dbd8f035423bca61fdacdb6f6f59927e09a8eaa45a03cc5ce8c0",
+    "configs/protocol.yaml": "ff533d48a1003c0e0606f79bbf65e8dd12a020d9ddfb21f4b3feb763fca74d79",
+    "run.py": "9c5103779dd241a76450201ff82ad13b1c2474f7ae825163e1d13556fbddb8a2"
+  },
+  "legacy_configuration_sha256": "0338b266a1ebc892a798c54ad4f29f3a15b5410d3dd3ffca307dbd3cc45020af",
+  "legacy_measurement_steps": [
+    65,
+    130,
+    196,
+    326,
+    489,
+    652
+  ],
+  "planned_analyses": [
+    "reproduce_original_3.0501409990602664",
+    "20_partitions_all_8_features_both_prefixes_all_budgets",
+    "common_denominator_layers_conv_only_per_weight_bias",
+    "additivity_and_uncentred_MSE_cross_term",
+    "calibrate_only_health_20_40_60",
+    "if_qualified_18_fresh_prefixes_20_partitions_256_with_all_eligible_condition_realisation_subsets"
+  ],
+  "structural_decision": "No automatic artifact label. Require descriptive review of individual-layer reliability, error cancellation, budget/checkpoint flags. Original main target never replaced.",
+  "numerical_semantics": "Unchanged mean gradients and legacy summarize/measure functions. Features use exact legacy formulas; expected cohort explicitly supplied. Missing/invalid runs invalidate planned cohort, eligibility does not silently filter.",
+  "partition_interpretation": "20 complementary overlapping partitions of one finite pool; descriptive quantiles/pass fractions, never confidence intervals or independent replication counts.",
+  "calibration_selection": "Only health, finite required telemetry and cost; never gradient reliability or recolouring. Smallest qualifying horizon; no grid expansion.",
+  "fresh_readiness": "Correctness, stable target for full/eligible cohorts, source coverage and reviewed structure jointly required. Within-condition absence qualifies a pooled result; no prediction claim."
+}
