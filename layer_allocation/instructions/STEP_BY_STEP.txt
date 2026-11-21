@@ -1,0 +1,52 @@
+GradientGuard first revised-direction implementation — 21 November 2026
+
+Open PowerShell and use:
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation'
+
+All commands below use the existing Feasibility\.venv\Scripts\python.exe directly. No activation or global install is needed. New caches/temp paths are project-local. The venv launcher path was repaired to the available matching Codex runtime; original and repaired pyvenv.cfg are backed up under layer_allocation\environment. No package versions changed. If a future app update removes that runtime again, preserve the cfg, verify a matching Python 3.12.14 interpreter and update only home/executable paths; do not replace scientific packages casually.
+
+1. Verify environment:
+.\layer_allocation\run.ps1 preflight
+Expected: matching 80-line package lock, Python/torch/GPU details; environment\verification.json. A mismatch blocks comparable measurements. Windows may require the execution environment's permission mechanism to load numerical DLLs. Do not change security settings.
+
+2. Run synthetic engineering tests:
+.\layer_allocation\run.ps1 tests
+Expected: all tests pass; runs\20261121_structural01\tests.xml. Logs of prior failed checks are preserved. Test fixtures never enter scientific feature exports.
+
+3. Freeze the bounded exploratory plan:
+.\layer_allocation\run.ps1 freeze
+Expected: protocol_freeze.json, source_snapshot and old-input hashes under runs\20261121_structural01. The configuration explicitly says outcomes have already been inspected. A freeze now cannot recreate untouched evaluation. Tests must pass first. Changing source/config after freeze is rejected; create a new attempt instead.
+
+4. Start or safely resume all scientific stages:
+.\layer_allocation\run.ps1 all
+Expected: 1,152 scalar checkpoint-panel records from 96 saved classifiers, six early checkpoints, both original 256/class panels. Then early_features.csv, original_reproduction.json, development_oof.csv, new pipelines.joblib and predictor_freeze.json, predictions.csv and prediction_freeze.json, descriptive tables/figures and report. No CNN optimiser/training occurs. New exploratory forecasters are fitted on development families only. Old predictors and reports are never overwritten.
+Progress: checkpoint_run_complete messages and status.json. The wrapper finishes all with the completed-output audit automatically. Resume skips verified scalar caches, skips already frozen fits and verifies frozen prediction hashes. An incomplete fit without predictor_freeze.json is safe to restart; it does not count as a completed model freeze. Never manually bypass hash guards. Do not claim completion until completion.json exists, validation_audit.json passed=true and preservation_audit.json says unchanged=true.
+
+5. Individual stages if diagnosing/resuming:
+.\layer_allocation\run.ps1 extract
+.\layer_allocation\run.ps1 features
+.\layer_allocation\run.ps1 reproduce
+.\layer_allocation\run.ps1 fit
+.\layer_allocation\run.ps1 predict
+.\layer_allocation\run.ps1 analyse
+Expected in order: measurements.csv; 384 early feature rows; original frozen prediction/9-audit reproduction; new development-only pipeline freeze; risk freeze; analysis tables. fit refuses to overwrite an existing freeze. After a completed fit use predict/analyse or all, not fit again.
+
+6. Status and preservation:
+.\layer_allocation\run.ps1 status
+.\layer_allocation\run.ps1 verify
+Expected: current progress, scalar-cache count, predictor/report existence; preservation_audit.json lists zero changed prior artifacts.
+
+7. Regenerate only this attempt's readable report:
+.\layer_allocation\run.ps1 report
+Expected: layer_allocation\reports\20261121_structural01\REPORT.md, decision.json and discovery_curves.png. Detailed CSV tables remain under runs\20261121_structural01. report does not train, tune or change old reports.
+
+8. Run the completed-output audit after all completes (and after regenerating a report):
+.\layer_allocation\run.ps1 audit
+Expected: validation_audit.json, costs.json, artifact_hashes.json and a resource/validation appendix in REPORT.md. This checks actual output lineage, complete curves, unchanged pipeline hashes, stage order, panel identities and preservation. It performs no fitting or selection. Its own source hash is recorded in the audit output.
+
+Interpretation:
+Successful execution means implementation/parity/preservation checks pass, not that the hypothesis succeeds. The original nine-audit tie remains unchanged. MZ versus M tests whether L6 adds audit information to the specified conventional/global/structural bank; NZ/N, L6/B and L6/L2 help locate the source of a difference. Both 25% and one-third capacities, full curves, both panels, the full cohort and family omissions must remain visible. New tuning uses a pilot-motivated one-third development capacity and must not be described as the original endpoint.
+
+A positive difference is exploratory and learner/bank-specific. A zero/negative difference can narrow the contribution but does not prove all layer information useless. Family intervals include only frozen-model conditional resampling uncertainty, not model-selection uncertainty. High-dimensional structural controls, few failure-bearing families, shared images and consumed evaluation outcomes limit interpretation. No sensitivity-specific novelty, causal shortcut mechanism, economic savings or broad generalisation follows automatically. Next independent training/benchmark work requires a separate protocol; this command never launches it.
+
+Failures: keep failures.log and all test/run logs. A parity or preservation failure blocks dependent interpretation. Do not lower tolerances, alter eligibility/cutoffs or delete difficult runs to pass. Correct code before freeze; after a scientific freeze preserve the failed attempt and make a separately named revision.

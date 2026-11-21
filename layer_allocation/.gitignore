@@ -1,0 +1,2 @@
+# Scalar per-checkpoint resume caches are redundant with measurements.csv.
+runs/*/measurements/
