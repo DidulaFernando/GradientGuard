@@ -1,0 +1,63 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.4.2, pluggy-1.7.0 -- E:\Final Year Project\Implementation\Feasibility\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Final Year Project\Implementation\layer_allocation\fresh_validation
+plugins: anyio-4.16.0
+collecting ... collected 20 items
+
+tests/test_fresh.py::test_manifest_and_nonoverlap PASSED                 [  5%]
+tests/test_fresh.py::test_official_masks_and_foreground[MAGNITUDE_LARGE-784] PASSED [ 10%]
+tests/test_fresh.py::test_official_masks_and_foreground[MAGNITUDE_MEDIUM-16] PASSED [ 15%]
+tests/test_fresh.py::test_analytical_readonly_fixture[A-expected0] PASSED [ 20%]
+tests/test_fresh.py::test_analytical_readonly_fixture[B-expected1] PASSED [ 25%]
+tests/test_fresh.py::test_microbatch_and_rng_isolation PASSED            [ 30%]
+tests/test_fresh.py::test_single_pass_observe_matches_original_sensitivity PASSED [ 35%]
+tests/test_fresh.py::test_norm_product_and_marginal_pairing PASSED       [ 40%]
+tests/test_fresh.py::test_columns_and_matched_banks PASSED               [ 45%]
+tests/test_fresh.py::test_summary_population_and_actual_fraction PASSED  [ 50%]
+tests/test_fresh.py::test_fold_local_preprocessing PASSED                [ 55%]
+tests/test_fresh.py::test_group_cv_and_support_rules PASSED              [ 60%]
+tests/test_fresh.py::test_checkpoint_resume_and_probe_neutrality PASSED  [ 65%]
+tests/test_fresh.py::test_evaluation_guards_before_files_accessed PASSED [ 70%]
+tests/test_fresh.py::test_audit_curves_and_edge_cases[y0] PASSED         [ 75%]
+tests/test_fresh.py::test_audit_curves_and_edge_cases[y1] PASSED         [ 80%]
+tests/test_fresh.py::test_audit_curves_and_edge_cases[y2] PASSED         [ 85%]
+tests/test_fresh.py::test_family_draw_keeps_nested_models PASSED         [ 90%]
+tests/test_fresh.py::test_gate_requires_every_condition PASSED           [ 95%]
+tests/test_fresh.py::test_training_and_early_export_contracts PASSED     [100%]
+
+============================== warnings summary ===============================
+..\..\Feasibility\.venv\Lib\site-packages\outdated\__init__.py:36
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\outdated\__init__.py:36: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import parse_version
+
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+..\..\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+tests/test_fresh.py::test_official_masks_and_foreground[MAGNITUDE_LARGE-784]
+tests/test_fresh.py::test_official_masks_and_foreground[MAGNITUDE_MEDIUM-16]
+  E:\Final Year Project\Implementation\Feasibility\.venv\Lib\site-packages\spuco\datasets\spuco_mnist.py:332: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+    return torch.tensor(rgb).unsqueeze(1).unsqueeze(2).repeat(1, 28, 28)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: E:\Final Year Project\Implementation\layer_allocation\runs\20261121_fresh01\tests.xml -
+======================= 20 passed, 16 warnings in 7.82s =======================

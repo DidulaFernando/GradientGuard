@@ -1,0 +1,36 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\Final Year Project\\Implementation\\Feasibility\\.venv\\Scripts\\python.exe",
+  "architecture": [
+    "64bit",
+    "WindowsPE"
+  ],
+  "os": "Windows-11-10.0.26200-SP0",
+  "lock_matches": true,
+  "missing": [],
+  "extra": [],
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "cudnn": 90701,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "versions": {
+    "torchvision": "0.22.1+cu128",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "matplotlib": "3.9.4",
+    "spuco": "2.0.3"
+  },
+  "settings": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONHASHSEED": "0",
+    "PYTHONPYCACHEPREFIX": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pycache",
+    "TEMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "TMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "PIP_CACHE_DIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pip",
+    "MPLCONFIGDIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\matplotlib"
+  },
+  "git_revision": "9edfad919e940122a0c6f8f70f127860cb7cbb38"
+}
+{"time_ns": 1795251995181784800, "event": "fresh_protocol_frozen", "families": 64, "classifiers": 256, "protected_files": 4305}
