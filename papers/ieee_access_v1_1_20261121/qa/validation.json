@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-21",
+  "pages": 12,
+  "abstract_words": 218,
+  "references": 18,
+  "primary_numerical_table_parity": true,
+  "input_hashes_verified": 28,
+  "protected_scientific_files_unchanged": 1813,
+  "overfull_boxes": 0,
+  "unresolved_references": false,
+  "missing_glyphs": false,
+  "edge_violations": 0,
+  "no_new_classifier_or_forecaster_training": true,
+  "pdf_sha256": "43f261d5356b498840c51a2aede1764260b94f79b5d0b85a87c4e1de7f8c4a00",
+  "pdf_bytes": 126054,
+  "visual_review": "All 12 final page images inspected; no remaining visual defects."
+}

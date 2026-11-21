@@ -1,0 +1,12 @@
+% XeTeX compatibility layer for the legacy ieeeaccess class mirror.
+% The class uses one full-tint PANTONE3015C colour. Preserve its stated CMYK
+% appearance without pdfTeX-only object primitives; no named spot ink is emitted.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{spotcolor}[2026/11/21 Local XeTeX CMYK compatibility]
+\RequirePackage{color}
+\def\NewSpotColorSpace#1{}
+\def\AddSpotColor#1#2#3#4{}
+\def\SetPageColorSpace#1{}
+\def\SpotSpace{\space}
+\def\color@spotcolor#1#2{\color@cmyk#1{1,.3,0,.2}}
+\endinput

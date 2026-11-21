@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-21",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "pdf_sha256": "43f261d5356b498840c51a2aede1764260b94f79b5d0b85a87c4e1de7f8c4a00",
+  "page_hashes": {
+    "page-01.png": "5714c907f8ea34a974ddcb3152456119c374809f4240929e3311863f02c292da",
+    "page-02.png": "5427cfa972f88366d1e3d41f32734c9d61ecb4eeb6a2101338e9d83b7dc0828d",
+    "page-03.png": "a46cb008a71469fea5c1352e46ef154ea81e54e875e3a7af5d652ae58b82b9fc",
+    "page-04.png": "6ff895ffdf3c33ac05e747cd249c6342504a01c36effe6db0e20e8434e604079",
+    "page-05.png": "6ccbd347cdcf498669829131cac8ed54ae73b0225cda4c49e603ef1fccd31490",
+    "page-06.png": "21651e080df292182eb2d28df95760aeaea6908d93763bf4a3785ecf2856ddd0",
+    "page-07.png": "386faa55c15981009dacc04b35782c4df5b87ac155b8c36866b37c900bbafc6b",
+    "page-08.png": "feffeffec44ac699e4c35a311e29ef93798080799c4965ed9493eb27002f3026",
+    "page-09.png": "3012876063f8323b518c68d416042116cb6fd0baf68d204304d192d2f6563bd7",
+    "page-10.png": "1b80efc137ed3f2a70a988623b6025dfe80c1eb67a3c88074f8d53f37f4c8621",
+    "page-11.png": "fd45f5ef20666c8c6a50fc95e6e39ad0ad4448b1d2a82f654d64a0e7a84873b1",
+    "page-12.png": "731d4fe2c46220430ee1c38215e9da236c68ea8387d407e01e74756a48338c0c"
+  },
+  "checks": [
+    "All pages visually inspected",
+    "Equations, table columns, captions and references legible",
+    "No clipped text, overlapping content or missing glyphs observed"
+  ],
+  "remaining_issues": []
+}
