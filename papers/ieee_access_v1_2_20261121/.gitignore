@@ -1,9 +1,0 @@
-# Authoring intermediates and rendered QA; final PDF/source/evidence are tracked.
-LayoutCheck.*
-qa/page-*.png
-qa/contact-*.png
-*.aux
-*.log
-*.out
-*.toc
-*.synctex.gz
