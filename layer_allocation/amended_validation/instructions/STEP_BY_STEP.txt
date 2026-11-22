@@ -32,3 +32,51 @@ Combined24hour cap includes9401.188seconds previously charged in fresh01; GPU-st
 Interpretation: support failure means not adequately evaluable; full cohort cannot rescue the source-normal claim. Preserve all methods/budgets/panels/family influence, including losses. Only all original useful-gain/uncertainty/control/panel/influence gates passing permits v1.3. Otherwise v1.2 is untouched. No Waterbirds or design expansion.
 
 Git: stage only relevant source/manifests/reports and frozen forecasters; environments/raw data/checkpoint binaries remain local. Make separate logical commits, push origin main without force and verify remote HEAD. No credentials in commits.
+
+FINAL COMPLETION AUDIT (after all has exited successfully)
+$env:PYTHONUTF8='1'
+$env:PYTHONPYCACHEPREFIX='E:\Final Year Project\Implementation\layer_allocation\cache\pycache'
+& .\Feasibility\.venv\Scripts\python.exe .\layer_allocation\complete_amended_validation.py
+
+Expected: final_validation_audit.json with passed=true, run_status_expanded.csv
+accounting for all 256 planned identities, checkpoint_hashes.json, and
+final_artifact_hashes.json. The audit checks byte-identical development imports,
+complete 19,560-update horizons, frozen-source and predictor hashes, chronological
+boundaries, matched candidate panels and feature banks, and bounded complete curves.
+It also adds the explicit amendment/missingness disclosure to the new report.
+
+SUCCESSFUL EXECUTION VERSUS SCIENTIFIC SUCCESS
+execution_completion.json with finished=true means the authorised pipeline exited;
+final_validation_audit.json with passed=true means the completed evidence passed
+the engineering checks. Neither establishes a predictive benefit. Read
+evaluation_support.json first, then analysis_gate.json, contrasts.csv,
+intervals.csv and leave_one_family_out.csv. All progression flags must pass to
+permit manuscript v1.3. A failed gain, interval, panel or family gate is preserved
+and reported; it does not trigger new training, different thresholds or tuning.
+
+SAFE RESUME AND REPORTING
+Use run.ps1 status to inspect progress. Use run.ps1 all to resume the same frozen
+attempt: completed classifiers and frozen predictors are reused; recovery states
+resume interrupted classifiers. Do not edit configs or source to bypass guards.
+Do not start a second all process while one is running. A construction rejected
+by the exact official empty-group assertion remains unavailable at its fixed seed.
+Any other construction error requires diagnosis, not automatic exclusion.
+
+run.ps1 analyse recomputes the predefined scalar analyses from frozen predictions
+and already-unsealed outcomes; it does not fit predictors. run.ps1 report regenerates
+the generic report only. After either reporting command, rerun the final completion
+audit to restore amendment disclosure and refresh final hashes. Preserve any
+additional signed-off interpretation supplement rather than overwriting it.
+
+CHECK PRESERVATION AND GIT
+.\layer_allocation\amended_validation\run.ps1 verify
+git status --short
+git log -8 --oneline
+git rev-parse HEAD
+git ls-remote origin refs/heads/main
+
+Expected: preservation_audit.json reports passed checks with no changed protected
+inputs. After publication, the local HEAD and remote main hash must match. Never
+use force-push or stage environments, raw datasets, caches, credentials or binary
+classifier checkpoints. Compact manifests, frozen forecasters, scalar evidence,
+figures, source and reports belong in the published record.
