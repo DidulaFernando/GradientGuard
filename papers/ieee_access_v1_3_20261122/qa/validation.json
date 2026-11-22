@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "eight_native_tables": true,
+    "three_figures": true,
+    "nine_native_equations": true,
+    "all_table_captions": true,
+    "all_figure_captions": true,
+    "abstract_150_to_250_words": true,
+    "author_email": true,
+    "supervisor_email": true,
+    "formal_availability": true,
+    "funding_statement": true,
+    "honest_unconfirmed_competing_interests": true,
+    "no_unresolved_crossrefs": true,
+    "no_replacement_characters": true,
+    "nineteen_references": true,
+    "prior_files_unchanged": true,
+    "rendered_pdf_has_all_tables": true,
+    "rendered_pdf_has_biography": true,
+    "rendered_no_conversion_mojibake": true
+  },
+  "passed": 18,
+  "total": 18,
+  "pages": 15,
+  "scope": "Document assembly and preservation checks only; no scientific experiments or inference rerun."
+}
