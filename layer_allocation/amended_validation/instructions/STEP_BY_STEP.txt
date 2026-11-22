@@ -55,10 +55,15 @@ permit manuscript v1.3. A failed gain, interval, panel or family gate is preserv
 and reported; it does not trigger new training, different thresholds or tuning.
 
 SAFE RESUME AND REPORTING
-Use run.ps1 status to inspect progress. Use run.ps1 all to resume the same frozen
-attempt: completed classifiers and frozen predictors are reused; recovery states
-resume interrupted classifiers. Do not edit configs or source to bypass guards.
-Do not start a second all process while one is running. A construction rejected
+Use run.ps1 status to inspect progress. Once predictor fitting has completed, use:
+& .\Feasibility\.venv\Scripts\python.exe .\layer_allocation\resume_amended_validation.py
+
+This resumes the same frozen attempt without rewriting a completed evaluation
+preflight timestamp. Completed classifiers, predictors and predictions are reused;
+interrupted classifiers resume from recovery states. Once execution is complete,
+the wrapper reports completion and performs no stages again. Do not edit configs
+or source to bypass guards. Do not start a second process while one is running.
+A construction rejected
 by the exact official empty-group assertion remains unavailable at its fixed seed.
 Any other construction error requires diagnosis, not automatic exclusion.
 
