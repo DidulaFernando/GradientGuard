@@ -1,0 +1,39 @@
+{
+  "flags": {
+    "correctness_preservation_boundary": true,
+    "evaluation_support": true,
+    "useful_gain": false,
+    "interval_above_zero": false,
+    "beats_B": false,
+    "beats_selected_nonZ": false,
+    "both_B_variants_positive": false,
+    "no_negative_family_omission": true
+  },
+  "passed": false,
+  "primary": {
+    "cohort": "eligible",
+    "variant": "A",
+    "added": "logistic_MZ",
+    "base": "logistic_M",
+    "denominator": 3,
+    "N": 106,
+    "k": 35,
+    "D_added": 26,
+    "D_base": 26,
+    "difference": 0,
+    "Delta20": 0.0
+  },
+  "interval": {
+    "cohort": "eligible",
+    "variant": "A",
+    "added": "logistic_MZ",
+    "base": "logistic_M",
+    "denominator": 3,
+    "low": -0.20833333333333334,
+    "high": 0.1887699564586344,
+    "valid": 5000,
+    "invalid": 0,
+    "seed": 710005
+  },
+  "selected_nonZ": "logistic_M"
+}

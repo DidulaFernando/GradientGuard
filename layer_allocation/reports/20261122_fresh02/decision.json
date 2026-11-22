@@ -1,0 +1,101 @@
+{
+  "attempt": "20261122_fresh02",
+  "status": "complete",
+  "verdict": "Fresh study does not meet the predefined sensitivity-specific progression gate",
+  "planned_classifiers": 256,
+  "completed": 248,
+  "diverged": 0,
+  "incomplete": 0,
+  "not_launched": 0,
+  "evaluation_support": {
+    "passed": true,
+    "N": 106,
+    "families": 28,
+    "outcomes": {
+      "0": {
+        "models": 72,
+        "families": 20
+      },
+      "1": {
+        "models": 34,
+        "families": 12
+      }
+    },
+    "requirements": {
+      "minimum_n": 64,
+      "minimum_families": 20,
+      "minimum_each": 16,
+      "families_each": 8
+    }
+  },
+  "manuscript_v1_3_gate_passed": false,
+  "gate": {
+    "flags": {
+      "correctness_preservation_boundary": true,
+      "evaluation_support": true,
+      "useful_gain": false,
+      "interval_above_zero": false,
+      "beats_B": false,
+      "beats_selected_nonZ": false,
+      "both_B_variants_positive": false,
+      "no_negative_family_omission": true
+    },
+    "passed": false,
+    "primary": {
+      "cohort": "eligible",
+      "variant": "A",
+      "added": "logistic_MZ",
+      "base": "logistic_M",
+      "denominator": 3,
+      "N": 106,
+      "k": 35,
+      "D_added": 26,
+      "D_base": 26,
+      "difference": 0,
+      "Delta20": 0.0
+    },
+    "interval": {
+      "cohort": "eligible",
+      "variant": "A",
+      "added": "logistic_MZ",
+      "base": "logistic_M",
+      "denominator": 3,
+      "low": -0.20833333333333334,
+      "high": 0.1887699564586344,
+      "valid": 5000,
+      "invalid": 0,
+      "seed": 710005
+    },
+    "selected_nonZ": "logistic_M"
+  },
+  "manuscript_updated": false,
+  "amended": true,
+  "development_reused": 124,
+  "development_newly_trained": 0,
+  "development_unavailable": 4,
+  "construction_policy": "Fixed exact official empty-source-subgroup rejections only; no seed replacement or assertion override",
+  "status_counts": {
+    "('development', 'complete')": 124,
+    "('development', 'data_preparation_failed')": 4,
+    "('evaluation', 'complete')": 124,
+    "('evaluation', 'data_preparation_failed')": 4
+  },
+  "source_normal_core_evaluable": true,
+  "conditional_on_available_pool": true,
+  "unavailable": 8,
+  "evaluation_newly_trained": 124,
+  "interpretation": {
+    "primary_incremental_discovery_observed": false,
+    "sensitivity_specific_value": "not_supported_by_primary_matched_comparison",
+    "mixed_eligible_evaluation_families": 4,
+    "recommendation": "Revise or pause the current sensitivity-specific representation; no automatic larger replication or manuscript promotion.",
+    "limitations": [
+      "conditional on successfully constructed source pool",
+      "shared MNIST benchmark and one architecture",
+      "bootstrap conditional on frozen predictors",
+      "panel dependence",
+      "isolated incremental Z cost not measured"
+    ],
+    "postprocessing_source_sha256": "cd7cfe1d6c5ea36cebdd2eb6a670578680261d4d7724628bcb177b352068bdcd"
+  }
+}

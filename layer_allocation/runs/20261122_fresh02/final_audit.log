@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "status_counts": {
+    "('development', 'complete')": 124,
+    "('development', 'data_preparation_failed')": 4,
+    "('evaluation', 'complete')": 124,
+    "('evaluation', 'data_preparation_failed')": 4
+  },
+  "gate_passed": false,
+  "primary": {
+    "cohort": "eligible",
+    "variant": "A",
+    "added": "logistic_MZ",
+    "base": "logistic_M",
+    "denominator": 3,
+    "N": 106,
+    "k": 35,
+    "D_added": 26,
+    "D_base": 26,
+    "difference": 0,
+    "Delta20": 0.0
+  },
+  "interval": {
+    "cohort": "eligible",
+    "variant": "A",
+    "added": "logistic_MZ",
+    "base": "logistic_M",
+    "denominator": 3,
+    "low": -0.20833333333333334,
+    "high": 0.1887699564586344,
+    "valid": 5000,
+    "invalid": 0,
+    "seed": 710005
+  }
+}

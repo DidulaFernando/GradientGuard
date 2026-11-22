@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "N": 106,
+  "families": 28,
+  "outcomes": {
+    "0": {
+      "models": 72,
+      "families": 20
+    },
+    "1": {
+      "models": 34,
+      "families": 12
+    }
+  },
+  "requirements": {
+    "minimum_n": 64,
+    "minimum_families": 20,
+    "minimum_each": 16,
+    "families_each": 8
+  }
+}

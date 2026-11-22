@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "preservation": {
+    "protected_files": 7171,
+    "unchanged": true,
+    "changed_paths": []
+  },
+  "status_counts": {
+    "('development', 'complete')": 124,
+    "('development', 'data_preparation_failed')": 4,
+    "('evaluation', 'complete')": 124,
+    "('evaluation', 'data_preparation_failed')": 4
+  },
+  "source_sha256": "a3fb90260b18db7746a70c27fb9518025449a01f92b0cc83cd320fee37ab6a28",
+  "predictor_boundary": true,
+  "candidate_panel_and_bank_checks": true,
+  "development_import_unchanged": true,
+  "manuscript_gate": {
+    "flags": {
+      "correctness_preservation_boundary": true,
+      "evaluation_support": true,
+      "useful_gain": false,
+      "interval_above_zero": false,
+      "beats_B": false,
+      "beats_selected_nonZ": false,
+      "both_B_variants_positive": false,
+      "no_negative_family_omission": true
+    },
+    "passed": false,
+    "primary": {
+      "cohort": "eligible",
+      "variant": "A",
+      "added": "logistic_MZ",
+      "base": "logistic_M",
+      "denominator": 3,
+      "N": 106,
+      "k": 35,
+      "D_added": 26,
+      "D_base": 26,
+      "difference": 0,
+      "Delta20": 0.0
+    },
+    "interval": {
+      "cohort": "eligible",
+      "variant": "A",
+      "added": "logistic_MZ",
+      "base": "logistic_M",
+      "denominator": 3,
+      "low": -0.20833333333333334,
+      "high": 0.1887699564586344,
+      "valid": 5000,
+      "invalid": 0,
+      "seed": 710005
+    },
+    "selected_nonZ": "logistic_M"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "classifier_component_sums": {
+    "training": 14164.147245997083,
+    "monitor_A": 811.3129752999912,
+    "monitor_B": 825.7574848999773,
+    "initialization": 299.0473419000432,
+    "health": 12.72656719996803,
+    "wall": 16784.725023999992,
+    "outcome_seconds": 21.9701499999901
+  },
+  "conservative_gpu_budget": {
+    "charged_seconds": 18858.786558200016,
+    "limit_seconds": 86400,
+    "definition": "Cumulative wall time in GPU stages including source preparation, checkpoints, health and outcome evaluation; conservative, not hardware occupancy"
+  },
+  "dataset_bytes": 10410106,
+  "checkpoint_bytes": 289110744,
+  "limitations": "Training synchronized; primary-panel path includes telemetry/structural/clustering, not isolated sensitivity increment. GPU counters are per-observation allocated peaks; no historical CPU peak or demonstrated monetary savings."
+}
