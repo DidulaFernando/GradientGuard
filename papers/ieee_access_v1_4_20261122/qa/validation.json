@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "page_size_matches_official_template": true,
+    "template_margins": true,
+    "two_column_gutter": true,
+    "tables_unchanged": true,
+    "nine_equations_unchanged": true,
+    "three_images_unchanged": true,
+    "image_bytes_unchanged": true,
+    "no_usage_mentions_in_package": true,
+    "no_usage_mentions_in_source": true,
+    "footer_draft_label_removed": true,
+    "supervisor_acknowledgement_retained": true,
+    "funding_retained": true,
+    "eighteen_sequential_references": true,
+    "citation_order": true,
+    "v1_3_inputs_unchanged": true,
+    "pdf_template_dimensions_within_one_point_export_rounding": true,
+    "pdf_no_usage_mentions": true,
+    "pdf_has_all_tables": true,
+    "pdf_has_biography": true,
+    "pdf_has_key_results": true
+  },
+  "passed": 20,
+  "total": 20,
+  "pages": 15,
+  "scope": "Document checks only; no experiments rerun."
+}
