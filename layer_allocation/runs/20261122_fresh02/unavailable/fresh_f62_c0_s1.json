@@ -1,0 +1,13 @@
+{
+  "family": 62,
+  "construction": 0,
+  "data_seed": 400620,
+  "reservation_seed": 500620,
+  "reason": "No examples in (2, 8), considering reducing spurious correlation strength",
+  "affected_runs": [
+    "fresh_f62_c0_s0",
+    "fresh_f62_c0_s1"
+  ],
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Final Year Project\\Implementation\\layer_allocation\\finish_fresh_development.py\", line 32, in finish\n    try:d=source(group[0]);budget.tick()\n          ^^^^^^^^^^^^^^^^\n  File \"E:\\Final Year Project\\Implementation\\layer_allocation\\fresh_validation\\ggfresh\\measure_data.py\", line 36, in source\n    ds.initialize(); ids=np.array(ds.mnist.indices); y=np.array(ds.labels); bg=np.array(ds.spurious)\n    ^^^^^^^^^^^^^^^\n  File \"E:\\Final Year Project\\Implementation\\Feasibility\\.venv\\Lib\\site-packages\\spuco\\datasets\\base_spuco_dataset.py\", line 137, in initialize\n    assert group_label in self._group_partition and len(self._group_partition[group_label]) > 0, f\"No examples in {group_label}, considering reducing spurious correlation strength\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: No examples in (2, 8), considering reducing spurious correlation strength\n",
+  "configuration_unchanged": true
+}

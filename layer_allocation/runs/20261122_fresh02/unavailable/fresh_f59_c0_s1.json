@@ -1,0 +1,12 @@
+{
+  "family": 59,
+  "construction": 0,
+  "available": false,
+  "data_seed": 400590,
+  "reservation_seed": 500590,
+  "reason": "No examples in (4, 1), considering reducing spurious correlation strength",
+  "affected_runs": [
+    "fresh_f59_c0_s0",
+    "fresh_f59_c0_s1"
+  ]
+}
