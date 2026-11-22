@@ -1,0 +1,63 @@
+GradientGuard bounded development-only diagnosis
+
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation'
+
+Use the existing project virtual environment. No activation or installation:
+& .\Feasibility\.venv\Scripts\python.exe --version
+
+1. Synthetic/schema checks (no diagnostic outcome statistics):
+.\layer_allocation\development_diagnostics\run.ps1 tests
+Expected: all tests pass and tests.xml under layer_allocation\runs\20261122_devdiag01.
+
+2. Freeze before calculating diagnostic results:
+.\layer_allocation\development_diagnostics\run.ps1 freeze
+Expected: matching complete package lock; plan.json, plan_freeze.json, source_snapshot,
+input hashes and protected prior-input hashes. Frozen source changes cause a stop.
+
+3. Execute the fixed development analysis:
+.\layer_allocation\development_diagnostics\run.ps1 analyse
+Expected: source-normal107/full124 memberships verified; B/N/M feature reconstruction,
+both panels, original grouped folds, all six raw/residual feature summaries, family
+pair tables, existing OOF-score tables, conditional-permutation support, semantic-read
+and preprocessing audits. analysis_complete.json means the numerical work finished.
+No classifier or failure forecaster is fitted. Fixed auxiliary Ridge fits reconstruct
+feature values without terminal labels as regression targets.
+
+4. Generate the report and supervisor-style appraisal:
+.\layer_allocation\development_diagnostics\run.ps1 report
+Expected: REPORT.md, decision.json, reconstruction.png and within_family.png under
+layer_allocation\reports\20261122_devdiag01. completion.json and artifact_hashes.json
+record final evidence. A successful run is not proof of a positive scientific result.
+
+Automatic execution / safe resume (never run two processes concurrently):
+.\layer_allocation\development_diagnostics\run.ps1 all
+This tests, verifies/freezes, runs analysis if incomplete, and generates the report.
+Analysis contains no training checkpoints or expensive GPU work. Interrupted fixed
+analysis can be repeated from the same unchanged inputs; existing results stay within
+this diagnostic attempt. No old evidence is overwritten or old command invoked.
+
+Status and preservation:
+.\layer_allocation\development_diagnostics\run.ps1 status
+.\layer_allocation\development_diagnostics\run.ps1 verify
+git status --short
+git log -5 --oneline
+
+Read tables in layer_allocation\runs\20261122_devdiag01. The semantic-read audit must
+contain only development feature/OOF records, validation labels, memberships and bank
+definitions. Evaluation/test files may be byte-hashed for preservation, not loaded
+into analysis. Imputation, scaling and target references must be fold-local.
+
+Interpretation: high reconstruction suggests overlap, not proof of redundancy; low
+reconstruction does not prove unique outcome information. Within-family inference
+depends on the few mixed-outcome families, not the headline model count. Conditional
+randomisation is retrospective, assumes within-family exchangeability and includes a
+maximum-statistic adjustment across all24 feature/representation/panel columns.
+It is not an independent confirmation or a new manuscript progression gate.
+
+Do not tune risk predictors, select a new favourite feature, change outcomes, expand
+classifier training or update the proposal/manuscript from this diagnosis. Review
+the supervisor-style assessment with the actual supervisor before further work.
+
+Code and results are committed separately according to repository policy. No global
+packages, caches or security settings are modified. All temporary/cache directories
+remain under the project root. No new GitHub push is assumed by this diagnostic task.

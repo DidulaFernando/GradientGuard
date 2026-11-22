@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.4.2, pluggy-1.7.0 -- E:\Final Year Project\Implementation\Feasibility\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Final Year Project\Implementation\layer_allocation\development_diagnostics
+plugins: anyio-4.16.0
+collecting ... collected 17 items
+
+tests/test_diagnostics.py::test_family_variance_is_an_exact_partition_with_unequal_sizes PASSED [  5%]
+tests/test_diagnostics.py::test_family_constant_signal_has_no_within_variance PASSED [ 11%]
+tests/test_diagnostics.py::test_within_concordance_orientation_and_ties PASSED [ 17%]
+tests/test_diagnostics.py::test_family_offset_does_not_change_within_concordance PASSED [ 23%]
+tests/test_diagnostics.py::test_fold_local_imputation_and_target_scaling PASSED [ 29%]
+tests/test_diagnostics.py::test_reconstruction_has_no_label_input PASSED [ 35%]
+tests/test_diagnostics.py::test_multi_target_reconstruction_contract PASSED [ 41%]
+tests/test_diagnostics.py::test_flat_target_metrics_are_undefined_not_fake_perfect PASSED [ 47%]
+tests/test_diagnostics.py::test_family_folds_are_disjoint_and_cover_once PASSED [ 52%]
+tests/test_diagnostics.py::test_conditional_permutation_preserves_counts_and_adjusts_maximum PASSED [ 58%]
+tests/test_diagnostics.py::test_equal_family_weighting_not_pair_weighting PASSED [ 64%]
+tests/test_diagnostics.py::test_no_mixed_families_explicitly_unavailable PASSED [ 70%]
+tests/test_diagnostics.py::test_monte_carlo_is_reproducible_and_counted PASSED [ 76%]
+tests/test_diagnostics.py::test_semantic_allowlist_blocks_evaluation_and_test_outcomes PASSED [ 82%]
+tests/test_diagnostics.py::test_primary_schema_and_no_risk_training_api PASSED [ 88%]
+tests/test_diagnostics.py::test_protection_hashes_and_nonfinite_json PASSED [ 94%]
+tests/test_diagnostics.py::test_paired_panels_source_id_counts_without_outcome_read PASSED [100%]
+
+- generated xml file: E:\Final Year Project\Implementation\layer_allocation\runs\20261122_devdiag01\tests.xml -
+============================= 17 passed in 2.23s ==============================

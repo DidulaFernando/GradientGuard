@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="16" time="2.714" timestamp="2026-11-22T17:30:40.051850+05:30" hostname="DidulaPC"><testcase classname="tests.test_diagnostics" name="test_family_variance_is_an_exact_partition_with_unequal_sizes" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_family_constant_signal_has_no_within_variance" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_within_concordance_orientation_and_ties" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_family_offset_does_not_change_within_concordance" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_fold_local_imputation_and_target_scaling" time="0.024"><failure message="ValueError: shape mismatch: value array of shape (2,) could not be broadcast to indexing result of shape (2,1)">def test_fold_local_imputation_and_target_scaling():
+        x=np.array([[1,np.nan],[3,4],[1000,9999],[2000,9999]],float);y=np.array([[2],[4],[100],[200]],float)
+&gt;       p,b,u,a=d.fixed_reconstruction(x,y,[(np.array([0,1]),np.array([2,3])),(np.array([2,3]),np.array([0,1]))])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_diagnostics.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+x = array([[1.000e+00,       nan],
+       [3.000e+00, 4.000e+00],
+       [1.000e+03, 9.999e+03],
+       [2.000e+03, 9.999e+03]])
+y = array([[  2.],
+       [  4.],
+       [100.],
+       [200.]])
+folds = [(array([0, 1]), array([2, 3])), (array([2, 3]), array([0, 1]))]
+
+    def fixed_reconstruction(x,y,folds):
+        x=np.asarray(x,dtype=np.float64);y=np.asarray(y,dtype=np.float64);pred=np.full(y.shape,np.nan);base=np.full(y.shape,np.nan);units=np.full(y.shape,np.nan);audits=[]
+        for fold,(train,test) in enumerate(folds):
+            assert not set(train)&amp;set(test)
+            mu=y[train].mean(0);sd=y[train].std(0);scale=np.where(sd&gt;CFG['flat_floor'],sd,1.)
+            pipeline=make_pipeline(SimpleImputer(keep_empty_features=True),StandardScaler(),Ridge(alpha=CFG['ridge_alpha'],solver='svd'))
+            pipeline.fit(x[train],(y[train]-mu)/scale)
+&gt;           pred[test]=pipeline.predict(x[test])*scale+mu;base[test]=mu;units[test]=scale
+            ^^^^^^^^^^
+E           ValueError: shape mismatch: value array of shape (2,) could not be broadcast to indexing result of shape (2,1)
+
+diagnose.py:90: ValueError</failure></testcase><testcase classname="tests.test_diagnostics" name="test_reconstruction_has_no_label_input" time="0.000" /><testcase classname="tests.test_diagnostics" name="test_flat_target_metrics_are_undefined_not_fake_perfect" time="0.000" /><testcase classname="tests.test_diagnostics" name="test_family_folds_are_disjoint_and_cover_once" time="0.003" /><testcase classname="tests.test_diagnostics" name="test_conditional_permutation_preserves_counts_and_adjusts_maximum" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_equal_family_weighting_not_pair_weighting" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_no_mixed_families_explicitly_unavailable" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_monte_carlo_is_reproducible_and_counted" time="0.002" /><testcase classname="tests.test_diagnostics" name="test_semantic_allowlist_blocks_evaluation_and_test_outcomes" time="0.194" /><testcase classname="tests.test_diagnostics" name="test_primary_schema_and_no_risk_training_api" time="0.001" /><testcase classname="tests.test_diagnostics" name="test_protection_hashes_and_nonfinite_json" time="0.006" /><testcase classname="tests.test_diagnostics" name="test_paired_panels_source_id_counts_without_outcome_read" time="0.026" /></testsuite></testsuites>

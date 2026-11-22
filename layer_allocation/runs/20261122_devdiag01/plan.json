@@ -1,0 +1,55 @@
+{
+  "attempt": "20261122_devdiag01",
+  "source_attempt": "20261122_fresh02",
+  "status": "post-hoc development-only diagnostic; prior evaluation outcomes already known globally, not newly used here",
+  "prefix": 0.1,
+  "cohorts": [
+    "eligible",
+    "full"
+  ],
+  "panels": [
+    "A",
+    "B"
+  ],
+  "features": [
+    "shallow_share_last",
+    "shallow_share_mean",
+    "shallow_share_std",
+    "deep_share_last",
+    "deep_share_mean",
+    "deep_share_std"
+  ],
+  "reconstruction_banks": [
+    "B",
+    "N",
+    "M"
+  ],
+  "reconstruction": "Fixed Ridge alpha=1, solver=svd; CPU float64; fold-local mean imputation and StandardScaler of inputs; fold-local target centering/scaling; original frozen family folds; no grid or tuning",
+  "ridge_alpha": 1.0,
+  "flat_floor": 1e-12,
+  "descriptive_alpha": 0.05,
+  "reconstruction_metrics": [
+    "pooled_oof_R2",
+    "RMSE",
+    "skill_versus_fold_training_mean",
+    "RMSE_in_fold_training_SD_units"
+  ],
+  "within_family": "All failure/nonfailure pairs within each mixed-outcome family; larger feature treated as larger risk; ties=0.5; equal-family mean concordance; raw features and M-reconstruction OOF residuals; both panels; per-family and same-construction pair accounting",
+  "conditional_permutation": "Preserve failure count within each mixed family, labels shared across both panels and representations; max absolute concordance departure from0.5 over all24 fixed raw/residual panel-feature columns within each cohort; exact enumeration when combinations<=50000, otherwise5000 fixed-seed draws plus-one Monte Carlo p values. Descriptive conditional randomisation diagnostics, not confirmatory evidence; exchangeability across construction/initialisation is an assumption",
+  "permutation_seed": 805021,
+  "permutation_exact_limit": 50000,
+  "permutation_draws": 5000,
+  "variance": "Run-weighted within-family and between-family sums of squares; proportions sum to1 unless flat; no population variance inference",
+  "panel_noise": "RMS(A-B)/sqrt(2), compared descriptively with population SD of panel-average raw and family-centred feature; complementary fixed panels, not numerical jitter or independent dataset replications",
+  "existing_predictors": "Read only saved development OOF scores for logistic M/MZ and L6/B; no pipeline deserialisation, fitting, refitting, tuning or new risk model. OOF diagnostics remain development-selection-biased",
+  "interpretation": "R2>=0.8 is a descriptive substantial-reconstructability marker, not proof of conditional outcome redundancy. Low Ridge R2 does not establish unique predictive information. Small mixed-family support limits within-setting claims. No result rescues the failed fresh primary gate or authorises a manuscript update, new classifier training, feature selection or external benchmark.",
+  "prohibited": [
+    "evaluation feature/outcome semantic reads",
+    "classifier training",
+    "risk forecaster fitting",
+    "retuning",
+    "feature selection",
+    "manuscript edits",
+    "old artifact mutation"
+  ]
+}

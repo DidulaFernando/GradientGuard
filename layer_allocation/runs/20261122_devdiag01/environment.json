@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\Final Year Project\\Implementation\\Feasibility\\.venv\\Scripts\\python.exe",
+  "os": "Windows-11-10.0.26200-SP0",
+  "lock_matches": true,
+  "missing": [],
+  "extra": [],
+  "precision": "CPU float64; fixed single-thread linear algebra; no GPU training",
+  "settings": {
+    "TEMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "TMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "PYTHONPYCACHEPREFIX": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pycache",
+    "PIP_CACHE_DIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pip",
+    "MPLCONFIGDIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\matplotlib"
+  }
+}
