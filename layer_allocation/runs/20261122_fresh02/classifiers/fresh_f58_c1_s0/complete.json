@@ -1,0 +1,22 @@
+{
+  "run": "fresh_f58_c1_s0",
+  "updates": 19560,
+  "planned_updates": 19560,
+  "full_60_epochs": true,
+  "timing": {
+    "training": 56.83483450024505,
+    "monitor_A": 3.1625171000014234,
+    "monitor_B": 3.1700951999955578,
+    "initialization": 1.276265800002875,
+    "health": 0.05204780000349274
+  },
+  "wall_this_invocation": 67.13232869999774,
+  "final_health": {
+    "loss": 0.032512025826144965,
+    "accuracy": 0.9953125,
+    "seconds": 0.008674900000187336
+  },
+  "protocol_sha256": "97701a42ecc4d9a2cbec626ff1b70367e1d5a826a9e9ec738e54af68d4f9c307",
+  "final_sha256": "0bf1c7c92a35648cccdf87a87c84db6fe78116bfdf43152833e406452a620d2a",
+  "peak_gpu_allocated": 594062336
+}

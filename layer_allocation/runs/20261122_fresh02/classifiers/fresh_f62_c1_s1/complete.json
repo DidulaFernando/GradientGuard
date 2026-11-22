@@ -1,0 +1,22 @@
+{
+  "run": "fresh_f62_c1_s1",
+  "updates": 19560,
+  "planned_updates": 19560,
+  "full_60_epochs": true,
+  "timing": {
+    "training": 57.948069499707344,
+    "monitor_A": 3.251424699999916,
+    "monitor_B": 3.3021839000066393,
+    "initialization": 1.1611195000004955,
+    "health": 0.05311960000108229
+  },
+  "wall_this_invocation": 68.35471260000122,
+  "final_health": {
+    "loss": 0.018980941490008264,
+    "accuracy": 0.99609375,
+    "seconds": 0.007517199999711011
+  },
+  "protocol_sha256": "97701a42ecc4d9a2cbec626ff1b70367e1d5a826a9e9ec738e54af68d4f9c307",
+  "final_sha256": "b3f6d2063e683f8b877775fd92ad27abe76e61a93686767d810ec4a2954af1eb",
+  "peak_gpu_allocated": 594062336
+}

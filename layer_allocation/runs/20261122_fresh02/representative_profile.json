@@ -1,0 +1,16 @@
+{
+  "run": "fresh_f02_c0_s0",
+  "full_60_epochs": true,
+  "seconds": 69.02481089999992,
+  "timing": {
+    "training": 58.604221099996266,
+    "monitor_A": 3.053720899999689,
+    "monitor_B": 3.105551300000343,
+    "initialization": 1.347717399999965,
+    "health": 0.05200869999953284
+  },
+  "projected_256_classifier_seconds": 17670.35159039998,
+  "storage_per_classifier_bytes": 1242626,
+  "projection_rule": "First complete development trajectory extrapolated linearly, excludes construction/fitting/outcomes; conservative GPU-stage ledger enforced separately",
+  "within_24_hour_projection": true
+}
