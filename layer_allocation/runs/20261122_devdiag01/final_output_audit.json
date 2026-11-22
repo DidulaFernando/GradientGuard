@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "tests": 17,
+  "prior_files_unchanged": 12728,
+  "inputs_unchanged": 132,
+  "reconstruction_scores_recomputed": 72,
+  "paired_summary_rows_recomputed": 48,
+  "heldout_semantic_access": false,
+  "new_classifiers": 0,
+  "new_failure_forecasters": 0,
+  "fixed_auxiliary_fits": 60,
+  "source_sha256": "0d16f41a80ad68d58778e7bc0c188cee19ee830f37b273a70408b769b0e2d9da",
+  "numerical_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-10
+  }
+}

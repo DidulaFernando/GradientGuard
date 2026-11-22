@@ -1,0 +1,30 @@
+{
+  "attempt": "20261122_devdiag01",
+  "status": "complete",
+  "post_hoc": true,
+  "development_only": true,
+  "primary_cohort": {
+    "cohort": "eligible",
+    "N": 107,
+    "families": 29,
+    "failures": 38,
+    "nonfailures": 69,
+    "mixed_families": "[34, 38, 46, 51]",
+    "mixed_family_models": 16,
+    "folds": 5
+  },
+  "M_reconstruction_A_median_R2": 0.9312600825038392,
+  "features_R2_at_least_0_8": 6,
+  "reconstruction_assessment": "Substantial linear reconstructability in at least four of six features",
+  "descriptively_stable_within_features": [],
+  "within_family_evidence_limited": true,
+  "recommendation": "Pause the current sensitivity-specific claim; narrow the FYP or justify a materially different representation before more classifier training.",
+  "heldout_gate_overturned": false,
+  "manuscript_updated": false,
+  "no_new_classifiers_or_risk_forecasters": true,
+  "preservation": {
+    "passed": true,
+    "protected_files": 12728,
+    "changed_paths": []
+  }
+}

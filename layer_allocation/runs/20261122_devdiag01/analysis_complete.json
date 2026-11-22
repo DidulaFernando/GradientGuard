@@ -1,0 +1,16 @@
+{
+  "finished": true,
+  "time_ns": 1795348986489740500,
+  "seconds": 21.390691399999923,
+  "source_hashes": {
+    ".pytest_cache\\README.md": "420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70",
+    "config.json": "bb6f0fa200b93da0ec17d9a698c00657737aa7e1fdc25a53db8d8c856ee8cf50",
+    "diagnose.py": "66e0131d8ceadbdca515ebe6381b18623ef4a5b32f35c4a8383b74410afc66ce",
+    "ENGINEERING_HISTORY.md": "4b15ad82ea3af3b20dc04814506666e4f3267cc23a15257250d74d7a33f2d7be",
+    "instructions\\STEP_BY_STEP.txt": "5be281f6eb826548847404ffad85608ff01c36fdac204c4fa871ec3d90ae4168",
+    "README.md": "32dd4b36198cdb448779839c1600faec876d5a9f87c8445f169c16688ec900e1",
+    "report.py": "1f821e8de09cbed618ac96f070140c2a0d862ef3528ce2a62fd856b86b590814",
+    "run.ps1": "03563d445fd7d9377aeccbf4cf77a253426cac763a7580d92ccdd2c3e24afd03",
+    "tests\\test_diagnostics.py": "3fec5f89ad1611cf64ba498b864054218f094f84a275c86313115e8a7d07aa33"
+  }
+}
