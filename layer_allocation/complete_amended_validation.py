@@ -29,6 +29,9 @@ def complete():
         else:raise AssertionError('Unaccounted planned run: '+s['run'])
         r['reused_development']=s['split']=='development' and r['status']=='complete';rows.append(r)
     accounting=pd.DataFrame(rows);accounting.to_csv(O/'run_status_expanded.csv',index=False)
+    accounting.to_csv(O/'completion_accounting.csv',index=False)
+    accounting.groupby(['split','alignment','difficulty','lr','status']).size().rename('models').reset_index().to_csv(O/'availability_by_configuration.csv',index=False)
+    accounting.groupby(['split','family','status']).size().rename('models').reset_index().to_csv(O/'availability_by_family.csv',index=False)
     assert accounting[accounting.reused_development].shape[0]==124
     old=BASE/'runs/20261121_fresh01'
     for record in read(O/'development_import.json')['records']:
@@ -49,6 +52,7 @@ def complete():
     counts=accounting.groupby(['split','status']).size().to_dict();counts={str(k):int(v) for k,v in counts.items()}
     reportdir=BASE/'reports'/cfg()['attempt'];decision=read(reportdir/'decision.json');gate_record=read(O/'analysis_gate.json')
     decision.update(amended=True,development_reused=124,development_newly_trained=0,development_unavailable=4,construction_policy='Fixed exact official empty-source-subgroup rejections only; no seed replacement or assertion override',status_counts=counts,source_normal_core_evaluable=read(O/'evaluation_support.json')['passed'],conditional_on_available_pool=True)
+    decision.update(completed=int((accounting.status=='complete').sum()),unavailable=int((accounting.status=='data_preparation_failed').sum()),diverged=int((accounting.status=='numerical_divergence').sum()),incomplete=0,not_launched=0,evaluation_newly_trained=int(((accounting.split=='evaluation')&(accounting.status=='complete')).sum()))
     write_json(reportdir/'decision.json',decision)
     report=reportdir/'REPORT.md';content=report.read_text(encoding='utf8').split('\n## Amendment and completed-output audit')[0]
     disclosure='Of128planned development models,124completed training; four were unavailable because two fixed0.99-alignment source constructions failed the official generator group-presence validation. All completed development models were retained and reused, not retrained.'
