@@ -6,7 +6,7 @@
 Corresponding author: Didula Fernando (\texttt{didula.20232318@iit.ac.lk}).\\
 Project supervisor: Maninda Edirisooriya, IIT, Sri Lanka (\texttt{maninda.e@iit.ac.lk}).
 \begin{abstract}
-Early model measurements may help allocate limited inspection effort to classifiers that later exhibit subgroup failures despite healthy source performance. We investigate layer-wise connection sensitivity as an additional signal for this decision. GradientGuard summarises the distribution of absolute weight--mean-gradient products across shallow and deep network blocks during the first ten percent of training. A staged investigation combines analytical implementation checks, saved-checkpoint probe-partition analysis, a completed outcome experiment with 96 classifiers in 24 configuration families, and post-hoc diagnostics of frozen forecasts. The source-normal held-out cohort contains 36 classifiers and 12 terminal worst-group failures. Six non-slope layer summaries increase average precision from 0.775 to 0.934 and the area under the receiver operating characteristic curve from 0.816 to 0.962 relative to the selected conventional predictor. At twelve inspections, both six- and eight-feature layer variants discover ten failures, compared with eight for conventional and global-sensitivity predictors; this pattern persists across the two probe-panel variants examined. At the original nine-inspection endpoint, all four predictors discover eight failures. Whole-family uncertainty includes zero improvement, and one influential-family omission reverses the larger-capacity comparison. The two added layer-share slopes reach the estimator but add no discovery benefit to the six-feature variant in the primary cohort. These results identify non-slope layer summaries as a promising candidate for independent validation while bounding current claims to an exploratory, benchmark-specific association.
+Early model measurements may help prioritise classifiers for later subgroup-failure audits despite healthy source performance. GradientGuard summarises the allocation of absolute weight-mean-gradient products across network blocks during the first ten percent of training. Analytical and numerical checks establish measurement correctness. An exploratory outcome pilot trained 96 classifiers in 24 setting families. Its source-normal held-out cohort has 36 classifiers and 12 failures: six non-slope layer summaries raise average precision from 0.775 to 0.934, but paired-family ranking intervals include zero improvement and the original nine-audit discovery comparison is tied. A subsequent matched structural-control analysis reuses those outcomes and yields only a panel-dependent increment. A separately frozen fresh-family validation planned 256 classifiers in 64 new families; 248 completed and eight were unavailable because fixed source constructions failed generator validation. Among 106 source-normal evaluation classifiers with 34 failures, a rich structural predictor and the same predictor augmented with six sensitivity shares both discover 26 failures in 35 audits. Their average-precision difference is 0.0005 (95\% paired-family interval -0.0057 to 0.0096); AUROC and Brier differences also include zero. Smaller-control and secondary-capacity gains remain, while the sensitivity-specific primary benefit is not demonstrated. The contribution is a reproducible, benchmark-specific evaluation with explicit structural controls and a bounded negative validation result.
 \end{abstract}
 \paragraph{Index Terms}
 Audit prioritisation, connection sensitivity, early training, subgroup robustness, worst-group accuracy.
@@ -22,15 +22,15 @@ We study whether the allocation of early connection sensitivity across network l
 
 The operational research question is: \emph{Among classifiers that appear healthy early in training, does the allocation of connection sensitivity across layers improve prioritisation for terminal subgroup-failure audits beyond conventional telemetry, global sensitivity and matched layer-wise structural statistics?} In simple terms, we ask whether knowing where a model's loss is sensitive helps choose which models to inspect. This is local sensitivity to multiplicative weight changes on a specified source probe, not a causal account of visual feature reliance. ``Hidden'' refers to unavailable terminal group outcomes at the early decision point; audit groups are predefined.
 
-This article reports a completed exploratory investigation. A measurement-feasibility study established numerical correctness and useful between-run level variation. A targeted follow-up examined probe partitions, classifier-head aggregation and source-health calibration. A separately authorised outcome proof of concept then trained 96 classifiers to completion. Finally, a bounded post-hoc analysis examined the entire capacity curve and the contribution of slopes without fitting new forecasters. We preserve this chronology: the original outcome experiment designated the eight-feature variant L8 and a 25\% audit capacity as primary, whereas the present interest in L6 and twelve inspections was sharpened after observing those results.
+This article reports a staged investigation. Measurement feasibility and a targeted probe/calibration follow-up precede an exploratory 96-classifier outcome pilot and post-hoc capacity/slope diagnostics. The original pilot designated L8 and 25\% audit capacity as primary. Its L6 and one-third-capacity observations informed a subsequent reused-outcome structural-control study and then a separately frozen fresh-family validation. The latter tests a matched structural pair at one-third capacity; it does not retrospectively replace the pilot endpoint. We report both the original favourable observations and the completed validation that did not establish the sensitivity-specific primary benefit.
 
-The strongest positive observation is that six layer endpoint, mean and spread features improve held-out ranking metrics and discover two additional failures at twelve inspections. The same layer variants recover all twelve observed failures by seventeen inspections, compared with twenty-five for the conventional predictor. These capacity findings are retrospective and motivate fresh validation. The original nine-audit result remains a tie, and the apparent improvement is sensitive to setting-family composition.
+The pilot layer variants find ten failures at twelve inspections versus eight for conventional/global predictors, but the original nine-audit result is tied and family uncertainty is substantial. In the fresh validation, the rich structural predictor M and its sensitivity-augmented counterpart MZ each find 26 of 34 failures at 35 inspections. Thus the pilot motivates a hypothesis that the stronger test does not support at its predefined primary decision. This negative result narrows the claim from a sensitivity-specific forecasting advance to a reproducible evaluation of a candidate representation.
 
 Our contributions are:
 \begin{enumerate}
 \item We provide an auditable measurement and experimental pipeline separating implementation correctness, measurement reliability and outcome prediction.
-\item We report a family-grouped outcome experiment comparing conventional, global-sensitivity and nested layer representations under a shared early observation budget.
-\item We use preserved forecasts to identify which parts of the representation warrant further study: endpoint and prefix-distribution summaries show encouraging exploratory value, while added directional slopes do not improve primary-cohort discovery.
+\item We report conventional, global-sensitivity, norm-product and rich structural controls under matched early information, family folds, preprocessing, learner classes and tuning allowances.
+\item We combine frozen-prediction ablations, paired-family ranking intervals and a fresh-family matched validation, retaining ties, losses, unavailable constructions and the unmet sensitivity-specific primary gate.
 \end{enumerate}
 The contribution is an empirical investigation of a candidate representation, rather than invention of connection sensitivity or a demonstrated general-purpose shortcut detector.
 
@@ -50,7 +50,7 @@ SPARE [2] identifies early output structure associated with spurious correlation
 \subsection{Sensitivity and layer statistics}
 SNIP [4] supplies the connection-sensitivity primitive. Zero-cost proxies [5] already aggregate related scores for eventual model-performance ranking. SSNR/T-CET [9] explicitly studies saliency composition and layer-aware aggregation, while ZiCo [10] uses gradient-variation information. Early sensitivity and the observation that aggregation can discard layer information therefore have clear prior art.
 
-Weight-distribution statistics also predict network accuracy [11]. Bohadana, Schneider and Katz [12] investigate performance prediction using weights and gradients; this is especially close technical prior art for internal layer histories. Our literature audit distinguishes the accepted publication record from the accessible associated manuscript version. The present experiment does not implement that full temporal predictor or the richer matched marginal-statistic controls subsequently proposed. Any observed increment is conditional on the implemented conventional/global controls. Sensitivity-specific originality remains unestablished because the matched structural comparison has not been executed.
+Weight-distribution statistics also predict network accuracy [11]. Bohadana, Schneider and Katz [12] investigate performance prediction using weights and gradients, close technical prior art for internal histories. We do not reproduce their full temporal predictor. We instead implement explicit norm-product and parameter/mean-gradient marginal controls and compare each structural bank with and without the same six sensitivity shares. The fresh matched result does not establish sensitivity-specific superiority over these controls.
 
 \subsection{Auditing and generalisation measures}
 Subgroup discovery and model selection use information regimes different from ours. Domino [13] identifies systematic error slices, and SubpopBench [3] highlights ordinary worst-class information as a relevant robustness signal. Our early features use ordinary source labels; group annotations are required for historical terminal outcome labels and later evaluation. The system neither discovers arbitrary new groups nor eliminates the need for group-labelled audits.
@@ -61,7 +61,7 @@ Studies of generalisation measures [14, 15] motivate preserving configuration st
 \subsection{The precise gap and candidate contribution}
 The distinguishing question is conditional and decision-specific: does a small allocation representation improve the ranking of source-normal completed runs after the information already supplied by ordinary training telemetry and global sensitivity is considered? This differs from proposing another saliency formula. The derivative, normalisation and descriptive summaries are inherited operations; the candidate methodological contribution is their fixed, low-dimensional use in a carefully separated model-audit forecasting task.
 
-Table~1 makes the comparison boundary explicit. The distinction is an experimentally testable information contract, not a priority claim for all early layer statistics. A method that requires historical audited models is also different from discovering unknown subgroups without such labels. The strongest supported current claim is that this representation merits a matched conditional-addition test, with the existing observations providing a reason to conduct it. Three claims must remain separate: layer allocation adds audit value; coordinate-product sensitivity adds value beyond simpler layer statistics; and that increment justifies its monitoring cost. Evidence for the first does not establish the second or third.
+Table 1 states the information boundary relative to close prior work; distinct targets alone do not establish superiority. Historical audited models remain necessary for predictor training. Three claims are evaluated separately: useful layer information beyond conventional/global predictors, coordinate-product sensitivity beyond simpler structural statistics, and operational value relative to monitoring cost. The first has some secondary evidence, the fresh primary specificity comparison is tied, and the third remains unestablished.
 
 \begin{table*}[t]
 \caption{TABLE 1. Position relative to close prior work. Distinct prediction targets and information boundaries motivate the experiment; they do not by themselves establish methodological superiority.}
@@ -116,7 +116,7 @@ S_l=\langle|w_l|,|g_l|\rangle
 \leq\|w_l\|_2\|g_l\|_2=U_l.
 \label{eq:norm}
 \tag{4}\end{equation}
-Separate weight/gradient norms do not determine coordinate co-location. For example, $w=(2,1)$ and gradients $(2,1)$ or $(1,2)$ have identical gradient marginals and norms but sensitivity totals five and four. This is an information distinction, not evidence of subgroup prediction. A successful layer predictor could still be explained by generic layer norms, bias behaviour or denominator effects; richer matched controls are needed to resolve that possibility.
+Separate weight/gradient norms do not determine coordinate co-location. For example, weights (2,1) and gradients (2,1) or (1,2) have identical gradient marginals and norms but sensitivity totals five and four. This is an algebraic information distinction, not evidence of subgroup prediction. The matched norm-product and marginal-statistic controls below test whether that distinction adds useful forecast information under the implemented learning procedures.
 
 
 \subsection{A falsifiable specificity argument}
@@ -126,7 +126,7 @@ c_l=\frac{\langle|w_l|,|g_l|\rangle}{\|w_l\|_2\|g_l\|_2}\in[0,1].
 \tag{5}\end{equation}
 This elementary factorisation separates ordinary scale from the co-location of absolute coordinate magnitudes. It supplies a reason to measure allocation, but it does not prove that $c_l$ forecasts group failure. Likewise, a normalised profile is compositional: one block's larger share changes the others. The head, biases and shared denominator must therefore be examined before assigning a depth-specific interpretation.
 
-Let $X$ denote the available conventional/global inputs and $Z$ the six L6 share summaries. Predictive improvement of a bounded learner using $(X,Z)$ over one using $X$ supports an increment for that learner and information set. It is not a direct estimate of conditional mutual information or proof that no alternative statistic can recover the same signal. Repeating the addition after expanding $X$ with structural marginals would provide the missing specificity check. This formulation allows a useful layer-information finding even if connection sensitivity ultimately proves replaceable by simpler statistics.
+Let X denote conventional/global inputs and Z the six L6 share summaries. A predictive increment from adding Z is conditional on the bounded learner and the input bank; it is not an estimate of conditional mutual information or a proof that no alternative statistic recovers the signal. We therefore repeat the addition after expanding X with norm-product allocation, parameter/mean-gradient marginals and shared bias diagnostics. The fresh MZ-versus-M result tests this conditional claim and does not demonstrate primary added value.
 
 \subsection{Prefix features and nested learners}
 At actual full-horizon fractions $t_1,\ldots,t_m$, each signal has endpoint, arithmetic mean, population standard deviation and ordinary least-squares slope
@@ -136,7 +136,7 @@ At actual full-horizon fractions $t_1,\ldots,t_m$, each signal has endpoint, ari
 \tag{6}\end{equation}
 Initialization is diagnostic and excluded from summaries. The 10\% prefix uses six fixed checkpoints; the secondary 5\% prefix uses its available checkpoints. Invalid observations are not interpolated.
 
-The conventional predictor E is selected from compact/rich telemetry with or without output separation and two bounded learner classes. B adds four summaries of total connection sensitivity. L2 adds shallow/deep endpoint shares; L6 adds their four means and population standard deviations; L8 adds their two slopes. Thus L6 contributes exactly six layer-share inputs. Its endpoint is time-anchored; its means and standard deviations do not encode the order of observations. We use ``early multi-checkpoint layer summaries'' for the prospective L6 focus: its means and spreads retain prefix-distribution information while discarding checkpoint order. Demonstrating value from history requires a fresh L6-versus-L2 comparison; an L6 improvement over E alone cannot establish that multiple observations are needed. L8 remains the original primary experimental candidate, not a retroactively replaced endpoint.
+The conventional predictor E is selected from compact/rich telemetry, with or without output separation, and two bounded learner classes. B adds four total-sensitivity summaries. L2 adds shallow/deep endpoint shares; L6 adds their means and population standard deviations; L8 adds two slopes. L6 therefore adds six shares, denoted Z. Endpoints are time-anchored, whereas means and spreads discard checkpoint order. L8 remains the original pilot primary candidate. The subsequent validation fixes L6 prospectively and includes L2 to distinguish endpoint-only from multi-checkpoint information; that comparison is secondary to the matched structural test.
 
 \begin{table}[t]
 \caption{TABLE 2. Selected source-normal 10\% logistic predictors. Input counts include the shared conventional bank. L8 was the original primary sensitivity learner; L6 was a predefined ablation.}
@@ -163,7 +163,7 @@ The original practical target was one extra failure per twenty candidates. Avera
 \section{Experimental Design and Evidence Stages}
 \label{sec:experiments}
 \subsection{Chronology and scope}
-Table~3 separates the engineering studies from outcome evidence. The first two stages did not evaluate terminal validation/test outcomes. Following an unresolved health-calibration gate, the 60-epoch outcome study was explicitly authorised as exploratory. It does not retrospectively pass that gate. The final diagnostic stage was planned after held-out outcomes were known and used no new classifier training, forecaster fitting or tuning.
+Table 3 separates the original engineering and pilot stages. The conditional 18-prefix feasibility follow-up did not launch because calibration failed its gate. The later authorised 60-epoch pilot does not retrospectively pass that gate. Two subsequent studies are reported separately below: a saved-checkpoint structural analysis using consumed pilot outcomes and a frozen fresh-family validation using new settings. The fresh attempt includes an explicit execution amendment and retained source-construction failures.
 
 \begin{table*}[t]
 \caption{TABLE 3. Completed evidence stages and their interpretation. The conditional fresh 18-prefix follow-up was not launched because calibration did not qualify; it is not an executed negative replication.}
@@ -174,7 +174,9 @@ Table~3 separates the engineering studies from outcome evidence. The first two s
 Measurement feasibility & Two conditions; three paired seeds; six early prefixes & Numerical checks pass; selected 256/class deep-slope ratio 3.050141 & Two controlled conditions, not six independent setting families\\
 Targeted follow-up & Saved checkpoints; 20 partitions; three calibration trajectories & Original result reproduces; target passes 15/20; no horizon qualifies & Overlapping finite-pool partitions; structural interpretation unresolved\\
 Outcome proof of concept & 24 families; 96 complete 60-epoch classifiers & 36 source-normal held-out models, including 12 failures & Family-disjoint evaluation on shared MNIST images\\
-Post-hoc diagnostics & Frozen predictions; whole curves; slopes; panels; family influence & Two added discoveries at twelve audits; L6/L8 discovery curves match & Consumed outcomes; hypothesis-generating capacity and representation findings\\\bottomrule
+Post-hoc diagnostics & Frozen predictions; whole curves; slopes; panels; family influence & Two added discoveries at twelve audits; L6/L8 discovery curves match & Consumed outcomes; hypothesis-generating capacity and representation findings\\
+Matched structural & 96 existing classifiers & Consumed pilot outcomes & Post-hoc conditional-addition test\\
+Fresh validation & 256 planned; 248 complete & New held-out families & Matched primary benefit not demonstrated\\\bottomrule
 \end{tabular}
 \end{table*}
 
@@ -218,6 +220,20 @@ Panel A is primary. Secondary checks apply frozen A pipelines to panel B and use
 Uncertainty uses 2,000 paired draws of all ten held-out setting families, seed 130005, keeping nested runs together and recomputing pool size, ranking and fractional capacity. The historical empty/single-outcome exclusion rule is retained for interval comparability: 1,942 draws are valid and 58 invalid. Raw discovery counts remain defined for single-outcome pools. Percentile intervals are conditional on frozen forecasters and observed outcomes, exclude forecaster-selection uncertainty, and are pointwise rather than simultaneous evidence across a searched capacity curve.
 
 Leave-one-family-out analysis removes each of the ten families, including the one with no eligible models. Fractions 1/4 and 1/3 are recomputed using the remaining pool. A family omission is an influence diagnostic, not an independent replication. The post-hoc stage reproduces 27 saved-prediction comparisons to maximum absolute error approximately $1.11\times10^{-16}$ and passes 16 diagnostic checks.
+
+\subsection{Matched structural controls and fresh validation}
+
+The saved-checkpoint study remeasures all 96 pilot classifiers at six checkpoints on both original panels. N adds six summaries of norm-product allocation: for each learned layer, U is its weight L2 norm times its mean-probe-gradient L2 norm; shallow/deep shares use the sum over conv1, conv2, conv3 and head plus the original stabiliser. NZ adds exactly Z. M extends N with weight and mean-gradient L2 norms plus mean absolute magnitude, signed population standard deviation, absolute median and absolute 90th percentile for each of those four layers, each summarised by endpoint, mean and population standard deviation. It also includes shared bias norm and bias sensitivity summaries. MZ adds exactly the same six Z columns; head and bias controls are shared, not exclusive to MZ.
+
+Each pair uses identical cohort, checkpoints, panels, family folds, fold-local imputation/scaling/filtering, learner class and grid allowance. Logistic C is 0.1, 1 or 10. New histogram controls use depth 1/2/3, 100 iterations, rate 0.05, minimum leaf size five and disabled early stopping. This improves the small-fold comparator without altering historical predictions. Development out-of-fold discovery at one-third capacity selects each fit, with AP and frozen ordering as tie-breaks. Regularisation may differ between matched fits. The structural study is post hoc because pilot outcomes were already consumed; it cannot provide independent confirmation.
+
+The fresh design has 64 new setting families: alignments 0.10/0.30/0.50/0.65/0.80/0.90/0.95/0.99, two background difficulties and learning rates 0.0002/0.0005/0.0015/0.004. A configuration-only split assigns 32 families each to development and evaluation; two constructions and two initialisations per family give 256 planned classifiers. Source reservations, 60-epoch horizon, measurement definitions, health and 0.75 failure rules follow the pilot. Five-fold grouped development CV is valid; the fallback is three folds. E and the strongest non-Z control are selected on development only. E selects the 50-input conventional bank with output separation; M/MZ have 186/192 inputs and both select logistic C=0.1. The rich M bank is the development-selected strongest non-Z control.
+
+An initial fresh attempt stopped after 124 of 128 development classifiers completed: two fixed extreme-alignment source constructions failed the official group-presence assertion, making four trajectories unavailable. The amendment permits these documented preparation failures, retains all completed development classifiers and all planned settings/seeds, and applies the same policy to evaluation without replacement. Development outcomes were already known; the amended freeze precedes readiness checks and predictor fitting, and fitted predictors precede evaluation preflight/training. Early risks are frozen before one-time terminal test unsealing. The amendment does not relax support, feature banks, learner grids, outcome cutoffs or scientific benefit gates.
+
+The fresh primary estimand is the logistic MZ-M difference in failures discovered at floor(N/3), normalised as Delta20 in (7), among source-normal evaluation candidates at 10\%. The quarter-capacity, other learners, 5\% prefix, full cohort and panel variants are secondary. The benefit gate requires Delta20 at least one, a positive lower 95\% family bound, superiority over global and development-selected strongest non-Z controls, positive MZ-M gains on both B variants and no negative family-omission difference. The one-third choice is pilot-informed but precedes fresh evaluation outcomes.
+
+For ranking/probability evidence, identical whole-family draws are used for each paired AP, AUROC and Brier contrast, recomputing weighted empirical metrics with score ties. All ten pilot evaluation families are sampled in 2,000 draws (seed 130005); the structural study uses 2,000 draws (210212); the fresh study uses all 32 evaluation families in 5,000 draws (710005), including families with no eligible candidates. Multiplicities replicate every nested run together. Empty/single-label pools are excluded for the common metric set: 1,942 valid/58 invalid in each pilot-based analysis and 5,000 valid/zero invalid in the fresh analysis. Two-sided percentile intervals are pointwise and conditional on frozen forecasters, excluding selection uncertainty and shared-image sampling uncertainty. Ranking intervals were added retrospectively without fitting or tuning.
 
 \section{Results}
 \label{sec:results}
@@ -322,7 +338,7 @@ L6 and L8 probabilities are not identical: the maximum absolute difference is 0.
 Frozen-input replacement further localises the effect. Replacing one or both slopes by saved development-training reference means sets their standardised components to zero without fitting. The largest probability change is 0.004761 for shallow replacement, 0.002062 for deep replacement and 0.006829 for both. The logit identity holds within about $6.11\times10^{-16}$. No primary-cohort discovery count changes at any budget. This can create unusual feature combinations and is not a causal intervention or a retrained slope-free model. Together with the predefined L6 ablation, it supports prioritising non-slope summaries for a fresh test rather than asserting directional-slope value.
 
 \subsection{Secondary outcomes and structural diagnostics}
-The archived analysis does not provide paired-family uncertainty intervals for average precision, receiver-operating-characteristic area, Brier-score differences or regression errors. Their point estimates are descriptive; they must not be read as statistically established improvements. No additional inference is performed in this editorial revision.
+Paired-family intervals for AP, AUROC and Brier differences are now calculated from the archived frozen predictions and reported in Table 8 and the matched-validation tables below. The interval analysis neither refits forecasters nor changes outcomes. The separate regression point estimates in Table 7 remain descriptive; no regression-error interval or improvement claim is made.
 
 The secondary continuous worst-group analysis gives a further modest positive observation (Table~7). L6 reduces mean absolute error from E's 0.1650 to 0.1588; L8 reaches 0.1473, while its rank correlation is almost unchanged from E. This is a separate regression analysis, with no interval establishing improvement, and does not establish incremental fixed-budget discovery.
 
@@ -340,9 +356,104 @@ L8&0.1473&0.7090\\\bottomrule
 \end{tabular}
 \end{table}
 
-Deep-share additivity is verified at every recorded point. At the outcome study's 10\% endpoint on panel A and 256/class budget, none of 96 runs crosses the descriptive head-at-least-50\%-of-deep or bias-at-least-10\%-of-weight-total flags. This narrows two simple endpoint explanations but does not rule out architectural, norm, denominator or bias confounding. Shared bias inputs improve secondary ranking measures without adding primary discoveries. Rich matched weight/gradient-distribution controls remain future work.
+Deep-share additivity is verified at every recorded point. At the pilot 10\% endpoint on panel A, no run crosses the descriptive head-at-least-50\%-of-deep or bias-at-least-10\%-of-weight-total flags. These checks bound simple endpoint explanations but do not establish a layer mechanism. Shared-bias inputs improve pilot ranking without adding primary discoveries. The subsequent N/NZ and M/MZ comparisons directly add the missing matched structural controls.
 
 At fixed secondary failure cutoffs, E and L8 both discover eight at 0.70 and nine at 0.80 in the primary pool. The limited final-monitoring comparator finds four at nine audits, compared with eight for the early methods. Early observations occur six actual epochs into training, leaving 54 epochs or 17,604 updates of observation lead time. This demonstrates timing and a comparison under the implemented features, not dominance over every final-monitoring strategy or a measured operational benefit.
+
+\subsection{Paired-family ranking uncertainty}
+
+Table 8 adds paired-family difference intervals to the original point estimates in Table 5. The L6-E AP difference is 0.1585 with interval [-0.1875, 0.8382], and its AUROC difference is 0.1458 [-0.1000, 0.6042]. These wide intervals include zero; the favourable pilot point estimates are not statistically established population gains. AP/AUROC differences between L8 and L6 are exactly zero for all retained family draws; their Brier difference is -0.0000745 [-0.0004923, 0.0002976]. Zero-width rank intervals here describe these frozen score orderings, not equivalence under retraining or new families.
+
+\begin{table*}[t]
+\caption{TABLE 8. Original pilot paired-family metric differences with 95\% pointwise intervals. Positive AP/AUROC and negative Brier favour the first model. All comparisons use E as control; 1,942 valid and 58 invalid draws.}
+\centering\small
+\begin{tabular}{llll}
+\toprule Comparison & AP difference [95\% interval] & AUROC difference [95\% interval] & Brier difference [95\% interval]\\\midrule
+B - E & -0.0139 [-0.0691, 0.0000] & -0.0312 [-0.1209, 0.0000] & 0.0028 [-0.0011, 0.0095]\\
+L2 - E & -0.0152 [-0.0752, 0.0000] & -0.0347 [-0.1406, 0.0000] & 0.0025 [-0.0015, 0.0092]\\
+L6 - E & 0.1585 [-0.1875, 0.8382] & 0.1458 [-0.1000, 0.6042] & -0.0388 [-0.1596, 0.0453]\\
+L8 - E & 0.1585 [-0.1875, 0.8382] & 0.1458 [-0.1000, 0.6042] & -0.0389 [-0.1593, 0.0449]\\
+Histogram L8 - E & 0.1784 [-0.1702, 0.7886] & 0.1684 [-0.0417, 0.5959] & -0.0505 [-0.1910, 0.0504]\\
+Shared-bias E - E & 0.1431 [-0.1990, 0.7940] & 0.1354 [-0.1125, 0.5914] & -0.0403 [-0.1545, 0.0370]\\
+Shared-bias L8 - E & 0.1553 [-0.1942, 0.8382] & 0.1424 [-0.1014, 0.6042] & -0.0401 [-0.1579, 0.0407]\\
+Final monitoring - E & -0.0548 [-0.7938, 0.8382] & 0.0174 [-0.5000, 0.5875] & -0.0298 [-0.3015, 0.2321]\\\bottomrule
+\end{tabular}
+\end{table*}
+
+
+\subsection{Completed saved-checkpoint structural controls}
+
+The reused-outcome analysis reproduces original E/B/L6/L8 results before fitting its new controls. Its N proxy matches logistic L6 at ten discoveries in twelve audits. Rich logistic MZ adds one discovery over M (ten versus nine), but both B-panel variants tie; histogram M/MZ also tie. The logistic MZ-M Delta20 interval at one-third is [0.0000, 0.6250], with 1,942 valid and 58 invalid whole-family draws. This is a weak, panel-dependent exploratory increment, not independent sensitivity-specific evidence. The improved histogram E reaches nine at nine audits and ten at twelve, strengthening the conventional comparison without replacing the original pilot primary result.
+
+\begin{table*}[t]
+\caption{TABLE 9. Reused pilot outcomes with matched structural controls, panel A at 10\% (N=36, F=12). All names except Histogram E/M/MZ denote logistic models; new selection uses one-third capacity.}
+\centering\small
+\begin{tabular}{lllll}
+\toprule Predictor & D9 / D12 & AP & AUROC & Brier\\\midrule
+N & 8 / 10 & 0.9336 & 0.9618 & 0.1636\\
+NZ & 8 / 10 & 0.9304 & 0.9583 & 0.1654\\
+M & 9 / 9 & 0.9351 & 0.9583 & 0.1396\\
+MZ & 9 / 10 & 0.9405 & 0.9618 & 0.1402\\
+Histogram E & 9 / 10 & 0.9569 & 0.9722 & 0.1235\\
+Histogram M & 8 / 10 & 0.9248 & 0.9583 & 0.1310\\
+Histogram MZ & 8 / 10 & 0.9248 & 0.9583 & 0.1310\\\bottomrule
+\end{tabular}
+\end{table*}
+
+
+For logistic MZ-M, the paired AP difference is 0.0053 [0.0000, 0.0269], AUROC 0.0035 [0.0000, 0.0179], and Brier 0.0006 [-0.0014, 0.0027]. Both ranking intervals touch zero. Histogram MZ-M metrics and intervals are all zero because the frozen predictions coincide. Logistic NZ-N gives AP -0.0033 [-0.0207, 0.0000] and AUROC -0.0035 [-0.0179, 0.0000]. Thus the coordinate-product representation cannot claim specificity merely from its superiority to the original weaker E/B fits. M/MZ have 174/180 inputs against 48 eligible development models, a substantial dimensionality limitation.
+
+\subsection{Completed fresh-family matched validation}
+
+Of 256 planned classifiers, 248 complete all 19,560 updates: 124 reused development and 124 newly trained evaluation models. Eight are data-unavailable and none diverged or remained incomplete. Development failures are family 61 construction 1 and family 62 construction 0; evaluation failures are family 56 construction 0 and family 59 construction 0, each affecting two initialisations. All are at 0.99 alignment. Valid constructions remain in their assigned families; missingness is not assumed random. Evaluation source preflight precedes training and uses no model-performance replacement rule.
+
+Source-normal development support is 107 classifiers in 29 families, with 38 failures in 14 families, 69 non-failures in 19 and four mixed-outcome families. Evaluation has 106 eligible classifiers in 28 families: 34 failures in twelve families, 72 non-failures in twenty and four mixed-outcome families. All unchanged support requirements pass. The full evaluation cohort has 124 classifiers and 45 failures. Implementation, preservation and information-boundary audits pass; the scientific benefit gate does not.
+
+\begin{table*}[t]
+\caption{TABLE 10. Fresh source-normal evaluation, panel A at 10\% (N=106, F=34). D35 is the predefined primary one-third budget; D26 is secondary. E is the development-selected logistic conventional predictor.}
+\centering\small
+\begin{tabular}{lllll}
+\toprule Predictor & D35 / D26 & AP & AUROC & Brier\\\midrule
+E & 26 / 22 & 0.8719 & 0.9289 & 0.1121\\
+B & 26 / 22 & 0.8804 & 0.9355 & 0.1071\\
+L2 & 23 / 21 & 0.8524 & 0.9118 & 0.1173\\
+L6 & 26 / 23 & 0.8838 & 0.9334 & 0.1030\\
+N & 23 / 21 & 0.8505 & 0.9081 & 0.1183\\
+NZ & 26 / 23 & 0.8872 & 0.9342 & 0.1037\\
+M & 26 / 21 & 0.8790 & 0.9359 & 0.1024\\
+MZ & 26 / 21 & 0.8795 & 0.9355 & 0.1022\\
+Histogram E & 27 / 23 & 0.8806 & 0.9363 & 0.1115\\
+Histogram B & 27 / 22 & 0.8856 & 0.9375 & 0.1072\\
+Histogram L6 & 28 / 23 & 0.8897 & 0.9395 & 0.1055\\
+Histogram N & 27 / 21 & 0.8783 & 0.9355 & 0.1105\\
+Histogram NZ & 27 / 22 & 0.8902 & 0.9371 & 0.1037\\
+Histogram M & 26 / 21 & 0.8564 & 0.9073 & 0.1117\\
+Histogram MZ & 26 / 21 & 0.8564 & 0.9073 & 0.1117\\\bottomrule
+\end{tabular}
+\end{table*}
+
+
+At the fresh primary budget, MZ and M each discover 26 failures in 35 inspections (Table 10). Delta20 is zero, with the archived 95\% paired-family interval [-0.2083, 0.1888], 5,000 valid and zero invalid draws. Random expectation is 11.226 failures and the oracle ceiling is 34, leaving eight discoveries of headroom for each model. The useful-gain target was attainable in principle but not achieved. All six added Z columns survive preprocessing and reach both MZ learner classes; the null increment is not caused by silent feature removal.
+
+Table 11 shows that fresh ranking and probability differences also span zero for the primary logistic pair: AP 0.0005 [-0.0057, 0.0096], AUROC -0.0004 [-0.0046, 0.0034] and Brier -0.0002 [-0.0010, 0.0005]. These conditional intervals neither prove population equivalence nor establish superiority. Histogram MZ and M coincide. Secondary L6-L2 and NZ-N discovery gains are three at one-third; L6 improves E/B by one at the quarter budget, and histogram L6 improves histogram E/B by one at one-third. Their ranking intervals remain compatible with zero, and none replaces the primary structural comparison.
+
+\begin{table*}[t]
+\caption{TABLE 11. Fresh validation paired-family metric differences with 95\% pointwise intervals. Positive AP/AUROC and negative Brier favour the first model. All 5,000 draws are valid; ordinary names denote logistic fits.}
+\centering\small
+\begin{tabular}{llll}
+\toprule Comparison & AP difference [95\% interval] & AUROC difference [95\% interval] & Brier difference [95\% interval]\\\midrule
+MZ - M & 0.0005 [-0.0057, 0.0096] & -0.0004 [-0.0046, 0.0034] & -0.0002 [-0.0010, 0.0005]\\
+Histogram MZ - M & 0.0000 [0.0000, 0.0000] & 0.0000 [0.0000, 0.0000] & 0.0000 [0.0000, 0.0000]\\
+L6 - E & 0.0119 [-0.0233, 0.0596] & 0.0045 [-0.0203, 0.0322] & -0.0091 [-0.0228, 0.0029]\\
+L6 - B & 0.0035 [-0.0307, 0.0471] & -0.0020 [-0.0261, 0.0188] & -0.0041 [-0.0150, 0.0062]\\
+L6 - L2 & 0.0314 [-0.0083, 0.0860] & 0.0217 [-0.0049, 0.0576] & -0.0144 [-0.0402, 0.0058]\\
+NZ - N & 0.0368 [-0.0049, 0.0937] & 0.0261 [-0.0017, 0.0641] & -0.0145 [-0.0389, 0.0047]\\
+Histogram L6 - E & 0.0091 [-0.0212, 0.0456] & 0.0033 [-0.0232, 0.0271] & -0.0059 [-0.0273, 0.0137]\\\bottomrule
+\end{tabular}
+\end{table*}
+
+
+Panel and family diagnostics retain unfavourable results. Frozen A predictors on B inputs give MZ 27 versus M 28 discoveries, with Delta20 interval [-0.3571, 0.1818]; existing B-development refits give 27 versus 27, interval [-0.1961, 0.1696]. Across all 32 family omissions the panel-A primary difference stays zero. Over the 107 integer capacities from zero to 106, MZ is ahead of M at three, tied at 100 and behind at four, with differences from -1 to 1. These correlated capacities are descriptive. In the full cohort, M/MZ each discover 32 at 41 audits and 25 at 31 audits. The sensitivity-specific primary benefit and panel-consistency gates therefore fail despite adequate evaluation support.
 
 \section{Computational Cost and Reproducibility}
 \label{sec:cost}
@@ -350,51 +461,53 @@ The outcome archive records 94.14 minutes of classifier training, 5.20 minutes o
 
 The maximum recorded process-level peak allocated GPU memory is 567.2 MiB. This is an allocation high-water mark, not a sum of allocations over time. It does not isolate incremental probe memory, whole-device memory use, other GPU applications or CPU peak memory. Compact source data occupy 57.6 MiB and classifier artifacts 110.3 MiB. Dataset preparation, terminal evaluation and forecaster fitting were not separately instrumented; precise end-to-end component claims would require improved logging.
 
+The added structural extraction takes 78.0 seconds of summed checkpoint-panel measurement and 23.7 seconds of development fitting in the recorded reused-outcome attempt. The fresh combined conservative GPU-stage ledger is 5.239 hours, including the original stopped development attempt, within its 24-hour cap. Summed completed-model components include 3.934 hours of training, 811.3 seconds of panel-A monitoring and 825.8 seconds for panel B. The fresh recorded allocated GPU peak is 575.0 MiB; compact evaluation-source arrays occupy 9.93 MiB and local classifier checkpoints 275.72 MiB. Monitoring includes telemetry, structural diagnostics and clustering, so these totals do not isolate the incremental cost of Z or establish economic audit savings.
+
 The numerical stack is Python 3.12.14, PyTorch 2.7.1+cu128, torchvision 0.22.1+cu128 and CUDA runtime 12.8 on an NVIDIA GeForce RTX 5060 Ti. Training uses float32, deterministic operations and no mixed precision or reduced-precision shortcuts. Exact package records, seeds, pinned SpuCo source hashes, configuration snapshots and failed engineering attempts are retained. The later diagnostic environment repair restored a matching interpreter path without changing the 80 dependency records. Reproducibility is conditional on compatible hardware/software, not guaranteed across arbitrary systems [17].
 
 The public repository [18] contains source, configurations, compact identity manifests, figures, tables, reports, decisions and frozen forecaster artifacts. Environments, raw benchmark downloads, generated numerical dataset arrays and classifier weight/recovery files remain local; a clone therefore requires reconstruction rather than claiming to include every binary. Historical scientific files were imported without line-ending conversion. The manuscript's evidence manifest records the exact archived files used for its tables and figures.
 
 \section{Discussion and Scope of the Findings}
 \label{sec:discussion}
-The encouraging result is concentrated and interpretable: non-slope layer summaries improve secondary ranking measures and yield more discoveries at several capacities in a source-normal benchmark cohort. Panel-B checks retain the twelve-audit pattern, and the full curve reveals useful ranking structure beyond a single selected point. These observations justify testing the narrower representation with independent configuration families.
+The pilot yielded encouraging non-slope layer-summary rankings, with two extra discoveries at twelve inspections and consistent probe variants. The paired-family ranking intervals are wide, and one influential-family omission reverses that capacity comparison. The reused-outcome structural study gives only a panel-dependent MZ increment. In the fresh evaluation the primary MZ-M discovery difference is zero, with ranking and probability intervals spanning zero. The more complete evidence therefore does not establish a sensitivity-specific advantage.
 
-The directional interpretation is different. The eight-feature method was the prospective primary candidate, but its two extra slopes contribute no discovery gain over L6 in the primary cohort. Means and spreads are still summaries of a training prefix; the present findings do not establish that endpoint profiles alone suffice, or that all temporal information is unhelpful. The L2--L6 ranking difference motivates a separately controlled endpoint-versus-prefix comparison, while the slope result discourages presenting this pilot as a temporal-direction success.
+The pilot two-slope extension reaches the fitted L8 estimator but does not improve its discovery curve over L6. This does not imply that all history is unhelpful. In the fresh study L6 finds three more failures than L2 at one-third capacity, but their AP/AUROC difference intervals include zero, and neither observation overcomes the matched primary tie. Endpoint, prefix-distribution and directional information remain distinct questions.
 
-Sensitivity-specific originality also remains a testable hypothesis. Existing work already uses early telemetry, weights, gradients, saliency totals and layer-aware aggregation. A rich control incorporating ordinary layer norms, parameter/gradient marginals and shared bias diagnostics could explain the observed L6 benefit. A matched control with and without the same six shares would give a stronger conditional-information test. Its results are not part of this article.
+The strongest structural alternative is now an executed comparison. M includes conventional/global information, norm-product allocation, layer weight/mean-gradient marginals and shared bias diagnostics; MZ adds exactly Z. Separate regularisation selection is part of the matched learning procedure, not a pure coefficient intervention. M has 186 inputs relative to 107 eligible fresh development models, so dimensionality and bounded learners remain limitations. Nevertheless, the tested conditional specificity claim receives no primary support; simpler controls cannot be dismissed on the basis of the pilot.
 
-Table~8 distinguishes what the archive establishes from the next study's hypotheses. L6 is a prospective focus selected by this exploratory evidence; the table does not reclassify it as the original primary method.
+Table 12 separates engineering correctness, exploratory ranking signals and the completed fresh matched-control result. The pilot L8 primary endpoint and fresh MZ-M primary endpoint remain distinct.
 
 \begin{table*}[t]
-\caption{TABLE 8. Claim-to-evidence map. Supported observations remain conditional on the studied software, benchmark and family design. Planned comparisons are not completed findings.}
+\caption{TABLE 12. Claim-to-evidence map after matched structural controls and fresh-family validation. Negative and secondary findings retain their original roles.}
 \label{tab:claims}
 \centering\small
 \begin{tabular}{lll}
 \toprule Claim & Current evidence status & Required next evidence\\\midrule
-The specified measurement is correctly implemented & Supported by analytical, numerical and isolation checks & Revalidate extensions without changing the statistic\\
-L6 shows encouraging ranking performance & Supported in the exploratory source-normal benchmark cohort & Fresh family-level evaluation with adequate outcome support\\
-Layer features improve the original primary audit endpoint & Not demonstrated: all principal methods find eight at nine audits & A prospectively frozen capacity and comparison\\
-Connection sensitivity adds beyond matched structural statistics & Unresolved; implemented global controls do not answer this & Identical structural predictor with and without the six L6 shares\\
-Multi-checkpoint summaries add beyond endpoint profiles & Not established by the current exploratory comparison & Prospective L6 versus L2 with matched selection\\
-The procedure generalises to another benchmark & Unresolved & Separately frozen second-context evaluation\\
-Prioritisation yields operational savings & Unresolved; early timing is demonstrated & Incremental monitoring/audit costs and justified utility assumptions\\\bottomrule
+The specified measurement is correctly implemented & Supported by analytical, numerical and isolation checks & Revalidate changes to the statistic\\
+L6 improves pilot ranking point estimates & Exploratory; paired-family intervals include zero & Do not promote to established superiority\\
+Layer features improve the original primary endpoint & Not demonstrated: eight discoveries for all principal methods at nine audits & Retain the original primary tie\\
+Sensitivity adds beyond rich structural statistics & Fresh primary MZ-M tie: 26 versus 26 at 35 audits & Current sensitivity-specific benefit not demonstrated\\
+Multi-checkpoint summaries add beyond endpoints & Fresh L6-L2 discovery gain is secondary; ranking intervals include zero & Separate this claim from sensitivity specificity\\
+The procedure generalises to another benchmark & Unresolved; fresh settings remain within SpuCoMNIST & Separately designed external-context evaluation\\
+Prioritisation yields operational savings & Unresolved; early timing and monitoring costs recorded & Measure incremental costs and justified utility\\\bottomrule
 \end{tabular}
 \end{table*}
 
-The main statistical constraint is family diversity. The held-out source-normal set has only three failure-bearing families and no mixed-outcome family. Shared MNIST and outcome panels add dependence beyond repeated seeds. The bootstrap describes a small frozen-predictor setting mixture, and the influential-family reversal prevents interpreting the two-discovery point estimate as a reliable generalisation improvement. The intended primary generalisation is ranking models from previously unseen setting families within the studied benchmark, not necessarily distinguishing initialisation seeds within one setting. Homogeneous outcomes within each eligible family prevent assessing the latter, but do not by themselves invalidate the former. A future design should seek adequate development outcome support and precision before spending its final evaluation budget, without replacing unfavourable families or tuning cutoffs after outcomes. Mixed-outcome families are informative diagnostics, not a requirement imposed retrospectively on every setting.
+The pilot has only three failure-bearing eligible evaluation families and no mixed-outcome eligible family. The fresh study improves support to twelve failure-bearing and twenty non-failure-bearing eligible families, including four mixed-outcome families, but still shares MNIST identities and outcome panels. Whole-family resampling preserves nested constructions and initialisations; it does not quantify arbitrary dataset shift or forecaster-selection uncertainty. The fresh interval spanning zero is not an equivalence proof. Missing extreme-alignment constructions further condition the result on the available pool.
 
 The practical interpretation is similarly conditional. At the same number of audits the methods spend the same audit capacity; an increased yield is not automatically a monetary saving. Inexpensive benchmark group evaluation may favour auditing every classifier. A realistic use case requires a costly audit or an early reservation deadline, plus monitoring overhead that is justified by the value of additional discoveries. This study demonstrates a ranking decision and observation timing, not operational deployment savings.
 
-The revised proposal describes stronger global and structural controls and a separately designed Waterbirds replication. These remain prospective. No Waterbirds results, pretrained-model transfer evidence, fresh 256-run validation or new forecaster fitting are presented here. The initial nonlinear comparator's small-fold splitting limitation, the bounded probability-based SPARE adaptation and omitted prediction depth further bound claims against strong alternatives. Completing those checks would strengthen the next test, while a result explained by simpler layer statistics would support a narrower contribution.
+No Waterbirds, pretrained-model transfer or other external benchmark result is presented. The fresh 256-planned-run study is within SpuCoMNIST, with 248 completed classifiers and eight data-unavailable trajectories. Prediction depth and full reproductions of related temporal/output methods remain omitted comparators. The improved nonlinear controls address the historical minimum-leaf limitation in the new studies, while the original pilot predictions remain unchanged.
 
 
-\subsection{A bounded validation contract for the revised claim}
-The existing results select a research hypothesis, not a new primary result on the consumed test set. The next study should designate L6 prospectively and compare three ordered claims: added audit yield beyond conventional telemetry, beyond a strong global-sensitivity predictor, and a conditional increment beyond a rich structural bank. The matched structural pair must use the same development-selected bank, cohort, folds, preprocessing and learner class, adding only $Z$ to the second input set with comparable hyperparameter allowance. Different fitted regularisation is reported as part of the learning procedure, rather than interpreted as an isolated feature intervention.
+\subsection{Implications of the completed validation}
+The fresh protocol already performed the matched addition originally proposed for the next study. Implementation and evaluability gates passed, while the useful-gain, positive-interval and panel-consistency requirements failed. We retain that decision rather than promote a favourable learner, smaller control or secondary budget. The present evidence supports narrowing or revising the sensitivity-specific representation before further validation.
 
-The decisive specificity comparison is a strong conventional/global/structural predictor versus that same input bank augmented with exactly the six L6 shares. The structural bank should include layer weight/gradient norms and their products, distribution statistics for parameters and mean-probe gradients, and shared bias diagnostics. Separate competing feature banks are useful ablations, but cannot substitute for this nested pair. These measurements can be validated using existing checkpoints as engineering fixtures; fitting or selecting against their already known held-out labels would remain exploratory. A claimed sensitivity-specific advance requires fresh evaluation of the fixed pair. This comparison directly tests the alternative explanation identified by both reviewers and the literature audit.
+A materially revised representation needs its own rationale, matched structural controls, development selection and untouched evaluation. Reusing the present outcomes for feature design remains exploratory. A future external-context study must distinguish separately fitted replication of a learning procedure from direct transfer of a frozen predictor. Neither is established by this within-benchmark evaluation.
 
-Both benchmark protocols, family allocation, eligibility, failure cutoff, audit capacity, estimand and decision rules must precede new evaluation outcomes. The proposed one-third capacity is motivated by consumed diagnostics and must be disclosed as such. The original nine-audit tie remains unchanged. The proposed second-context Waterbirds experiment would use its own development/evaluation separation; it cannot become independent confirmation if its design or predictor choices are changed in response to the new primary test outcomes. New SpuCoMNIST families would test within-benchmark generalisation. A Waterbirds procedure with separately fitted development predictors would test replication of the learning procedure in a second context, not direct transfer of a frozen SpuCoMNIST predictor. Such direct transfer would require a separate compatible protocol. Results would remain conditional on two studied benchmark/model contexts, not arbitrary natural-image deployment.
+The one-third capacity was chosen using consumed pilot diagnostics but frozen before fresh evaluation outcomes. That order makes it the fresh study primary budget without making the earlier twelve-audit result prospective. The construction-availability amendment was made after development outcomes were known and before fresh evaluation training; it changed execution eligibility only, retained fixed identities and did not select replacements by performance.
 
-Development checks should assess the number of failure-bearing families, eligibility, mixed-outcome settings, measurement validity, inference calibration and computational cost. Counts of trajectories alone do not establish precision. Readiness must not depend on observing a favourable L6 advantage, and evaluation settings must not be replaced to obtain balance. If support is inadequate or the structural pair shows no credible increment, the contribution is narrowed accordingly. These are prospective requirements; no new control, benchmark result or interval is claimed in this revision.
+Counts of training trajectories alone do not establish inferential precision. Readiness must assess outcome-bearing families, eligibility, valid grouped folds and measurement reliability without requiring a favourable layer advantage. The fresh study met those support requirements and still did not demonstrate the predefined benefit. More data or a second benchmark cannot be assumed to make the current representation succeed.
 
 \subsection{Operational value as an explicit decision test}
 Consider an intended workflow in which a team must reserve specialist audit time or commission a labelled evaluation panel before all candidate training runs finish. An early risk ranking could inform which candidates receive those reservations; historical audited runs would supply the training labels. This is a proposed workflow, not a deployment evaluated here. An early shortlist is useful when audit slots, specialist time or later data collection must be reserved before terminal outcomes are available. That is an operating scenario to validate, not an assumed property of this inexpensive benchmark. At equal audit count $k$, define a transparent utility scenario
@@ -404,14 +517,14 @@ Consider an intended workflow in which a team must reserve specialist audit time
 where $v$ is an explicitly assumed value per discovered failure and $\Delta C_m$ is incremental monitoring cost. Shared training and equal-count audit costs cancel under this comparison. A positive observed discovery difference supplies a possible benefit region; it does not demonstrate monetary savings without measured cost and a justified value assumption. If exhaustive auditing is cheaper or the baseline reaches the oracle ceiling, the appropriate conclusion is limited operational headroom. This keeps scientific ranking value, early lead time and practical economics separately assessable.
 
 \section{Conclusion}
-GradientGuard\ provides a reproducible framework for examining early layer-wise connection sensitivity as a signal for subgroup-audit prioritisation. The completed studies establish engineering correctness of the intended measurement and identify an encouraging non-slope layer-summary pattern in a controlled outcome experiment. In the source-normal held-out pool, L6/L8 improve ranking metrics and find ten failures at twelve inspections compared with eight for conventional/global predictors, with consistent panel checks. The original nine-audit comparison remains a tie, family uncertainty includes zero gain and the added slopes do not improve primary discovery. The next scientific opportunity is a separately frozen evaluation of the six-feature representation against stronger structural alternatives and on a second benchmark context. The present contribution is exploratory evidence and a reproducible test bed for that question.
+GradientGuard provides a reproducible framework for measuring early layer-wise connection sensitivity and testing its value for subgroup-audit prioritisation. The exploratory pilot shows favourable non-slope ranking point estimates but an original primary discovery tie and wide paired-family uncertainty. Matched norm-product and rich structural controls weaken a sensitivity-specific interpretation. In the separately frozen fresh-family validation, MZ and M both discover 26 failures in 35 audits among 106 source-normal classifiers; ranking/probability difference intervals include zero. Smaller-control and secondary gains remain bounded observations. The completed evidence establishes measurement correctness and a transparent negative primary specificity result within SpuCoMNIST, without demonstrating causal shortcut detection, cross-benchmark transfer or operational savings.
 
 
 \section{Analytical Fixture and Evidence Access}
 \label{app:fixture}
 The fixture embeds one active channel through all three convolutions. Each active convolution uses a unit centre-kernel weight, and a unit classifier weight connects the pooled channel to one logit. Other connecting weights are zero; negative biases keep unused channels inactive. Unique pooling maxima and a twice-pooled spatial average of one avoid ambiguity. Bias states $(0,0,0,0)$ and $(0.5,-0.75,0,0.25)$ give selected logit one and the same total weight sensitivity $4|r|$, where $r$ is the selected-logit loss derivative. Their four learned-layer sensitivities divided by $|r|$ are $(1,1,1,1)$ and $(1,1.5,0.75,0.75)$, with ideal three-block shares $(0.25,0.25,0.50)$ and $(0.25,0.375,0.375)$. Epsilon is included in implementation comparisons. This validates possible profile information in CNN A, not a subgroup-accuracy difference or an empirical mechanism.
 
-The evidence directory supplied with the manuscript identifies source hashes and selected tables. The full repository retains all planned original comparisons, full-cohort outcomes and diagnostic curves. The first feasibility, targeted follow-up, outcome PoC and post-hoc attempt identifiers are respectively \texttt{20261116\_01}, \texttt{20261116\_03}, \texttt{20261116\_poc01} and \texttt{20261118\_01}. These identify an audit trail, not four independent confirmations of predictive value.
+The evidence directory identifies source hashes and scalar tables. Original stages are 20261116\_01, 20261116\_03, 20261116\_poc01 and 20261118\_01. The matched saved-checkpoint study is 20261121\_structural01. The fresh development attempt 20261121\_fresh01 and amended completed validation 20261122\_fresh02 retain their execution history and fixed identities. These are linked evidence stages, not independent confirmations. The manuscript interval analysis uses frozen risks and terminal outcomes from these archives without retraining or retuning.
 
 \section*{Data and Code Availability}
 Code, compact identity manifests, configurations, archived tables and frozen forecaster artifacts are available in the public GradientGuard repository [18]. The initial archival import is commit \texttt{ae2e80c}; study identifiers in Appendix A identify the underlying records. Raw MNIST downloads, generated dataset arrays, local virtual environments and classifier recovery/weight files are not distributed with the repository. Repository instructions describe reconstruction from the pinned official SpuCo implementation; the public clone does not contain every original binary. The evidence manifest accompanying this manuscript identifies its archived inputs.
@@ -423,7 +536,7 @@ The reported experiments use the public MNIST-derived SpuCoMNIST benchmark. They
 The author reports that this project currently receives no funding.
 
 \section*{Competing Interests}
-The competing-interest declaration requires confirmation by the author before submission.
+The author declares no competing financial interests or personal relationships that could have influenced the work reported in this article.
 
 \section*{Acknowledgment}
 The author thanks Maninda Edirisooriya, lecturer at the Informatics Institute of Technology (IIT), Sri Lanka, for supervision of this final-year project (contact: \texttt{maninda.e@iit.ac.lk}).

@@ -3,7 +3,9 @@
     "page_size_matches_official_template": true,
     "template_margins": true,
     "two_column_gutter": true,
-    "tables_unchanged": true,
+    "original_numeric_tables_unchanged": true,
+    "original_stage_rows_retained": true,
+    "matched_and_uncertainty_tables_added": true,
     "nine_equations_unchanged": true,
     "three_images_unchanged": true,
     "image_bytes_unchanged": true,
@@ -19,10 +21,19 @@
     "pdf_no_usage_mentions": true,
     "pdf_has_all_tables": true,
     "pdf_has_biography": true,
-    "pdf_has_key_results": true
+    "pdf_has_key_results": true,
+    "author_confirmed_declaration_final": true,
+    "fresh_primary_and_negative_result_reported": true,
+    "matched_structural_definitions_and_selection": true,
+    "paired_intervals_complete": true,
+    "intervals_contain_point_ordered_bounds": true,
+    "scientific_inputs_unchanged": true,
+    "added_evidence_archive_unchanged": true,
+    "version_still_1_4": true,
+    "source_has_new_tables_and_final_declaration": true
   },
-  "passed": 20,
-  "total": 20,
-  "pages": 15,
-  "scope": "Document checks only; no experiments rerun."
+  "passed": 31,
+  "total": 31,
+  "pages": 18,
+  "scope": "v1.4 document, preservation and read-only archived-evidence checks; no training or forecaster fitting."
 }

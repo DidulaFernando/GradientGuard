@@ -1,4 +1,4 @@
-"""Focused v1.4 revision; preserve the v1.3 manuscript and scientific evidence."""
+"""Rebuild v1.4 formatting, then apply matched-evidence and declaration fixes."""
 from pathlib import Path
 import copy
 import hashlib
@@ -139,3 +139,9 @@ report = {
 }
 (P/'qa/provenance.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({'output':str(P/'GradientGuard_IEEE_Access_v1_4.docx'),'tables':len(d.tables),'figures':len(d.inline_shapes),'equations':len(d.element.xpath('//m:oMathPara'))}))
+
+# Keep the reviewer corrections in the same v1.4, including on a clean build.
+# Archived ranking intervals are produced separately without fitting models.
+import runpy
+assert (P/'evidence/paired_family_ranking_intervals.csv').is_file()
+runpy.run_path(str(P/'address_review.py'),run_name='__main__')
