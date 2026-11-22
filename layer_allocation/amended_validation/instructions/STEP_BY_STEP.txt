@@ -1,0 +1,34 @@
+GradientGuard amended validation —22November2026
+Set-Location -LiteralPath 'E:\Final Year Project\Implementation'
+Use the existing Feasibility\.venv\Scripts\python.exe; run.ps1 sets project-local caches, deterministic settings and temp paths. Do not change global packages or security settings. Technical execution permissions may be needed for native libraries.
+
+Commands (PowerShell):
+.\layer_allocation\amended_validation\run.ps1 preflight
+.\layer_allocation\amended_validation\run.ps1 tests
+.\layer_allocation\amended_validation\run.ps1 freeze
+.\layer_allocation\amended_validation\run.ps1 readiness
+.\layer_allocation\amended_validation\run.ps1 fit
+.\layer_allocation\amended_validation\run.ps1 evaluation
+.\layer_allocation\amended_validation\run.ps1 predict
+.\layer_allocation\amended_validation\run.ps1 unseal
+.\layer_allocation\amended_validation\run.ps1 analyse
+.\layer_allocation\amended_validation\run.ps1 audit
+.\layer_allocation\amended_validation\run.ps1 status
+.\layer_allocation\amended_validation\run.ps1 verify
+
+Automatic start/resume:
+.\layer_allocation\amended_validation\run.ps1 all
+
+Expected: exact recorded environment;23passing checks; separate amendment/source/input freeze; byte-verified import of124development models and validation outcomes with four unavailable IDs; original107healthy models/29families and unchanged20each/8family support criteria; grouped development forecaster fitting/pipelines freeze; source preflight of ALL64evaluation constructions before any evaluation model trains; available models complete60epochs; frozen early risks before test unseal; all predefined tables and reports.
+
+Original attempt and frozen code are never edited. Imported models are development evidence, not newly trained or independent replications. Only exact official No examples subgroup assertions permit unavailability. No replacement seeds, alignment changes or disabled assertions. Evaluation families retain available constructions and original assignments. All256planned identities remain in accounting. Actual candidate sizes determine floor(N/3) and floor(N/4) budgets for every method.
+
+Results: layer_allocation\runs\20261122_fresh02
+Report: layer_allocation\reports\20261122_fresh02\REPORT.md and decision.json
+Progress: events.jsonl/status.json and checkpoint/recovery files. all skips existing imported evidence, frozen predictors, verified preflight results and complete evaluation models. Interrupted models resume from source/protocol-checked epoch recovery. No refit after test outcomes exist. Full horizons=19,560updates. Do not claim completion while training is active.
+
+Combined24hour cap includes9401.188seconds previously charged in fresh01; GPU-stage wall-time ledger is conservative and includes data/monitor/checkpoint overhead. Costs are not kernel occupancy or monetary savings.
+
+Interpretation: support failure means not adequately evaluable; full cohort cannot rescue the source-normal claim. Preserve all methods/budgets/panels/family influence, including losses. Only all original useful-gain/uncertainty/control/panel/influence gates passing permits v1.3. Otherwise v1.2 is untouched. No Waterbirds or design expansion.
+
+Git: stage only relevant source/manifests/reports and frozen forecasters; environments/raw data/checkpoint binaries remain local. Make separate logical commits, push origin main without force and verify remote HEAD. No credentials in commits.
