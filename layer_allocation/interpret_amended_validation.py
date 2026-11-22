@@ -105,6 +105,8 @@ For N={n}, failure prevalence is {fails/n:.2%}, the primary budget is {k} and th
 
 The matched primary 95% whole-family interval is **[{gate['interval']['low']:.4f}, {gate['interval']['high']:.4f}]** in Delta20 units, with 5,000 valid draws and zero invalid draws. It includes zero. This interval is conditional on frozen predictors and realised families, not a population equivalence proof or a powered confirmatory claim.
 
+The saved-pipeline lineage audit confirms that all six Z columns survive preprocessing and reach each MZ estimator in both learner classes, both fitted panels and all cohort/prefix pipelines (96 retained feature records). The tie therefore does not arise from silently omitting the added six inputs. Frozen pipeline and prediction files remained byte-identical during inspection.
+
 There are limited supporting gains: logistic NZ finds three more failures than N, and L6 finds three more than L2 at one-third capacity. L6 finds one more than E/B at the secondary 25% capacity. Histogram L6 finds 28 at one-third, compared with histogram E/B's 27. These are smaller-control or secondary findings; they do not establish improvement over rich M or satisfy the sensitivity-specific primary gate. All histogram M/MZ primary results tie. No favourable budget or learner is promoted after evaluation.
 
 ## Panels, families and whole curves
