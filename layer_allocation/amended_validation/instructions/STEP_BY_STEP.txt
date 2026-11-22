@@ -45,6 +45,18 @@ complete 19,560-update horizons, frozen-source and predictor hashes, chronologic
 boundaries, matched candidate panels and feature banks, and bounded complete curves.
 It also adds the explicit amendment/missingness disclosure to the new report.
 
+READABLE FINAL REPORT AND FIGURES
+& .\Feasibility\.venv\Scripts\python.exe .\layer_allocation\plot_amended_validation.py
+& .\Feasibility\.venv\Scripts\python.exe .\layer_allocation\interpret_amended_validation.py
+& .\Feasibility\.venv\Scripts\python.exe .\layer_allocation\complete_amended_validation.py
+
+Expected: allocation_control_curves.png, matched_control_panel_curves.png,
+the detailed signed-off REPORT.md and interpretation_summary.json under
+layer_allocation\reports\20261122_fresh02. The last command refreshes final
+audits/hashes after report generation. These commands read frozen results; they
+do not train classifiers, fit predictors or alter any protocol. The synthesis
+is specific to this completed attempt and its recorded failed progression gate.
+
 SUCCESSFUL EXECUTION VERSUS SCIENTIFIC SUCCESS
 execution_completion.json with finished=true means the authorised pipeline exited;
 final_validation_audit.json with passed=true means the completed evidence passed
