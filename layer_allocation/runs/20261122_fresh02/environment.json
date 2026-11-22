@@ -1,0 +1,36 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\Final Year Project\\Implementation\\Feasibility\\.venv\\Scripts\\python.exe",
+  "architecture": [
+    "64bit",
+    "WindowsPE"
+  ],
+  "os": "Windows-11-10.0.26200-SP0",
+  "lock_matches": true,
+  "missing": [],
+  "extra": [],
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "cudnn": 90701,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "versions": {
+    "torchvision": "0.22.1+cu128",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "matplotlib": "3.9.4",
+    "spuco": "2.0.3"
+  },
+  "nvidia_smi": "Sun Nov 22 12:08:13 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.88                 KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 5060 Ti   WDDM  |   00000000:06:00.0  On |                  N/A |\n|  0%   43C    P8             11W /  180W |    1236MiB /  16311MiB |      2%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            1620    C+G   ...aries\\Win64\\EpicWebHelper.exe      N/A      |\n|    0   N/A  N/A            8148    C+G   ...pps\\PowerToys.QuickAccess.exe      N/A      |\n|    0   N/A  N/A            8472    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A            8736    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A            8876    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A            9272    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           10620    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           10644    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           10876    C+G   ...cw5n1h2txyewy\\WidgetBoard.exe      N/A      |\n|    0   N/A  N/A           11268    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           13536    C+G   ...App_cw5n1h2txyewy\\LockApp.exe      N/A      |\n|    0   N/A  N/A           14228    C+G   ....0.4370.33\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           14444    C+G   ...Local\\PowerToys\\PowerToys.exe      N/A      |\n|    0   N/A  N/A           14676    C+G   ...1g1gvanyjgm\\WhatsApp.Root.exe      N/A      |\n|    0   N/A  N/A           16280    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           16672    C+G   ...Toys\\PowerToys.FancyZones.exe      N/A      |\n|    0   N/A  N/A           17040    C+G   ...8bbwe\\PhoneExperienceHost.exe      N/A      |\n|    0   N/A  N/A           17096    C+G   ...8bbwe\\Microsoft.CmdPal.UI.exe      N/A      |\n|    0   N/A  N/A           17360    C+G   ...s\\PowerToys.ColorPickerUI.exe      N/A      |\n|    0   N/A  N/A           17500    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           18144    C+G   ...UI3Apps\\PowerToys.Peek.UI.exe      N/A      |\n|    0   N/A  N/A           18908    C+G   ...m Files (x86)\\Steam\\steam.exe      N/A      |\n|    0   N/A  N/A           19836    C+G   ...\\cef.win64\\steamwebhelper.exe      N/A      |\n|    0   N/A  N/A           21432    C+G   ...cord\\app-1.0.9269\\Discord.exe      N/A      |\n|    0   N/A  N/A           21812    C+G   ...5.86\\Signal-x64\\SignalRgb.exe      N/A      |\n|    0   N/A  N/A           22584    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           22620    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           24076    C+G   ...s\\Win64\\EpicGamesLauncher.exe      N/A      |\n|    0   N/A  N/A           24704    C+G   ...ot\\Application\\copilotapp.exe      N/A      |\n|    0   N/A  N/A           24836    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           25260    C+G   ...ed_copilot\\copilotapphost.exe      N/A      |\n|    0   N/A  N/A           25844    C+G   ...ayRenderer-Win64-Shipping.exe      N/A      |\n|    0   N/A  N/A           26124    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A           27292    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "settings": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONHASHSEED": "0",
+    "PYTHONPYCACHEPREFIX": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pycache",
+    "TEMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "TMP": "E:\\Final Year Project\\Implementation\\layer_allocation\\tmp",
+    "PIP_CACHE_DIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\pip",
+    "MPLCONFIGDIR": "E:\\Final Year Project\\Implementation\\layer_allocation\\cache\\matplotlib"
+  },
+  "git_revision": "c15996a939c3534bccaf459ea7e990a3746502a5"
+}
