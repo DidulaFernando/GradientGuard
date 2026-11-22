@@ -54,6 +54,6 @@ checks['pdf_has_all_tables'] = all('TABLE '+str(n)+'.' in rendered for n in rang
 checks['pdf_has_biography'] = 'Author Biography' in rendered
 checks['pdf_has_key_results'] = all(x in rendered for x in ['0.7751','0.9336','0.8160','0.9618','0.2036','0.1648'])
 report={'checks':checks,'passed':sum(checks.values()),'total':len(checks),'pages':len(pdf.pages),'scope':'Document checks only; no experiments rerun.'}
-(P/'qa/validation.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+(P/'qa/validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(report,indent=2))
 assert all(checks.values())

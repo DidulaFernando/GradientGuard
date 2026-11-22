@@ -125,7 +125,7 @@ s = re.sub(r'(The author thanks Maninda Edirisooriya[^\n]+?) OpenAI ChatGPT[^\n]
 s = re.sub(r'^\[1\]  OpenAI[^\n]*\n', '', s, flags=re.M)
 s = re.sub(r'\[(?:[2-9]|1[0-9])(?:,\s*(?:[2-9]|1[0-9]))*\]', renumber, s)
 s = s.replace('{figures/', '{../ieee_access_v1_3_20261122/figures/')
-(P/'manuscript_source.tex').write_text(s,encoding='utf-8')
+(P/'manuscript_source.tex').write_text(s,encoding='utf-8',newline='\n')
 
 assert all(sha(Path(p)) == h for p,h in before.items())
 report = {
@@ -137,5 +137,5 @@ report = {
     'template_two_column_gutter_twips': 400,
     'scope':'Formatting and requested acknowledgement/disclosure removal only. No scientific results changed.',
 }
-(P/'qa/provenance.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+(P/'qa/provenance.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({'output':str(P/'GradientGuard_IEEE_Access_v1_4.docx'),'tables':len(d.tables),'figures':len(d.inline_shapes),'equations':len(d.element.xpath('//m:oMathPara'))}))
